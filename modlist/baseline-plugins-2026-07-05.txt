@@ -1,0 +1,354 @@
+   1. Skyrim.esm
+   2. Update.esm
+   3. Dawnguard.esm
+   4. HearthFires.esm
+   5. Dragonborn.esm
+   6. ccbgssse001-fish.esm
+   7. ccqdrsse001-survivalmode.esl
+   8. ccbgssse037-curios.esl
+   9. ccbgssse025-advdsgs.esm
+  10. _ResourcePack.esl
+  11. unofficial skyrim special edition patch.esp
+  12. Disable USSEP Book.esl
+  13. Navigator-NavFixes.esl
+  14. Unofficial Skyrim Modders Patch.esp
+  15. Creation Club - RCPA fix.esl
+  16. Skyrim Road Reconstruction Project.esl
+  17. Landscape and Water Fixes.esp
+  18. DwemerGatesNoRelock.esl
+  19. SimpleVampFixesSSE.esl
+  20. SmoothCam.esl
+  21. AHZmoreHUD.esl
+  22. AHZmoreHUDInventory.esl
+  23. TrueHUD.esl
+  24. Lightened Skyrim - merged.esp
+  25. BetterDynamicAsh-DisableRefs.esm
+  26. Better Dynamic Snow SE - DisableRefs.esm
+  27. Natural Waterfalls.esp
+  28. Natural Waterfalls - Blackreach.esp
+  29. Natural Waterfalls - Dawnguard.esp
+  30. Natural Waterfalls - Dragonborn.esp
+  31. Praedys_Soulcairn.esm
+  32. Lux Orbis - Master plugin.esm
+  33. man_DaedricShrines - Azura Statue Replacer by Xtudo - 3x its size version.esp
+  34. Partitioned snow Meshes.esl
+  35. Water for ENB.esm
+  36. Lux - Master plugin.esm
+  37. IcyFixes.esm
+  38. IceShaderDisabled.esl
+  39. FYX - Windhelm Graveyard.esp
+  40. IceLODFull.esl
+  41. High Poly Head.esm
+  42. IMRPatchForVanillaAndBDS.esl
+  43. Expressive Facegen Morphs.esl
+  44. Lux - Resources.esp
+  45. Lux Via.esp
+  46. Animated Ice Bergs.esp
+  47. Animated Ice Floes.esp
+  48. Animated Ice Bergs - Large Ice Bergs.esp
+  49. ProjectedGlacierSnow.esl
+  50. SimpleChildren.esp
+  51. DynDOLOD.esm
+  52. SolitudeLODArch.esm
+  53. Revert Runandwalkpaces.esp
+  54. DebugMenu.esp
+  55. USMP - Psijic Hood Fix for Beast Races.esp
+  56. SurvivalModeImproved.esp
+  57. EMISH - Dragon Crash Land Markers Fix.esp
+  58. Landscape and Water Fixes - Patch - Navigator ESL.esp
+  59. Landscape and Water Fixes - Patch - SRRP.esp
+  60. AnthorDragonFix.esp
+  61. MannequinManagement.esp
+  62. Dragon dies on Touchdown - fix.esp
+  63. ANV_Dragon dies on Touchdown - fix - USSEP.esp
+  64. Dwemer Gates Don't Reset - Navigator Patch.esp
+  65. shalidor's maze fixes.esp
+  66. LabyrinthianPuzzleSoundFix.esp
+  67. dunPOISoldiersRaidOnStartTweak.esp
+  68. Proving Honor Companions Quest Progression Fix.esp
+  69. StalhrimSourceFix.esp
+  70. Hearthfires Houses Building Fix.esp
+  71. Stamina of Steeds.esp
+  72. ChillwindDephts.esp
+  73. SeranaEyeFix.esp
+  74. ballistacrashfix.esp
+  75. Rock Traps Trigger Fixes.esp
+  76. zeroBountyHostilityFix.esp
+  77. bleedoutFix.esp
+  78. stuck on screen fix.esp
+  79. Guild Master's Armor First Person Texture Fix.esp
+  80. OnlyOnce.esp
+  81. Durak Teleport Fix.esp
+  82. Unaggressive Dragon Priests Fix.esp
+  83. AdoptionAndMovingFix.esp
+  84. ANV_AdoptionAndMovingFix - USSEP Patch.esp
+  85. fixLOD.esp
+  86. SkuldafnRailingNavmeshed.esp
+  87. Animals Swim.esp
+  88. Simplicity of Seeding.esp
+  89. ArcaneBlacksmithHoodFix.esp
+  90. EnchantableSpecialItemFix_USSEP.esp
+  91. hideQuestItems.esp
+  92. Nilheim.esp
+  93. Quest Journal Limit Bug Fixer.esp
+  94. DLC2MarchoftheDeadFix.esp
+  95. MissingMercerWorkaround.esp
+  96. StealthKillDetectionFix.esp
+  97. eve - bleeding damage fixes.esp
+  98. BeardMaskFix.esp
+  99. SeranaHoodFixWithAnim.esp
+ 100. Quick Start - SE.esp
+ 101. ANV_Quick Start - SE - USSEP.esp
+ 102. SkyUI_SE.esp
+ 103. MCMHelper.esp
+ 104. UIExtensions.esp
+ 105. McmRecorder.esp
+ 106. Soul-Cairn Objects Secured.esp
+ 107. BetterThirdPersonSelection.esp
+ 108. PhotoMode.esp
+ 109. RaceMenu.esp
+ 110. QuickLootIE.esp
+ 111. LoadScreenCompendium.esp
+ 112. ANV_LoadScreenCompendium - USSEP.esp
+ 113. ImprovedLoadingScreenColors.esp
+ 114. Audio Overhaul Skyrim.esp
+ 115. ANV_Audio Overhaul Skyrim - USMP.esp
+ 116. Barefoot Footstep Extended.esp
+ 117. EVE - Footstep Sounds Restored.esp
+ 118. Werewolf Footstep FX.esp
+ 119. BlackreachEerieAmbience.esp
+ 120. ANV_BlackreachEerieAmbience - Audio Overhaul Skryim.esp
+ 121. Whispering Tomes of Apocrypha.esp
+ 122. Revenant Spirits of the Soul Cairn.esp
+ 123. VolkiharSoundscapeOverhaul.esp
+ 124. Solstheim Exterior Soundscapes.esp
+ 125. Solstheim Exterior Soundscapes - All Maker Stones.esp
+ 126. WhalesOffTheCoast.esp
+ 127. MurderOfSongbirds.esp
+ 128. DistantDragonRoars.esp
+ 129. Nordic Winds.esp
+ 130. Murmurs and Mead.esp
+ 131. The Standing Sound Stones.esp
+ 132. Distant Rolling Thunder.esp
+ 133. Whispers of the Daedric Princes.esp
+ 134. Voiced Word Walls.esp
+ 135. DwemerPistonFix.esp
+ 136. Saints and Seducers - Less Obnoxious Elytra Footsteps.esp
+ 137. XPMSE.esp
+ 138. TrueDirectionalMovement.esp
+ 139. TDM Target Lock Fix - Bristleback.esp
+ 140. EVE - Ghostly Instruments Fix.esp
+ 141. Particle Patch.esp
+ 142. SMIM-SE-Merged-All.esp
+ 143. SB_Traps.esp
+ 144. SB_WindhelmEntrance.esp
+ 145. HPP - My fixes by Xtudo - Chopping Blocks.esp
+ 146. WIZ_FoscsF.esp
+ 147. Solitude Braziers.esp
+ 148. Solitude Empty Landscape Fix.esp
+ 149. Markarth Exterior 01 - River Water Fix.esp
+ 150. GQJ_DG_vampireamuletfix.esp
+ 151. Soul Cairn Landscape Fixes.esp
+ 152. Embers XD.esp
+ 153. Embers XD - Patch - Survival Mode Improved.esp
+ 154. Embers XD - Fire Magick Add-On.esp
+ 155. Embers XD - Reduced Actor Flames.esp
+ 156. DeadlySpellImpacts.esp
+ 157. PSI.esp
+ 158. PSI AOS Patch.esp
+ 159. DeadlySpellImpacts - Two Fire.esp
+ 160. FleshFX.esp
+ 161. dD - Enhanced Blood Main LITE.esp
+ 162. AOS_EBT LITE Patch.esp
+ 163. MoonsAndStars.esp
+ 164. NAT-ENB.esp
+ 165. NAT-ENB SUMMER patch.esp
+ 166. NAT-CS.esp
+ 167. ANV_NAT-ENB - Soul Cairn Fix.esp
+ 168. MoonGlowSize.esp
+ 169. RedMountainPlumeSE.esp
+ 170. Better Dynamic Snow SE.esp
+ 171. Better Dynamic Ash.esp
+ 172. Stretched Snow Begone.esp
+ 173. Stretched Snow Begone Small Update.esp
+ 174. BlendedRoads.esp
+ 175. BlendedRoadsFixes.esp
+ 176. Stones of Solitude.esp
+ 177. HD Stone Quarry and Clay Deposits SE.esp
+ 178. Simple Snow Improvements - Skyrim.esp
+ 179. Simple Snow Improvements - Snow Forts.esp
+ 180. Simple Snow Improvements - Giant Obelisk.esp
+ 181. Simple Snow Improvements - Solstheim Ruins.esp
+ 182. Icy Winterhold Spire.esp
+ 183. Enhanced Landscapes - Dead Marsh.esp
+ 184. ANV_EL Dead Marsh - SLaWF Patch.esp
+ 185. ANV_EL Dead Marsh - USSEP Patch.esp
+ 186. Nature of the Wild Lands.esp
+ 187. NotWL - Autumn Rift.esp
+ 188. NotWL - Autumn Tundra.esp
+ 189. ANV_NotWL Tree Replacer Only - Clipping Fixes.esp
+ 190. S3DTrees NextGenerationForests.esp
+ 191. ANV_S3D Trees and Plants - USSEP Patch.esp
+ 192. Aspens Ablaze.esp
+ 193. ANV_Aspens Ablaze - EMISH Patch.esp
+ 194. Sleeping Tree Path Patch.esp
+ 195. ANV_Removed Ugly Flora.esp
+ 196. Freak's Floral Solstheim.esp
+ 197. Freak's Floral Fields.esp
+ 198. Freak's Floral Fields- All Dead Tundra.esp
+ 199. Freak's Floral Fields- Mixed Reach.esp
+ 200. Freak's Floral Fields- Marsh Ultra.esp
+ 201. Freak's Floral Fields- Volcanic Wasteland.esp
+ 202. Freak's Floral Fields -Short Pine.esp
+ 203. ANV_Freak's Flora Fields - Short Pine Edit.esp
+ 204. Grass Bounds - Freak's Floral Fields.esp
+ 205. Landscape Fixes For Grass Mods.esp
+ 206. Landscape and Water Fixes - Patch - LFfGM.esp
+ 207. Ivy Replacer BOS.esp
+ 208. flower mod.esp
+ 209. blendedshrooms.esp
+ 210. ANV_Praedy's Soul Cairn - USSEP.esp
+ 211. Praedy's AncientFalmerThrone.esp
+ 212. Dwemer Water Wheels.esp
+ 213. Faultier's PBR DLC01 architecture.esp
+ 214. Faultier's PBR DLC02 architecture.esp
+ 215. Dovahnique's Diverse Dark Elf Lanterns - BOS.esp
+ 216. Skyrim Remastered - Ice Caves Fix.esp
+ 217. Skyrim Remastered - High Hrothgar.esp
+ 218. Skykings Unique Signs.esp
+ 219. ANV_SkyKing's Unique Signs - USSEP Patch.esp
+ 220. ThalmorRefrs.esp
+ 221. 3D Shack Kit Walls - Base Object Swapper.esp
+ 222. AbandonedShackInteriorFix.esp
+ 223. man_maraStatue.esp
+ 224. man_dibella.esp
+ 225. man_kynarethStatue.esp
+ 226. man_nocturnalShrine.esp
+ 227. man_malacathShrine.esp
+ 228. man_MehrunesDagonShrine.esp
+ 229. man_MeridiaShrine.esp
+ 230. PraedysAzurasRealm.esp
+ 231. ANV_Praedy's Azura's Realm - USSEP.esp
+ 232. Rudys Nordic Ruin - Snow Fix.esp
+ 233. JS Dwarven Oil SE.esp
+ 234. Book Covers Skyrim Updated.esp
+ 235. JS Knapsacks SE.esp
+ 236. Rudy Nordic Pottery SSE.esp
+ 237. Praedy's SoulGems.esp
+ 238. Praedy's SoulEssenceGem.esp
+ 239. PraedysSkulls.esp
+ 240. ANV_Praedy's Skulls - USSEP.esp
+ 241. ANV_Praedy's Skulls - USMP.esp
+ 242. PraedysElderScrollSoulCairnFix.esp
+ 243. JS Vanilla Circlets SE.esp
+ 244. ANV_JS Vanilla Circlets - USSEP.esp
+ 245. JS Unique Utopia SE - Rings - Johnskyrim.esp
+ 246. ANV_JS Unique Utopia Rings - USSEP.esp
+ 247. Heartbeat.esp
+ 248. Praedy's StavesAIO.esp
+ 249. Praedystaves - USSEP patch.esp
+ 250. HDT-SMP Vanilla.esp
+ 251. CommonClothing-JarlSleeves.esp
+ 252. ForswornRetexture Unique Armor of the Old Gods.esp
+ 253. ANV_Xavbio's Armor of the Old Gods - USSEP.esp
+ 254. Imperial Armors and Weapons Retexture SE - Penitus Pants.esp
+ 255. JS Unique Utopia SE - Daggers - Johnskyrim.esp
+ 256. ANV_JS Unique Utopia Daggers - USSEP.esp
+ 257. zz_HorseOverhaul.esp
+ 258. ANV_zzjay's Horse Overhaul - USSEP.esp
+ 259. UniqueDragonPriests_XB.esp
+ 260. sbbe.esp
+ 261. Skyrim Snow Dogs.esp
+ 262. ArmoredSnowDogs.esp
+ 263. VigilanceReborn.esp
+ 264. MeekoReborn.esp
+ 265. UniqueBarbas.esp
+ 266. LuminousAtronachs.esp
+ 267. PraedysSkeletons.esp
+ 268. RefinedWerebearsFemaleFix.esp
+ 269. Female Woodelf Fix.esp
+ 270. VanillaArgoniansRedux.esp
+ 271. BetterArgonianHorns.esp
+ 272. Eyes Nouveaux.esp
+ 273. Eyes Nouveaux - Daedra and Devotees.esp
+ 274. Eyes Nouveaux - Vanilla Character Presets.esp
+ 275. Faithful Faces.esp
+ 276. Faithful Faces0.esp
+ 277. Faithful Faces - Creation Club.esp
+ 278. BaobhanSith_Serana.esp
+ 279. FacegenForKids.esp
+ 280. Simple Children - USSEP Aventus Aretino Patch.esp
+ 281. ANV_Simple Children - USMP.esp
+ 282. MoreWoodenBridges.esp
+ 283. Northern Marsh Bridges SE.esp
+ 284. Landscape and Water Fixes - Patch - Northern Marsh Bridges.esp
+ 285. Unique Goldenglow Estate Crossing.esp
+ 286. Ivy - Riverwood Smelter Addon.esp
+ 287. Ivy - Riverwood Smelter Addon - USSEP Patch.esp
+ 288. Ivy - Whiterun - Well Overhaul.esp
+ 289. Ivy - Whiterun Overhaul - No Easteregg.esp
+ 290. Ivy - Whiterun - Well Overhaul - Normal Lantern.esp
+ 291. Spaghetti's Cities - AIO.esp
+ 292. Ivy - Whiterun - Well Overhaul - Spaghetti's Cities Patch.esp
+ 293. Spaghetti's Cities - AIO - NavCuts.esp
+ 294. Spaghetti's Cities - Clutter Addons.esp
+ 295. Spaghetti's Towns - AIO.esp
+ 296. Spaghetti's Towns - AIO - NavCuts.esp
+ 297. Spaghetti's Palaces - AIO.esp
+ 298. Spaghetti's Palaces - AIO - NavCuts.esp
+ 299. Spaghetti's Orc Strongholds - AIO.esp
+ 300. Spaghetti's Orc Strongholds - AIO - NavCuts.esp
+ 301. Spaghetti's Faction Halls - AIO.esp
+ 302. Spaghetti's Faction Halls - AIO - NavCuts.esp
+ 303. Spaghetti's Solstheim - AIO.esp
+ 304. Spaghetti's Solstheim - AIO - NavCuts.esp
+ 305. Vanilla Plus City Entrances.esp
+ 306. bingus really hates insects.esp
+ 307. bingus hates spiders.esp
+ 308. Lux Via - plugin.esp
+ 309. Lux Orbis.esp
+ 310. Lux.esp
+ 311. Lux Via - Blended Roads Bridges Texture sets.esp
+ 312. Lux Via - More Lantern Posts.esp
+ 313. Lux Via - More Wooden Bridges patch.esp
+ 314. ANV_Lux Via - HPP Firewood Snow.esp
+ 315. ANV_Windhelm Bridge Interior Snow Fix.esp
+ 316. Ivy - Whiterun - Well Overhaul - Normal Lantern - Lux Orbis Patch.esp
+ 317. Ivy - Riverwood Smelter Addon - Lux Orbis Patch.esp
+ 318. Lux Orbis - CC Fish patch.esp
+ 319. Lux Orbis - Saints and Seducers patch.esp
+ 320. Lux Orbis - USSEP patch.esp
+ 321. Lux Orbis - USMP Patch.esp
+ 322. Lux Orbis - Embers XD patch.esp
+ 323. Lux Orbis - Mandragora's Meridia Shrine patch.esp
+ 324. Lux Orbis - Northern Marsh Bridges patch.esp
+ 325. ANV_Lux Orbis - SB Windhelm Entrance.esp
+ 326. Lux Orbis - Riften Sconce Patch.esp
+ 327. Water for ENB (Shades of Skyrim).esp
+ 328. Water for ENB - Patch - Blue Volcanic Water.esp
+ 329. Water for ENB - Patch - Blue Rift Water.esp
+ 330. Water for ENB - Patch - Landscape Fixes for Grass Mods.esp
+ 331. Natural Waterfalls - SLaWF Patch.esp
+ 332. Natural Waterfalls - Water for ENB Patch (Shades of Skyrim).esp
+ 333. Lux - CC Fish patch.esp
+ 334. Lux - Saints and Seducers patch.esp
+ 335. Lux - USSEP patch.esp
+ 336. Lux - Embers XD patch.esp
+ 337. Lux - NAT ENB.esp
+ 338. Lux - SLaWF patch.esp
+ 339. Lux - Water for ENB patch.esp
+ 340. ANV_Lux - Volkihar Soundscape Overhaul - W4ENB.esp
+ 341. Lux - Water for ENB (Shades of skyrim) patch.esp
+ 342. Lux - No grass in caves patch.esp
+ 343. ANV_Lux - W4ENB - No Grass in Caves.esp
+ 344. Lux - Brighter interior nights.esp
+ 345. Lux - Even Brighter Templates.esp
+ 346. Actually Brighter Lux Templates.esp
+ 347. ParallaxGen.esp
+ 348. PG_1.esp
+ 349. ANV_SynHPHRaceMenuPatcher.esp
+ 350. ANV_SynNPCPatcher.esp
+ 351. ANV_SynW4ENBPatcher.esp
+ 352. ANV_SynWorldPatcher.esp
+ 353. DynDOLOD.esp
+ 354. Occlusion.esp
