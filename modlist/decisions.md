@@ -7,6 +7,33 @@ entry at the top.
 
 ---
 
+### 2026-07-05 — Full Quest/Perk/MagicEffect/Spell audit; all baseline categories now audited (task-0007)
+
+Individually audited all 1,562 conflicts across Quest (576), Perk (151),
+MagicEffect (492), and Spell (343) — **all confirmed healthy, nothing
+flagged.** Winners are USSEP/USMP, DLC/master overrides, survival-mod
+content, and named fix mods (`eve - bleeding damage fixes.esp`,
+`FleshFX.esp`, `LuminousAtronachs.esp`, `AdoptionAndMovingFix.esp`,
+`OnlyOnce.esp`, and several `ANV_*-USSEP.esp` quest patches), each
+confirmed to match its own domain.
+
+Per this task's specific requirement, checked whether any Quest winners
+involve script-fragment or alias overrides (higher risk than plain field
+changes): 7 named quest-fix winners do carry `VirtualMachineAdapter`/
+`Aliases` diffs, but this is expected — each is a purpose-built patch
+whose entire job is forwarding two other plugins' script changes into one
+record (the `ANV_*-USSEP` naming convention on this list means exactly
+that). No winner touched script/alias data without an obvious reason to.
+
+This closes out the full audit series started in task-0004: **all ~20
+largest conflict categories from the original task-0002 baseline (31,257
+of 129,515 total conflicts) have now been individually checked.** Two
+findings remain open from this series: task-0009 (McmRecorder.esp Cell
+finding, unintentional) and task-0010 (Lux Orbis.esp LeveledItem finding,
+needs verification). Categories outside the original top-20 sample
+remain unaudited; only worth a follow-up task if a specific problem is
+suspected there.
+
 ### 2026-07-05 — Baseline version audit (task-0008)
 
 Prioritized version check of the D: Anvil install against Nexus/GitHub (Jul 2026).

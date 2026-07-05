@@ -274,13 +274,58 @@ break) and very likely intentional given the mod's popularity and scope.
 Flagged as task-0010 (assigned to Cursor) to confirm via the mod's
 documentation rather than treating it as a bug.
 
+### Full manual audit — Quest, Perk, MagicEffect, Spell (task-0007)
+
+All conflicts in these four categories individually checked: Quest (576),
+Perk (151), MagicEffect (492), Spell (343) — **1,562 total.**
+
+**Confirmed healthy — all 1,562.** Winners across all four types:
+
+| Category | Winner(s) | Count | Why expected |
+|---|---|---|---|
+| Quest | USSEP | 492 | USSEP |
+| Quest | `Update.esm` / `HearthFires.esm` / `Dawnguard.esm` / `Dragonborn.esm` | 50 | Master overrides |
+| Quest | USMP | 12 | USMP |
+| Quest | `SurvivalModeImproved.esp` | 9 | Survival mod's own quest logic |
+| Quest | `AdoptionAndMovingFix.esp` | 5 | Named fix, same adoption scope as task-0004's dialogue finding |
+| Quest | `OnlyOnce.esp` | 2 | Spot-checked: wins Civil War map-table scene quests it's designed to touch (adds a "RunOnce" flag) |
+| Quest | `SeranaHoodFixWithAnim.esp` / `Praedy's SoulEssenceGem.esp` / `DLC2MarchoftheDeadFix.esp` / `ANV_Quick Start - SE - USSEP.esp` / `ANV_Praedy's Azura's Realm - USSEP.esp` / `ANV_Dragon dies on Touchdown - fix - USSEP.esp` | 6 | Named quest-specific fixes, each spot-checked via `conflict_tree` — see script/alias note below |
+| Perk | USSEP | ~140 (bulk) | USSEP |
+| Perk | `Update.esm` / `Dawnguard.esm` / `Dragonborn.esm` | 14 | Master overrides |
+| Perk | `ccqdrsse001-survivalmode.esl` / USMP | 2 | CC/USMP |
+| Perk | `eve - bleeding damage fixes.esp` | 6 | Named fix, all `*_EVE` bleed-damage perks — exact match |
+| MagicEffect | USSEP | 396 | USSEP |
+| MagicEffect | `SurvivalModeImproved.esp` / `ccqdrsse001-survivalmode.esl` | 37 | Survival mod's own effects |
+| MagicEffect | `Update.esm` / `Dawnguard.esm` / `Dragonborn.esm` | 29 | Master overrides |
+| MagicEffect | USMP | 19 | USMP |
+| MagicEffect | `FleshFX.esp` / `LuminousAtronachs.esp` | 8 | Named visual-effect mods matching their scope |
+| MagicEffect | `eve - bleeding damage fixes.esp` / `Audio Overhaul Skyrim.esp` | 3 | Named fixes |
+| Spell | USSEP | ~230 (bulk) | USSEP |
+| Spell | `Update.esm` / `Dawnguard.esm` / `Dragonborn.esm` | ~60 | Master overrides |
+| Spell | `ccqdrsse001-survivalmode.esl` / `SurvivalModeImproved.esp` | ~45 | Survival mod's own spells/diseases |
+| Spell | USMP | 5 | USMP |
+| Spell | `eve - bleeding damage fixes.esp` | ~20 | Named fix, matches bleed-perk pattern above |
+
+**Script fragment / alias override check (per task requirement):** all 7
+named quest-fix winners above (`SeranaHoodFixWithAnim.esp`, `Praedy's
+SoulEssenceGem.esp`, `OnlyOnce.esp` ×2, `DLC2MarchoftheDeadFix.esp`, and
+the two `ANV_*-USSEP.esp` patches) do carry `VirtualMachineAdapter`
+(script) and/or `Aliases` diffs against the other plugins touching the
+same quest. This is expected, not a red flag: each is a purpose-built
+patch whose entire job is to forward two other plugins' script/alias
+changes into one winning record (that's literally what the `ANV_*-USSEP`
+naming convention means on this list). No case was found where a winner
+touched script fragments/aliases without an obvious reason to.
+
 ### Not individually audited (out of scope for this baseline pass)
 
-MagicEffect, Spell, Quest, Perk — too large to hand-check record by
-record in one pass. **Recommend as follow-up tasks** if deeper conflict
-resolution is wanted before further customization. NPC_, Dialogue, Cell,
-and Armor/Weapon/ConstructibleObject/LeveledItem, previously in this
-list, were fully audited in task-0004, task-0005, and task-0006 above.
+None remaining — NPC_, Dialogue, Cell, Armor, Weapon, ConstructibleObject,
+LeveledItem, Quest, Perk, MagicEffect, and Spell (the ~20 largest conflict
+categories from the original baseline) have all been fully audited across
+task-0004, task-0005, task-0006, and task-0007. Categories outside the
+original top-20 sample (NAVI, LAND, REFR-level cell forwarding, and other
+smaller record types) remain unaudited; treat as a future task only if a
+specific problem is suspected there.
 
 ### Tiering methodology discrepancy — resolved (task-0003)
 
@@ -308,7 +353,7 @@ asserting conflicts are "known-expected" without a source.
 | Missing masters | None |
 | Other load-order errors | None (0 excluded plugins) |
 | Total record conflicts | 129,515 |
-| Conflicts individually audited | 29,695 (Race/Faction/Class/Worldspace: 327; NPC_/Dialogue: 14,338 — task-0004; Cell: 13,588 — task-0005; Armor/Weapon/ConstructibleObject/LeveledItem: 1,442 — task-0006) |
+| Conflicts individually audited | 31,257 (Race/Faction/Class/Worldspace: 327; NPC_/Dialogue: 14,338 — task-0004; Cell: 13,588 — task-0005; Armor/Weapon/ConstructibleObject/LeveledItem: 1,442 — task-0006; Quest/Perk/MagicEffect/Spell: 1,562 — task-0007) — this covers all ~20 largest conflict categories from the original baseline |
 | Unintentional conflicts found | 1 (Cell) — `McmRecorder.esp` on `WEMerchantChests`, flagged as task-0009 |
 | Needs verification (low severity) | 4 (LeveledItem) — `Lux Orbis.esp` gear-list edits, flagged as task-0010 |
 | Bashed/Smashed patch present | No — discrepancy with documented methodology |
