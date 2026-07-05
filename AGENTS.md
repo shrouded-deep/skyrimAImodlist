@@ -26,6 +26,17 @@ successor list later.
 
 - Never assume context from a previous session. Read `modlist/decisions.md`
   and relevant `tasks/completed/*.md` files before acting.
+- **Before starting any task, check for recently-completed work that might
+  affect it** — not just your own assigned queue. Scan `tasks/completed/`
+  (and recent git history if useful) for anything that touches the same
+  mod, record type, or decision your task depends on. If a just-completed
+  task contradicts or changes the premise of the one you're about to
+  start, stop and flag it rather than proceeding on stale assumptions —
+  this applies even if the human explicitly handed you the task, since
+  the human may not have seen the other result yet either.
+- Pull latest before starting any session's work, not just before
+  committing — this is how you actually catch the recently-completed
+  work mentioned above.
 - One task file = one unit of work. Don't bundle unrelated changes.
 - Every completed task must record: what was done, what changed on disk
   (if anything), and any follow-up tasks it implies.
