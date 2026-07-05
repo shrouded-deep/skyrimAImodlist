@@ -29,6 +29,14 @@ successor list later.
 - One task file = one unit of work. Don't bundle unrelated changes.
 - Every completed task must record: what was done, what changed on disk
   (if anything), and any follow-up tasks it implies.
+- **When a task implies follow-up work, create the task file yourself**
+  directly in `tasks/queue/` using `tasks/template.md`, with the next
+  sequential ID — don't just describe the follow-up in prose and leave it
+  for a human to write up. This applies whether the follow-up is assigned
+  to yourself or to the other agent. Only stop and ask the human first if
+  the follow-up implies a real strategic choice (e.g. changing curation
+  philosophy, adding a mod that changes list scope) rather than a
+  mechanical continuation of work already in progress.
 - Commit messages reference the task ID, e.g. `[task-0007] resolve ACOT/
   Kasako Core Framework conflict`.
 - Do not silently change the load order tiering methodology

@@ -163,14 +163,124 @@ conflicts** — winner breakdown (combined):
 No case was found where a low-priority or unrelated mod won an NPC or
 dialogue record it had no obvious business touching.
 
+### Full manual audit — Cell (task-0005)
+
+All **13,588 Cell conflicts** individually checked (same method as
+task-0004: grouped by winning plugin, every non-obvious winner
+individually inspected via `conflict_tree`).
+
+**Confirmed healthy (13,587 of 13,588):**
+
+| Winner | Count | Why expected |
+|---|---|---|
+| `Occlusion.esp` | 10,695 | Generated occlusion-data output |
+| `ANV_SynWorldPatcher.esp` | 1,518 | Generated Synthesis patcher output |
+| `Lux.esp` | 929 | Lighting overhaul — owns the cells it relights |
+| `ANV_SynW4ENBPatcher.esp` | 189 | Generated Synthesis patcher output |
+| `DynDOLOD.esm` | 76 | Generated LOD output |
+| `Dawnguard.esm` | 38 | DLC master override |
+| `Lux - USSEP patch.esp` / `Lux - Embers XD patch.esp` / `Lux Orbis.esp` / `Lux - CC Fish patch.esp` / `Lux - Saints and Seducers patch.esp` / `Lux - SLaWF patch.esp` | 61 combined | Named Lux compatibility patches |
+| `unofficial skyrim special edition patch.esp` | 13 | USSEP |
+| `DynDOLOD.esp` | 19 | Generated LOD output |
+| `IcyFixes.esm` | 8 | Spot-checked (cell `00385D`): standard exterior grid/landscape override, normal pattern |
+| `Dragonborn.esm` / `Update.esm` / `ccbgssse001-fish.esm` / `ccbgssse025-advdsgs.esm` | 15 combined | Master/CC overrides |
+| `Aspens Ablaze.esp` | 6 | Named visual mod, owns its own cells |
+| `Navigator-NavFixes.esl` | 4 | Named navmesh fix, plausible for cell/navmesh conflicts |
+| `Lightened Skyrim - merged.esp` | 4 | Spot-checked (cell `020EE3`): standard region/grid data carried by a merged patch, normal pattern |
+| `Landscape and Water Fixes.esp` / `Landscape Fixes For Grass Mods.esp` | 3 combined | Named landscape fix mods |
+| `DwemerGatesNoRelock.esl` | 2 | Named tweak, touches Dwemer ruin cells it's built for |
+| `shalidor's maze fixes.esp` | 1 | Named fix, touches a Labyrinthian cell (Shalidor's Maze) |
+| `man_malacathShrine.esp` | 1 | Own shrine-mod cell |
+| `PraedysElderScrollSoulCairnFix.esp` | 1 | Named fix, touches a Soul Cairn cell |
+| `Spaghetti's Faction Halls - AIO.esp` | 1 | Spot-checked (cell `007BC0`): adds furniture/placed objects to a Dawnguard cell, normal pattern for a content-adding mod |
+| `Water for ENB (Shades of Skyrim).esp` | 1 | Named water/ENB visual patch |
+| `ANV_Lux - Volkihar Soundscape Overhaul - W4ENB.esp` | 1 | Wins `DLC1VampireCastleDungeon02` — matches its name exactly |
+
+**Needs attention (1 of 13,588):**
+
+`McmRecorder.esp` wins cell `0BBCB2:Skyrim.esm` (editorID
+`WEMerchantChests`, name "Warehouse Bookshelves") over `Update.esm`.
+Inspected the full diff — this is **not** a routine field tweak:
+- `NavigationMeshes` goes from 1 item (vanilla) to **0 items** in
+  McmRecorder.esp's version — the cell's navmesh data is dropped.
+- The cell's `Persistent` placed-reference list is swapped: vanilla has a
+  reference to `00327E:Update.esm`; McmRecorder.esp's version instead
+  places its own reference to `000D65:McmRecorder.esp`, a `MiscItem`
+  named `McmRecorder_MessageText` (an MCM-helper debug item).
+
+`McmRecorder.esp` is a lightweight MCM-recording/debug utility — not a
+mod with any obvious reason to touch a vanilla warehouse cell's navmesh or
+persistent references. This has the signature of an **accidental/dirty
+edit** (e.g. the mod author had this cell open in the Creation Kit while
+testing and it got saved into the distributed plugin), not an intentional
+compatibility patch. Flagged as a follow-up task (task-0009) rather than
+fixed here, per this task's audit-only scope.
+
 ### Not individually audited (out of scope for this baseline pass)
 
-Cell, Armor, Weapon, ConstructibleObject, LeveledItem, MagicEffect, Spell,
-Quest, Perk — too large to hand-check record by record in one pass.
-**Recommend as follow-up tasks** (one task per category, or per suspected
-problem area) if deeper conflict resolution is wanted before further
-customization. NPC_ and Dialogue, previously in this list, were fully
-audited in task-0004 above.
+### Full manual audit — Armor, Weapon, ConstructibleObject, LeveledItem (task-0006)
+
+All conflicts in these four categories individually checked: Armor (662),
+Weapon (607), ConstructibleObject (36), LeveledItem (137) — **1,442
+total.**
+
+**Confirmed healthy (1,438 of 1,442):**
+
+| Category | Winner(s) | Count | Why expected |
+|---|---|---|---|
+| Armor | USSEP | 474 | USSEP |
+| Armor | `Update.esm` | 105 | Master override |
+| Armor | `JS Unique Utopia SE - Rings - Johnskyrim.esp` + `ANV_JS Unique Utopia Rings - USSEP.esp` | 27 | Named ring mod + its USSEP patch |
+| Armor | `JS Vanilla Circlets SE.esp` + `ANV_JS Vanilla Circlets - USSEP.esp` | 18 | Named circlet mod + its USSEP patch |
+| Armor | USMP | 11 | USMP |
+| Armor | `SurvivalModeImproved.esp` | 11 | Survival mod adding stats to armor — plausible for its domain |
+| Armor | `BeardMaskFix.esp` | 5 | Spot-checked: wins only `DBArmorHelmet*` (Dark Brotherhood masks) — exact name match |
+| Armor | `PraedysSkeletons.esp` | 3 | Spot-checked: wins `ClothesWarlockHoodUnplayable` variants + `DLC2MiraakSkeleton` — matches its scope |
+| Armor | `ForswornRetexture Unique Armor of the Old Gods.esp` + `ANV_Xavbio's Armor of the Old Gods - USSEP.esp` | 4 | Named retexture mod + patch |
+| Armor | `EnchantableSpecialItemFix_USSEP.esp` | 3 | Named fix |
+| Armor | `ArcaneBlacksmithHoodFix.esp` | 1 | Spot-checked: wins `ccBGSSSE025_ClothesBlackSmith` — exact match |
+| Weapon | USSEP | 517 | USSEP |
+| Weapon | `Praedy's StavesAIO.esp` + `Praedystaves - USSEP patch.esp` | 64 | Named staff mod + its USSEP patch |
+| Weapon | `Update.esm` / `Dragonborn.esm` | 12 | Master overrides |
+| Weapon | `EnchantableSpecialItemFix_USSEP.esp` | 6 | Named fix |
+| Weapon | `JS Unique Utopia SE - Daggers - Johnskyrim.esp` + `ANV_JS Unique Utopia Daggers - USSEP.esp` | 7 | Named dagger mod + patch |
+| Weapon | USMP | 1 | USMP |
+| ConstructibleObject | USSEP / USMP | 17 | USSEP/USMP fixing crafting recipes |
+| ConstructibleObject | `Update.esm` / `HearthFires.esm` | 2 | Master overrides |
+| ConstructibleObject | `Hearthfires Houses Building Fix.esp` | 11 | Named fix, all `BYOHHouseRecipe*` building-material recipes — exact match |
+| LeveledItem | USSEP | 106 | USSEP |
+| LeveledItem | `Update.esm` / `Dawnguard.esm` / `HearthFires.esm` / `Dragonborn.esm` | 12 | Master overrides |
+| LeveledItem | USMP | 12 | USMP |
+| LeveledItem | `SurvivalModeImproved.esp` | 2 | Wins `LItemFoodSalt(Small)` — matches survival-mod domain |
+
+**Needs verification (low severity) — 4 of 1,442:**
+
+`Lux Orbis.esp` wins 4 `LeveledItem` conflicts unrelated to its lighting
+purpose: `GuardGear`, `CWSoldierImperialGear`, `CWSoldierSonsGear`,
+`CWSoldierSonsGear1H`. Inspected the diff for `GuardGear`
+(`100561:Skyrim.esm`): vanilla has 5 entries, Lux Orbis's version has 4 —
+it removes the `12x SteelArrow` entry. This is a real content change, not
+metadata noise, and the other three follow the same pattern.
+
+Lux Orbis (Nexus id 56095) is a large, actively-maintained exterior
+lighting overhaul (5M+ downloads) whose FOMOD explicitly bundles "patches
+and improvements for a lot of modded content," so a gear-list tweak being
+a selected FOMOD patch option is plausible — but it's still an odd thing
+for a lighting mod to touch, and unlike the other findings in this audit
+it isn't traceable to an obviously-named dedicated patch. Marked
+"needs verification" rather than "unintentional," since it's low severity
+(a guard not getting 12 arrows is a minor balance nuance, not a functional
+break) and very likely intentional given the mod's popularity and scope.
+Flagged as task-0010 (assigned to Cursor) to confirm via the mod's
+documentation rather than treating it as a bug.
+
+### Not individually audited (out of scope for this baseline pass)
+
+MagicEffect, Spell, Quest, Perk — too large to hand-check record by
+record in one pass. **Recommend as follow-up tasks** if deeper conflict
+resolution is wanted before further customization. NPC_, Dialogue, Cell,
+and Armor/Weapon/ConstructibleObject/LeveledItem, previously in this
+list, were fully audited in task-0004, task-0005, and task-0006 above.
 
 ### Tiering methodology discrepancy — resolved (task-0003)
 
@@ -198,6 +308,7 @@ asserting conflicts are "known-expected" without a source.
 | Missing masters | None |
 | Other load-order errors | None (0 excluded plugins) |
 | Total record conflicts | 129,515 |
-| Conflicts individually audited | 14,665 (Race/Faction/Class/Worldspace: 327; NPC_/Dialogue: 14,338 — task-0004) — all healthy |
-| Unintentional conflicts found | None in audited categories |
+| Conflicts individually audited | 29,695 (Race/Faction/Class/Worldspace: 327; NPC_/Dialogue: 14,338 — task-0004; Cell: 13,588 — task-0005; Armor/Weapon/ConstructibleObject/LeveledItem: 1,442 — task-0006) |
+| Unintentional conflicts found | 1 (Cell) — `McmRecorder.esp` on `WEMerchantChests`, flagged as task-0009 |
+| Needs verification (low severity) | 4 (LeveledItem) — `Lux Orbis.esp` gear-list edits, flagged as task-0010 |
 | Bashed/Smashed patch present | No — discrepancy with documented methodology |
