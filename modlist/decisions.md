@@ -7,6 +7,36 @@ entry at the top.
 
 ---
 
+### 2026-07-05 — McmRecorder.esp removed from the load order (task-0011)
+
+Despite task-0009's "keep it, document as harmless" conclusion, the
+decision was made to remove `McmRecorder.esp` entirely — it's an older
+approach to recording MCM settings, superseded by a newer method. Before
+removing, independently re-verified (not just trusting the prior session)
+that nothing depends on it: grepped every plugin binary in the install for
+the literal master-reference string `McmRecorder.esp` — zero matches,
+meaning no other plugin declares it as a master, which structurally means
+none can reference its forms. Confirmed clean.
+
+**Correction to the task-0005 finding:** re-examining the `WEMerchantChests`
+cell diff before removing turned up that the dropped navmesh (1 entry →
+0) was **not** McmRecorder's doing — `Update.esm` (the immediate
+predecessor in the override chain) already had 0 navmesh entries for this
+cell, independent of McmRecorder. Only the swapped persistent reference
+(vanilla merchant-chest object → McmRecorder's own debug `MiscItem`) was
+actually McmRecorder's change. This doesn't change the removal decision,
+but the earlier "drops the cell's navmesh" framing was inaccurate — flag
+this correction if referencing task-0005 later.
+
+Removed by disabling the mod in `modlist.txt` and removing its plugin
+entry from `plugins.txt`/`loadorder.txt` in the `Anvil - Main Profile`
+(354 → 353 active plugins, 924 → 923 enabled mods). Verified post-removal:
+`housecarl_load_order_status` reports 0 missing masters, 353/353 resolved;
+the `WEMerchantChests` cell now resolves cleanly to `Update.esm` with the
+original persistent reference restored. `modlist/baseline-plugins-
+2026-07-05.txt` was left as-is (annotated with a note) since it's a
+historical baseline snapshot, not current-state tracking.
+
 ### 2026-07-05 — Lux Orbis guard/Civil War leveled-list edits confirmed intentional (task-0010)
 
 task-0006 flagged four `LeveledItem` wins by `Lux Orbis.esp` (`GuardGear`,

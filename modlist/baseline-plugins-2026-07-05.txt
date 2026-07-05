@@ -1,3 +1,10 @@
+# NOTE (2026-07-05, task-0011): this file is a historical snapshot from
+# the task-0002 baseline scan and is NOT updated to reflect later changes.
+# McmRecorder.esp was removed from the load order on this date (see
+# tasks/completed/task-0011.md and decisions.md) — it still appears below
+# as entry 106 because this list represents the baseline as it was, not
+# current state. Do not treat this file as authoritative for what's
+# currently installed; re-run housecarl_load_order_status for that.
    1. Skyrim.esm
    2. Update.esm
    3. Dawnguard.esm
