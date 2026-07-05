@@ -7,6 +7,33 @@ entry at the top.
 
 ---
 
+### 2026-07-05 — Lux Orbis guard/Civil War leveled-list edits confirmed intentional (task-0010)
+
+task-0006 flagged four `LeveledItem` wins by `Lux Orbis.esp` (`GuardGear`,
+`CWSoldierImperialGear`, `CWSoldierSonsGear`, `CWSoldierSonsGear1H`) that
+remove ammo entries (e.g. 12× Steel Arrow from `GuardGear`). The Lux Orbis
+Nexus description (mod 56095) explicitly states: *"Guards levelled list has
+been edited so that they stop using torches all around, pretty much
+destroying all meshes nearby"* and *"Most civil war content has been
+reworked."* These are **core Lux Orbis design choices**, not a stray FOMOD
+patch option or an accidental conflict. No patch or revert recommended —
+reverting would restore guard torch/gear behaviour that conflicts with Lux
+Orbis lighting. Low-severity balance nuance only.
+
+### 2026-07-05 — McmRecorder.esp WEMerchantChests edit confirmed harmless (task-0009)
+
+task-0005 flagged `McmRecorder.esp` winning cell `WEMerchantChests`
+(`0BBCB2`) with dropped navmesh and a swapped persistent ref to
+`McmRecorder_MessageText`. Research confirms: (1) the Nexus page and GitHub
+repo describe MCM recording only — no stated reason to edit world cells;
+(2) `WEMerchantChests` is an [inaccessible developer test
+cell](https://en.uesp.net/wiki/Skyrim:Inaccessible_Cells) (peddler merchant
+chest storage, reachable only via console `coc`); (3) the edit matches
+accidental CK dirt, not mod functionality. **Decision: (c) document as
+confirmed-harmless — no patch task, do not disable the mod** (Anvil keeps
+`McmRecorder.esp` active for list MCM automation). Optional list-hygiene
+patch is low priority if ever desired.
+
 ### 2026-07-05 — Full Quest/Perk/MagicEffect/Spell audit; all baseline categories now audited (task-0007)
 
 Individually audited all 1,562 conflicts across Quest (576), Perk (151),
