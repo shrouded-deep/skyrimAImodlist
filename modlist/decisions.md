@@ -7,7 +7,48 @@ entry at the top.
 
 ---
 
-### 2026-07-05 — Community Shaders recategorized: runtime shader system, not generated-output toolchain
+### 2026-07-05 — USSEP, USMP, and Community Shaders updated; sbbe.esp folder identified (task-0013)
+
+Updated three routine framework mods on the D: Anvil MO2 instance (`Anvil -
+Main Profile`) ahead of the DynDOLOD/PGPatcher maintenance window. All are
+runtime/in-place mod-folder replacements — no load-order or plugin-list edits.
+
+**USSEP 4.3.8a** (was 4.3.4a): Nexus page requires Skyrim **1.6.1130+**;
+install is on **1.6.1170 / SKSE 2.2.6** — compatible. ESP dated 2026-03-21.
+
+**USMP 2.6.8** (was 2.6.3; task specified 2.6.7 but 2.6.8 was latest on
+Nexus at install time): Nexus requirements table confirms **powerofthree's
+Papyrus Extender is no longer required** as of 2.6.7+ (was only mandatory
+for 2.6.4–2.6.6 due to the removed UOSC bundle). USMP still masters
+`Unofficial Skyrim Special Edition Patch.esp` — load order unchanged. ESP
+dated 2026-07-02.
+
+**Community Shaders 1.7.3** (was 1.2.1): DLL dated 2026-06-27. CS plugin
+submods in the Anvil CS block updated where newer Nexus MAIN files existed:
+Grass Collision **3.0.2**, SSGI **4.2.0**. Verified unchanged/current:
+Grass Lighting 2.0.0, Grass Sampler Fix 1.0.1, Screen Space Shadows 2.0.0,
+Terrain Shadows 1.0.0, NAT.CS III 1.5.0.0. **Community Shaders - Anvil
+Settings** INI overrides preserved (not overwritten). **Anvil - Community
+Shaders ShaderCache Output** cleared (meta.ini only remains) — disk cache
+will rebuild on next game launch.
+
+**Missing masters:** binary scan of all 343 active plugins against 361
+available plugin files → **0 missing masters**.
+
+**sbbe.esp hygiene (from task-0012):** plugin lives in MO2 folder
+`SpiRally's Beautiful Butterflies Enhanced`
+(`D:\Skyrim AI Modlist\Anvil\mods\SpiRally's Beautiful Butterflies Enhanced\sbbe.esp`).
+Benign critter FormList expansion — no action needed.
+
+**Post-update re-audit:** **Low priority.** USSEP/USMP historically win their
+records cleanly in this list. Optional spot-check if gameplay issues appear:
+USSEP 4.3.8a changelog (Mar 2026) for any removed/replaced records that could
+shift conflict winners; USMP 2.6.8 for script/quest fixes affecting mods that
+patch the same records. No immediate houseCARL conflict pass warranted unless
+something breaks in testing. **First launch after CS update will compile
+shaders** — expect one-time "Compiling Shaders" delay.
+
+---
 
 The version-check report (task-0008) and the initial task-0013 scope both
 grouped Community Shaders with PGPatcher/DynDOLOD as part of a "coordinated
