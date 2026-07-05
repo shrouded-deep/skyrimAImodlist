@@ -106,28 +106,82 @@ worldspace, won by `Occlusion.esp`) look alarming in isolation but are
 normal for DynDOLOD/Occlusion, which intentionally touch a huge number of
 plugins' worldspace data for LOD generation.
 
+### Full manual audit — NPC_ and Dialogue (task-0004)
+
+Per follow-up from the original baseline pass, NPC_ and Dialogue
+(DialogTopic + DialogResponses) were audited in full as the two
+highest-risk unaudited categories: NPC_ conflicts commonly cause missing
+faces, wrong stats, or duplicate NPCs; Dialogue conflicts can silently
+break quest lines. **14,338 records individually checked** (4,711 NPC_ +
+3,424 DialogTopic + 6,203 DialogResponses). Method: pulled every conflict
+as a compact summary line (winner + override depth, no full field diffs),
+grouped by winning plugin, and individually inspected every winner that
+wasn't an obvious bulk compatibility patch.
+
+**Verdict: healthy across all three — no unintentional or unresolved
+conflicts found.**
+
+**NPC_ (4,711 conflicts)** — winner breakdown:
+
+| Winner | Count | Why expected |
+|---|---|---|
+| `ANV_SynHPHRaceMenuPatcher.esp` | 4,251 | Generated Synthesis patcher output |
+| `unofficial skyrim special edition patch.esp` | 233 | USSEP |
+| `Unofficial Skyrim Modders Patch.esp` | 111 | USMP |
+| `FacegenForKids.esp` | 43 | Named facegen fix, confirmed winning only child NPCs (Frodnar, Knud, Svari, etc.) |
+| `Dawnguard.esm` | 42 | DLC master override |
+| `ANV_SynNPCPatcher.esp` | 14 | Generated Synthesis patcher output |
+| `ANV_zzjay's Horse Overhaul - USSEP.esp` | 4 | Named USSEP patch, confirmed winning only player-horse NPCs it's built to fix |
+| `zz_HorseOverhaul.esp` | 3 | Base mod, wins horse NPCs its own USSEP patch doesn't touch — expected, not a gap |
+| `Update.esm` | 3 | Master override |
+| `ccbgssse001-fish.esm` | 1 | CC content |
+| `VigilanceReborn.esp` | 1 | Confirmed: wins its own "TrainedDog" (Vigilance) record |
+| `UniqueBarbas.esp` | 1 | Confirmed: wins its own "DA03Barbas" record |
+| `Simple Children - USSEP Aventus Aretino Patch.esp` | 1 | Named USSEP patch for one NPC |
+| `Nilheim.esp` | 1 | Confirmed: wins its own added-location bandit guard NPC |
+| `MeekoReborn.esp` | 1 | Confirmed: wins its own "Meeko" dog record |
+| `ANV_Praedy's Skulls - USSEP.esp` | 1 | Named USSEP patch for one NPC |
+
+**Dialogue — DialogTopic (3,424) + DialogResponses (6,203) = 9,627
+conflicts** — winner breakdown (combined):
+
+| Winner | Count | Why expected |
+|---|---|---|
+| `unofficial skyrim special edition patch.esp` | 8,793 | USSEP |
+| `Unofficial Skyrim Modders Patch.esp` | 304 | USMP |
+| `HearthFires.esm` | 290 | DLC master override |
+| `Update.esm` | 95 | Master override |
+| `Dragonborn.esm` | 72 | DLC master override |
+| `AdoptionAndMovingFix.esp` | 33 | Confirmed: all wins are adoption/moving dialogue (`RelationshipAdoption_*`) |
+| `Dawnguard.esm` | 32 | DLC master override |
+| `ANV_AdoptionAndMovingFix - USSEP Patch.esp` | 2 | Named USSEP patch for the same adoption dialogue |
+| `dunPOISoldiersRaidOnStartTweak.esp` | 2 | Confirmed: wins its own named quest-start dialogue |
+| `StalhrimSourceFix.esp` | 2 | Confirmed: wins Fanari/Stalhrim quest dialogue it's named for |
+| `DLC2MarchoftheDeadFix.esp` | 1 | Named fix, single record it's built to patch |
+| `Audio Overhaul Skyrim.esp` | 1 | Single dialogue record touched by an audio mod |
+
+No case was found where a low-priority or unrelated mod won an NPC or
+dialogue record it had no obvious business touching.
+
 ### Not individually audited (out of scope for this baseline pass)
 
-Cell, NPC_, dialogue (INFO/DIAL), Armor, Weapon, ConstructibleObject,
-LeveledItem, MagicEffect, Spell, Quest, Perk — too large to hand-check
-record by record in one pass. **Recommend as follow-up tasks** (one task
-per category, or per suspected problem area) if deeper conflict resolution
-is wanted before further customization.
+Cell, Armor, Weapon, ConstructibleObject, LeveledItem, MagicEffect, Spell,
+Quest, Perk — too large to hand-check record by record in one pass.
+**Recommend as follow-up tasks** (one task per category, or per suspected
+problem area) if deeper conflict resolution is wanted before further
+customization. NPC_ and Dialogue, previously in this list, were fully
+audited in task-0004 above.
 
-### Tiering methodology discrepancy
+### Tiering methodology discrepancy — resolved (task-0003)
 
-`modlist/load-order-notes.md` states the tiering methodology as "bashed/
-smashed patches last." **This load order has neither** — no plugin named
-`Bashed Patch.esp` or similar exists anywhere in the 354-plugin list. The
-last plugins are Synthesis-based patchers, ParallaxGen, DynDOLOD, and
-Occlusion — not a bashed/smashed leveled-list/inventory merge patch. Same
-finding as the earlier (E:) pass — this is a property of the Anvil
-methodology itself, not specific to one instance.
-
-Not treating this as a bug to fix — flagging per project convention (do
-not silently change tiering methodology). **Follow-up: confirm with the
-user/Cursor whether a bashed or smashed patch is intentionally absent
-(e.g. Synthesis modules cover its role) or genuinely missing.**
+`modlist/load-order-notes.md` previously stated the tiering methodology as
+"bashed/smashed patches last," which this load order didn't match — no
+`Bashed Patch.esp`/Smashed Patch output exists; the load order ends with
+Synthesis-based patchers, ParallaxGen, DynDOLOD, and Occlusion instead.
+Task-0003 confirmed this is intentional: the stale "bashed/smashed" line
+was generic boilerplate, not Anvil's actual methodology, and
+`load-order-notes.md` has been updated accordingly. See the task-0003
+decisions.md entry for full rationale.
 
 ### Known/expected issues from prior documentation
 
@@ -144,6 +198,6 @@ asserting conflicts are "known-expected" without a source.
 | Missing masters | None |
 | Other load-order errors | None (0 excluded plugins) |
 | Total record conflicts | 129,515 |
-| Conflicts individually audited | 327 (Race/Faction/Class/Worldspace) — all healthy |
+| Conflicts individually audited | 14,665 (Race/Faction/Class/Worldspace: 327; NPC_/Dialogue: 14,338 — task-0004) — all healthy |
 | Unintentional conflicts found | None in audited categories |
 | Bashed/Smashed patch present | No — discrepancy with documented methodology |
