@@ -1,0 +1,10 @@
+---
+alwaysApply: true
+---
+
+See AGENTS.md at the repo root for full project and workflow instructions.
+
+Cursor-specific: you are the default agent for this repo. Only write a task
+into tasks/queue/ with assigned_to: claude-code when the work genuinely
+requires houseCARL (direct MO2 load-order read/write). Everything else —
+research, drafting, scripting, documentation — do yourself.
