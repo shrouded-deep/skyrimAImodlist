@@ -7,6 +7,30 @@ entry at the top.
 
 ---
 
+### 2026-07-05 — Community Shaders recategorized: runtime shader system, not generated-output toolchain
+
+The version-check report (task-0008) and the initial task-0013 scope both
+grouped Community Shaders with PGPatcher/DynDOLOD as part of a "coordinated
+regen" maintenance window. This was incorrect. Community Shaders is a
+**runtime shader system** — it builds its shader cache on first game launch
+after an update; there is no offline generation step, and it has no
+dependency on PGPatcher or DynDOLOD output. It can be updated at any time,
+independently, the same as any other framework mod.
+
+Corrected in:
+- `version-check-2026-07-05.md`: executive summary, "Biggest gap" paragraph,
+  Tier 1 table (CS moved to its own "Runtime shader system" subsection, out
+  of "Generated-output toolchain"), and recommended update order (CS now
+  listed with the SKSE-DLL batch, not between PGPatcher and DynDOLOD).
+- `tasks/queue/task-0013.md`: CS added to scope alongside USSEP/USMP.
+
+**Rule for future maintenance planning:** CS plugin submods (individual
+shader feature modules) should be updated alongside CS itself to stay on
+compatible versions — but this is still a routine "update and relaunch"
+operation, not a regen event.
+
+---
+
 ### 2026-07-05 — FormList, GameSettingString, Keyword, Global audit complete; all top-20 categories now audited (task-0012)
 
 Individually audited the four remaining top-20 conflict categories from the

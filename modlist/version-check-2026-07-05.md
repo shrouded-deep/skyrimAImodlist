@@ -17,17 +17,23 @@ MO2's `newestVersion` cache was last refreshed around the April 2025 install
 | Category | Count / status |
 |---|---|
 | Core frameworks verified | 35 mods (see Tier 1) |
-| **Behind upstream — high caution** | Community Shaders, Open Animation Replacer, DynDOLOD toolchain, PGPatcher/ParallaxGen |
+| **Behind upstream — high caution** | Open Animation Replacer, DynDOLOD toolchain, PGPatcher/ParallaxGen |
+| **Behind upstream — routine/always-keep-current** | Community Shaders (runtime shader cache only — update independently, no regen coordination needed) |
 | **Behind upstream — routine/medium** | USSEP, USMP, Water for ENB, Faultier PBR suite, several landscape/PBR add-ons |
 | Current per MO2 + Nexus spot-check | SKSE, Address Library, Lux suite, SPID/KID, most PO3 libs, RaceMenu, TDM, etc. |
 | MO2 stale cache (installed ≠ newestVersion) | **78** mod folders total — mostly texture/misc; full list in Appendix A |
 | Abandoned / static | Nemesis (no updates since 2021), several pre-2020 texture mods still present |
 | Flagged in decisions.md | MCM Recorder — version current; dirty cell issue is separate |
 
-**Biggest gap:** the **generated-output toolchain** (Community Shaders, PGPatcher,
+**Biggest gap:** the **offline generated-output toolchain** (PGPatcher/ParallaxGen,
 DynDOLOD) is several major versions behind current upstream. Updating any one piece
-requires coordinated regen (shader cache, ParallaxGen, TexGen/DynDOLOD, Synthesis,
-Occlusion) — treat as a planned maintenance window, not drive-by bumps.
+requires coordinated regen (ParallaxGen, TexGen/DynDOLOD, Synthesis, Occlusion) —
+treat as a planned maintenance window, not drive-by bumps.
+
+**Community Shaders is not part of this coordination risk.** CS is a runtime shader
+system — it builds its shader cache on first game launch after an update, with no
+offline generation step and no dependency on PGPatcher or DynDOLOD output. Update it
+independently whenever a new version is available, same as any other framework mod.
 
 ---
 
@@ -89,11 +95,19 @@ Occlusion) — treat as a planned maintenance window, not drive-by bumps.
 | SmoothCam | 41252 | 1.7.0.0 | 1.7.0.0 | Current |
 | TrueHUD | 62775 | 1.1.9.0 | 1.1.9.0 | Current |
 
+### Runtime shader system
+
+Community Shaders generates its shader cache at game launch — no offline regen step,
+no coordination with DynDOLOD or PGPatcher. Update independently, keep current.
+
+| Component | Installed | Latest available | Update risk |
+|---|---|---|---|
+| **Community Shaders** (86492) | 1.2.1.0 | **1.7.3** (Jun 2026) | **Routine** — update independently; CS plugin submods (listed in MO2 under the CS section) should be updated at the same time to stay compatible with the new CS version |
+
 ### Generated-output toolchain (highest maintenance cost)
 
 | Component | Installed | Latest available | Update risk |
 |---|---|---|---|
-| **Community Shaders** (86492) | 1.2.1.0 | **1.7.3** (Jun 2026) | **High** — multiple minor/major releases; full shader-cache regen; many CS plugin updates |
 | **PGPatcher / ParallaxGen** (120946) | tool binary dated **2025-04-19** | **1.1.4** (Jun 2026) | **High** — regen `ParallaxGen.esp` / `PG_1.esp` after update |
 | **DynDOLOD Standalone** (68518) | tool binary dated **2025-02-24** | **Alpha-204** (Jun 2026) | **High** — full TexGen + DynDOLOD regen |
 | **DynDOLOD Resources SE 3** (52897) | Alpha-55 | **Alpha-59** (May 2026) | **High** — must match standalone version |
@@ -163,8 +177,8 @@ Nothing checked appears **removed from Nexus**. No hard 404s on priority mod IDs
 Report only; no tasks queued. If you choose to update, this order minimizes breakage:
 
 1. **USSEP → USMP** (plugin-level; no tool regen)
-2. **SKSE-dependent DLLs** as a batch (CS, OAR, SPID, W4ENB, etc.) after verifying each supports your game runtime
-3. **Community Shaders** + shader-cache regen
+2. **Community Shaders + CS plugin submods** (runtime only; no regen; update independently at any time — listed here for ordering convenience only)
+3. **SKSE-dependent DLLs** as a batch (OAR, SPID, W4ENB, etc.) after verifying each supports your game runtime
 4. **PGPatcher** → regen ParallaxGen output
 5. **DynDOLOD Resources + Standalone + DLL** (matched versions) → TexGen → DynDOLOD → Occlusion
 6. **Synthesis** profile regen (four `ANV_Syn*.esp`)
