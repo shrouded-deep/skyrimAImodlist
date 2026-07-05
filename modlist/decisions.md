@@ -7,6 +7,29 @@ entry at the top.
 
 ---
 
+### 2026-07-05 — FormList, GameSettingString, Keyword, Global audit complete; all top-20 categories now audited (task-0012)
+
+Individually audited the four remaining top-20 conflict categories from the
+original baseline scan: FormList (40), GameSettingString (51), Keyword (2),
+Global (27) — 120 records total. **All 120 confirmed healthy.** Notable
+findings: `sbbe.esp` wins three insect/moth FormLists by adding 16+ new
+butterfly species entries — confirmed to be a critter variety expansion mod
+(species names: AgraulisVanillae, BattusPhilenor, Kaisermantel, etc.); its
+plugin has no matching MO2 mod-folder name (likely bundled under a differently-
+named folder) but the conflict is benign. `Audio Overhaul Skyrim.esp` wins
+two USSEP armor material Keywords (`USLEEPArmorMaterialBlackguard`,
+`USKPArmorMaterialLinwe`) — confirmed standard AOS behaviour for applying
+custom impact-sound descriptors. `SurvivalModeImproved.esp` wins all 27 CC
+Survival globals — its entire purpose.
+
+This completes the conflict audit of all top-20 categories from the original
+baseline (31,377 total records individually checked across task-0002,
+task-0004 through task-0007, and task-0012). Remaining ~98k conflicts are
+outside the top-20 sample (NAVI, LAND, REFR, etc.) and are not audited
+unless a specific problem is identified.
+
+---
+
 ### 2026-07-05 — McmRecorder.esp removed from the load order (task-0011)
 
 Despite task-0009's "keep it, document as harmless" conclusion, the

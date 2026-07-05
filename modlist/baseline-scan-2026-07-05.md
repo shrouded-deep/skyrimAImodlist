@@ -317,15 +317,61 @@ changes into one winning record (that's literally what the `ANV_*-USSEP`
 naming convention means on this list). No case was found where a winner
 touched script fragments/aliases without an obvious reason to.
 
+### Full manual audit — FormList, GameSettingString, Keyword, Global (task-0012)
+
+All four remaining top-20 categories audited: FormList (40), GameSettingString
+(51), Keyword (2), Global (27) — **120 total. All 120 confirmed healthy.**
+
+**FormList (40):**
+
+| Winner | Count | Why expected |
+|---|---|---|
+| `unofficial skyrim special edition patch.esp` | 22 | USSEP — diverse vanilla list fixes |
+| `Update.esm` | 2 | Master override |
+| `Dawnguard.esm` | 2 | DLC master override |
+| `ccbgssse001-fish.esm` | 1 | CC content |
+| `Audio Overhaul Skyrim.esp` | 3 | Wins `TrapGasOnHit`, `TrapGasOnEnter`, `trapGasWeapon` — AOS alters trap-gas sound/effect chains, owning these lists is expected |
+| `SurvivalModeImproved.esp` | 2 | Wins `Survival_ColdWeakRacesMajor`, `Survival_OblivionLocations` — its own CC survival-mode lists |
+| `Embers XD - Patch - Survival Mode Improved.esp` | 1 | Wins `Survival_WarmUpObjectsList` — named compatibility patch for exactly these two mods |
+| `Unofficial Skyrim Modders Patch.esp` | 1 | USMP — `HairColorList` |
+| `Landscape and Water Fixes.esp` | 2 | Wins two tavern lock-list FormLists (`FalkreathDeadMansDrinkLockList`, `SolitudeWinkingSkeeverLockList`) — named landscape/fix mod, plausible cell-object scope |
+| `FacegenForKids.esp` | 1 | Wins `HeadPartsChildren` — named child-facegen fix, exact match |
+| `sbbe.esp` | 3 | Wins `AAAMothPlantTypes`, `critterMothTypes`, `critterInsectsDiurnal` — confirmed via `conflict_tree`: sbbe.esp is a butterfly/moth critter variety expansion (editorIDs include `CritterMothAgraulisVanillae`, `CritterMothBattusPhilenor`, `CritterMothKaisermantel`, etc. — real butterfly species names); it adds 16+ new moth species and registers them in these critter-type FormLists so they spawn in-world. 622 total records touched by the plugin, all within its own critter domain. Note: sbbe.esp is active as a plugin but has no matching MO2 mod folder name — it is probably bundled under a differently-named folder (not investigated further here). |
+
+**GameSettingString / Float / Int (51):**
+
+| Winner | Count | Why expected |
+|---|---|---|
+| `Update.esm` | 8 | Master override — system strings and `fTemperingSkillUseMult` |
+| `unofficial skyrim special edition patch.esp` | 1 | USSEP — `iDeathDropWeaponChance` |
+| `Unofficial Skyrim Modders Patch.esp` | 5 | USMP — bump-reaction timers, `fSandboxCylinderBottom`, voice-file padding |
+| `Revert Runandwalkpaces.esp` | 2 | Wins `fFastWalkInterpolationBetweenWalkAndRun`, `fJogInterpolationBetweenWalkAndRun` — named mod whose stated purpose is reverting run/walk pace changes; exact match |
+| `XPMSE.esp` | 9 | Wins death-force physics globals (`fDeathForce*`) and `fZKeyMaxForce*` — XP32 Maximum Skeleton adjusts physics settings for its skeleton system; documented XPMSE behaviour |
+| `dD - Enhanced Blood Main LITE.esp` | 10 | Wins all blood-splatter settings (`fBloodSplatter*`, `iBloodSplatterMaxCount`) — Enhanced Blood Textures mod; exact domain match |
+| `MoonsAndStars.esp` | 7 | Wins moon/star fade-angle and rotation-axis settings — named sky-visual mod; exact domain match |
+| `NAT-ENB.esp` | 3 | Wins `fSunDirXExtreme`, `fAutoraFadeIn/Out` — Natural and Atmospheric Tamriel weather mod; sun direction and aurora controls are its domain |
+| `MoonGlowSize.esp` | 2 | Wins `iMasserSize`, `iSecundaSize` — named mod, exact match |
+| `Water for ENB (Shades of Skyrim).esp` | 1 | Wins `sDefaultCubeMap` — named water/ENB mod setting its own cube-map path |
+
+**Keyword (2):**
+
+| Winner | Count | Why expected |
+|---|---|---|
+| `Audio Overhaul Skyrim.esp` | 2 | Wins `USLEEPArmorMaterialBlackguard`, `USKPArmorMaterialLinwe` (USSEP-added material keywords for Blackguard and Linwe's armors) — AOS modifies armor material keywords to point to its custom impact-sound descriptors; this is standard, documented AOS behaviour for its USSEP compatibility layer |
+
+**Global (27):**
+
+| Winner | Count | Why expected |
+|---|---|---|
+| `SurvivalModeImproved.esp` | 27 | Wins every single `Survival_*` global from `ccqdrsse001-survivalmode.esl` (hunger stages, cold levels, exhaustion rates, racial bonuses, etc.) — SurvivalModeImproved's entire purpose is tuning CC survival-mode values; winning all 27 is exactly what it is designed to do |
+
 ### Not individually audited (out of scope for this baseline pass)
 
-None remaining — NPC_, Dialogue, Cell, Armor, Weapon, ConstructibleObject,
-LeveledItem, Quest, Perk, MagicEffect, and Spell (the ~20 largest conflict
-categories from the original baseline) have all been fully audited across
-task-0004, task-0005, task-0006, and task-0007. Categories outside the
-original top-20 sample (NAVI, LAND, REFR-level cell forwarding, and other
-smaller record types) remain unaudited; treat as a future task only if a
-specific problem is suspected there.
+All top-20 conflict categories from the original baseline are now fully audited
+(task-0002 through task-0007 and task-0012). Categories outside the top-20
+sample (NAVI, LAND, REFR-level cell forwarding, and other smaller record types
+representing the remaining ~98k of 129,515 total conflicts) remain unaudited;
+treat as a future task only if a specific problem is suspected there.
 
 ### Tiering methodology discrepancy — resolved (task-0003)
 
@@ -353,7 +399,7 @@ asserting conflicts are "known-expected" without a source.
 | Missing masters | None |
 | Other load-order errors | None (0 excluded plugins) |
 | Total record conflicts | 129,515 |
-| Conflicts individually audited | 31,257 (Race/Faction/Class/Worldspace: 327; NPC_/Dialogue: 14,338 — task-0004; Cell: 13,588 — task-0005; Armor/Weapon/ConstructibleObject/LeveledItem: 1,442 — task-0006; Quest/Perk/MagicEffect/Spell: 1,562 — task-0007) — this covers all ~20 largest conflict categories from the original baseline |
+| Conflicts individually audited | 31,377 (Race/Faction/Class/Worldspace: 327; NPC_/Dialogue: 14,338 — task-0004; Cell: 13,588 — task-0005; Armor/Weapon/ConstructibleObject/LeveledItem: 1,442 — task-0006; Quest/Perk/MagicEffect/Spell: 1,562 — task-0007; FormList/GameSettingString/Keyword/Global: 120 — task-0012) — all top-20 conflict categories from original baseline now fully audited |
 | Unintentional conflicts found | 1 (Cell) — `McmRecorder.esp` on `WEMerchantChests`, flagged as task-0009 |
 | Needs verification (low severity) | 4 (LeveledItem) — `Lux Orbis.esp` gear-list edits, flagged as task-0010 |
 | Bashed/Smashed patch present | No — discrepancy with documented methodology |
