@@ -62,14 +62,12 @@ to load (hard block since CS PR #1477). Anvil had `Enhanced Volumetric Lighting
 and Shadows (EVLaS)` enabled alongside CS — valid under CS 1.2.1, broken under
 1.7.3.
 
-**Fix applied:** disabled EVLaS in MO2 `modlist.txt`. CS replacement is
-[Sky Sync](https://www.nexusmods.com/skyrimspecialedition/mods/153543) (CS
-feature plugin) — **not yet installed** in this list. Anvil already has
-Skylighting + NAT.CS III; NAT.CS ships an optional `EVLaS.cfg` tuned for NAT
-(that config only applied when EVLaS.dll was present). Install Sky Sync near
-other CS plugins and enable in the CS in-game menu for sun/moon VL sync.
-DynDOLOD terrain underside (already in Anvil output) satisfies Sky Sync's mesh
-requirement.
+**Fix applied:** disabled EVLaS in MO2 `modlist.txt`. Sky Sync (the CS
+equivalent of EVLaS's sun/moon volumetric sync) is **built into CS core since
+1.7.0** — no separate install needed. `Community Shaders - Anvil Settings`
+already has Sky Sync `Enabled: true` (confirmed in task-0017). NAT.CS III's
+optional `EVLaS.cfg` no longer applies now that EVLaS.dll is absent — no
+action needed there either.
 
 ---
 
