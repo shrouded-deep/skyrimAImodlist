@@ -7,6 +7,26 @@ entry at the top.
 
 ---
 
+### 2026-07-06 — OAR 3.x audit + SPID bump (task-0015)
+
+**SPID:** updated **7.2.0.0.RC11 → 7.3.1** (AE / 1.6.629+ DLL from GitHub
+FOMOD). Six `_DISTR.ini` files in the install — all use standard Spell/Skin
+distribution syntax; no grammar changes needed for 7.3.x. In-game distribution
+log check recommended on next launch (`po3_SpellPerkItemDistributor.log`).
+
+**OAR audit:** full mod-folder scan found **six** replacer dependents (four
+native OAR JSON, two DAR legacy `_conditions.txt`). No Dynamic Animation
+Replacer mod installed; no OAR custom-condition SKSE plugins (Math Plugin,
+Payload Interpreter, etc.). OAR 3.x API changes affect extending plugins only —
+not this list's replacers. All six mods confirmed compatible via mod-page
+descriptions + OAR author's documented DAR backwards compatibility.
+
+**Decision:** proceed with **Open Animation Replacer 2.3.6.0 → 3.1.6** (Nexus
+92109, file 768987). Full per-mod table:
+[`oar-audit-2026-07-06.md`](oar-audit-2026-07-06.md).
+
+---
+
 ### 2026-07-06 — Full CS 1.7.3 ecosystem audit; corrects task-0013 oversights (task-0017)
 
 task-0013 updated Community Shaders to **1.7.3** but only bumped a handful of
