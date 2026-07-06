@@ -89,7 +89,7 @@ independently whenever a new version is available, same as any other framework m
 
 | Mod | Nexus ID | Installed | Latest available | Update risk |
 |---|---|---|---|---|
-| SkyUI | 12604 | 5.2.0.0SE | 5.2.0.0SE | Current (Nexus page stale since 2017 — mod is stable) |
+| SkyUI | 12604 | **6.11.0.0** | **6.11.0.0** | **Updated** (task-0014) — was 5.2 SE; community SkyUI 6 line (doodlum). Light ESL plugin; native aspect-ratio support |
 | RaceMenu | 19080 | 0.4.19.16 | 0.4.19.16 | Current |
 | True Directional Movement | 51614 | 2.2.6.0 | 2.2.6.0 | Current |
 | SmoothCam | 41252 | 1.7.0.0 | 1.7.0.0 | Current |
@@ -164,7 +164,7 @@ AOS 4.1.3, MCM Helper 1.5.
 |---|---|
 | **Nemesis** (60033) | No updates since Dec 2021. Still at 0.84-beta. Community successor: **Pandora Behaviour Engine+** (133232). Anvil ships pre-generated Nemesis output — engine update only matters if animation mods change. |
 | **Simple Children** (22789) | Nexus page unchanged since 2019. Works but unmaintained. |
-| **SkyUI** (12604) | Functionally complete; Nexus metadata frozen since 2017. |
+| **SkyUI** (12604) | **Updated to 6.11** (task-0014). Same Nexus page received major community update Mar 2026 after 9 years — version-check spot-check missed it. |
 | **Better Dialogue / MessageBox Controls** (1429/1428) | Nexus pages from 2016 — stable utilities, not actively maintained. |
 | **Ultimate HD Torch** (28060) | Nexus page from 2013; Anvil uses a dated custom build string (`d2025.3.11.0`). |
 
@@ -240,7 +240,7 @@ Mods where MO2 `version` ≠ `newestVersion` (Apr 2025 install cache). Low-prior
 | Skyrim 3D Misc (×2) | 1.0.x | 1.0.2.0 |
 | SLaWF | 9.3.0.0 | 9.2.0.0 |
 | SLaWF Assorted Mesh Fixes | 1.1.0.0 | 1.16.1.0 |
-| SkyUI ESL Master plugin | 5.2.0.0a | 5.2.0.0 |
+| SkyUI ESL Master plugin | — | **Disabled** — native in SkyUI 6 (task-0014) |
 | slightly Better EVIL Rock Cairns | 1.1.0.0 | 1.0.0.0 |
 | SmoothCam Octavian Preset | 1.1.2.0 | 1.1.1.0 |
 | Snowy Tree Swapper | 2.0.0.0 | 1.0.0.0 |

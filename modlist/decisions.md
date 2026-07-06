@@ -7,6 +7,72 @@ entry at the top.
 
 ---
 
+### 2026-07-06 — Full CS 1.7.3 ecosystem audit; corrects task-0013 oversights (task-0017)
+
+task-0013 updated Community Shaders to **1.7.3** but only bumped a handful of
+labeled “CS plugin” folders. It missed that CS 1.7.x **merges many former
+standalone features into core** and **hard-blocks** others at startup.
+
+**Corrections applied** (see [`community-shaders-audit-2026-07-05.md`](community-shaders-audit-2026-07-05.md)):
+
+- **Disabled** core-merged standalone folders: Light Limit Fix, Terrain Shadows
+  (+ Heightmaps), Water Effects, Subsurface Scattering, Screen Space Shadows,
+  Grass Collision, Grass Lighting. Frame Generation was already off.
+- **Disabled** EVLaS (incompatible DLL — caused live launch failure).
+- **Updated** still-separate features to CS 1.7.3 line: Wetness Effects **3.1.0**,
+  Cloud Shadows **1.4.0**, Skylighting **1.4.0** (from CS GitHub release zips).
+- **Sky Sync:** confirmed **core since CS 1.7.0** — no Nexus folder needed.
+  `Community Shaders - Anvil Settings` already has Sky Sync **Enabled: true**.
+- **0 missing masters** after all modlist changes.
+
+**Left enabled (intentional):** SSGI 4.2.0, Grass Sampler Fix, NAT.CS III,
+NAT.ENB weather plugin, CS Light, Splashes of Storms (subjective overlap with
+Wetness Effects — Anvil aesthetic choice).
+
+**USSEP/USMP/SSGI from task-0013:** re-checked — still valid; no rollback needed.
+
+---
+
+Updated **SkyUI** (Nexus 12604) from 5.2 SE to **6.11** (doodlum community
+line, same mod page). Research found no blocking compatibility risk for this
+list — official SkyUI 6 article states backwards compatibility with SkyUI 5.2
+dependents; expected side effect is MCM/favourites settings reset (light-plugin
+conversion).
+
+**List-specific findings:**
+- `Complete Widescreen Fix` (21x9/32x9) was already **disabled** — SkyUI 6
+  adds native 16:9/21:9/32:9/4:3 aspect-ratio support.
+- Seven satellite mods **disabled** as redundant with SkyUI 6 integrations:
+  `SkyUI - ESL Plugin with Master Added` (native Skyrim.esm master + ESL flag),
+  `SkyUI - Ghost Item Bug Fix`, `Quest Journal Fix for SkyUI`, `SkyUI - 3D Item
+  Offset Fix`, `Wider MCM Menu for SkyUI`, `SkyUI - Fix Note Icon`, `Widescreen
+  Scale Removed`. No UI reskin mods (Dear Diary, Nordic UI, etc.) in the active
+  list that would need aspect-ratio SWF updates.
+- `SkyUI_SE.esp` verified: **ESL-flagged**, masters `Skyrim.esm` only.
+- Missing masters after update: **0** (343 active plugins).
+
+**User action:** reconfigure SkyUI MCM/favourites after first launch if settings
+reset. Watch for menu scaling issues on non-16:9 — re-enable widescreen helpers
+only if needed.
+
+### 2026-07-05 — EVLaS disabled for Community Shaders 1.7.x compatibility (post-task-0013)
+
+Launch error: CS 1.7.3 detects `EVLaS.dll` as an **incompatible DLL** and refuses
+to load (hard block since CS PR #1477). Anvil had `Enhanced Volumetric Lighting
+and Shadows (EVLaS)` enabled alongside CS — valid under CS 1.2.1, broken under
+1.7.3.
+
+**Fix applied:** disabled EVLaS in MO2 `modlist.txt`. CS replacement is
+[Sky Sync](https://www.nexusmods.com/skyrimspecialedition/mods/153543) (CS
+feature plugin) — **not yet installed** in this list. Anvil already has
+Skylighting + NAT.CS III; NAT.CS ships an optional `EVLaS.cfg` tuned for NAT
+(that config only applied when EVLaS.dll was present). Install Sky Sync near
+other CS plugins and enable in the CS in-game menu for sun/moon VL sync.
+DynDOLOD terrain underside (already in Anvil output) satisfies Sky Sync's mesh
+requirement.
+
+---
+
 ### 2026-07-05 — USSEP, USMP, and Community Shaders updated; sbbe.esp folder identified (task-0013)
 
 Updated three routine framework mods on the D: Anvil MO2 instance (`Anvil -
