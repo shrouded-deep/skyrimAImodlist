@@ -57,10 +57,11 @@ independently whenever a new version is available, same as any other framework m
 
 | Mod | Nexus ID | Installed | Latest available | Update risk |
 |---|---|---|---|---|
-| Spell Perk Item Distributor (SPID) | 36869 | 7.2.0.0.RC11 | 7.2.0.0.RC19+ (community lists) | **Medium** — RC bump; test `_DISTR` inis after update |
+| Spell Perk Item Distributor (SPID) | 36869 | **7.3.1** | 7.3.1 | **Current** (updated task-0015) |
 | Keyword Item Distributor (KID) | 55728 | 3.4.0.0 | 3.4.0.0 | Current |
-| Open Animation Replacer | 92109 | 2.3.6.0 | **3.1.6** (Jun 2026) | **High** — major v3; OAR/DAR mod compatibility pass required |
-| Project New Reign - Nemesis | 60033 | 0.84.0.0b- | 0.84-beta (unchanged) | **Static** — no Nexus updates since Dec 2021; spiritual successor is [Pandora Behaviour Engine+](https://www.nexusmods.com/skyrimspecialedition/mods/133232) (v4.2.0-beta, Mar 2026) — migration is a list-level decision |
+| Open Animation Replacer | 92109 | **3.1.6.0** | 3.1.6 | **Current** (updated task-0015) |
+| Project New Reign - Nemesis | 60033 | 0.84.0.0b- (disabled) | — | **Replaced** — Pandora Behaviour Engine+ 4.3.1-beta installed; MO2 prep done (task-0018); behavior regen pending manual MO2 launch |
+| Pandora Behaviour Engine+ | 133232 | **4.3.1-beta** (tool-only, disabled in modlist) | 4.3.1-beta | Installed — awaiting first manual regen |
 
 ### Patches & lighting stack
 
@@ -68,9 +69,10 @@ independently whenever a new version is available, same as any other framework m
 |---|---|---|---|---|
 | USSEP | 266 | 4.3.4.0a | **4.3.8a** (Mar 2026) | **Medium** — routine patch release; re-check conflict winners after update |
 | USMP | 49616 | 2.6.3.0 | **2.6.7** | **Medium** — several minor releases; 2.6.7 drops Papyrus Extender requirement |
-| Lux (Patch Hub) | 113002 | 6.8.0.0 | 6.8.0.0 | Current |
-| Lux Orbis | 56095 | 4.5.0.0 | 4.5.0.0 | Current |
-| Lux Via | 63588 | 2.2.0.0 | 2.2.0.0 | Current |
+| Lux (Patch Hub) | 113002 | 6.8.0.0 | 6.8.0.0 | **Disabled** 2026-07-07 (task-0021) — replaced by MLO2 pending install |
+| Lux Orbis | 56095 | 4.5.0.0 | 4.5.0.0 | **Disabled** 2026-07-07 (task-0021) |
+| Lux Via | 63588 | 2.2.0.0 | 2.2.0.0 | **Disabled** 2026-07-07 (task-0021) |
+| Modern Lighting Overhaul 2 | 160748 | — | latest | **Not installed** — user download required (task-0021) |
 | Embers XD | 37085 | 3.1.2.0 | 3.1.2.0 | Current |
 | Audio Overhaul Skyrim | 12466 | 4.1.3.0 | 4.1.3.0 | Current |
 

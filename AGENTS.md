@@ -48,6 +48,17 @@ successor list later.
   the follow-up implies a real strategic choice (e.g. changing curation
   philosophy, adding a mod that changes list scope) rather than a
   mechanical continuation of work already in progress.
+- **Tasks/plans marked "do not execute without human sign-off" require an
+  explicit, unambiguous approval phrase before an execution task is
+  created or run: the human must say "Task-XXXX approved" (with the
+  actual task/plan ID).** General instructions like "run the next task,"
+  "go ahead," "continue," or "what's next" do NOT count as approval for
+  anything gated this way, even if said right after the plan was
+  presented — treat those as applying only to already-approved or
+  routine (non-gated) work. If it's ambiguous whether a message approves
+  a specific gated item, stop and ask which task ID is being approved
+  rather than inferring it. This applies regardless of which agent is
+  operating or who queued the task.
 - Commit messages reference the task ID, e.g. `[task-0007] resolve ACOT/
   Kasako Core Framework conflict`.
 - Do not silently change the load order tiering methodology

@@ -7,6 +7,137 @@ entry at the top.
 
 ---
 
+### 2026-07-07 — Lux suite disabled; MLO2 install pending user download (task-0021)
+
+Executed MO2 prep per sign-off: **7 Lux-related mods disabled**, **36 Lux-named
+plugins removed** from `Anvil - Main Profile`, CS Light reverted from Lux FOMOD
+JSONs to vanilla core configs (Lux JSONs archived under
+`_disabled_lux_mlo2_migration/`). Snapshot:
+`modlist/exports/mlo2-pre-migration-2026-07-07/`.
+
+**MLO2 (160748) was not in MO2 downloads or mods** — could not install without
+Nexus auth. User must download/install via MO2 and place per
+[`mlo2-manual-run.md`](mlo2-manual-run.md). Optional WSU / Dark Crypts still
+deferred.
+
+Research reference: [`mlo2-migration-plan.md`](mlo2-migration-plan.md).
+
+---
+
+### 2026-07-07 — Lux → MLO2 migration sign-off; execution queued (task-0021)
+
+User approved **bold Lux removal** and MLO2 install after task-0019 research.
+Execution task **task-0021** queued (Cursor, MO2 folder/plugin work). Optional
+adds (Window Shadows Ultimate, Dark Crypts) **deferred** unless user requests later.
+
+Research reference: [`mlo2-migration-plan.md`](mlo2-migration-plan.md).
+
+---
+
+### 2026-07-07 — Lux suite → MLO2 migration researched; execution needs sign-off (task-0019)
+
+**Research only** — no MO2 changes. User intent: **bold full replacement** of Lux +
+Lux Orbis + Lux Via (113002/56095/63588) with [Modern Lighting Overhaul 2](https://www.nexusmods.com/skyrimspecialedition/mods/160748).
+
+**Findings:** Anvil has **7 Lux-suite MO2 mods**, **35 active Lux-named plugins**, and
+**22 content mods** with installed Lux/Orbis/Via patches (plus **CS Light** on Lux
+FOMOD configs). MLO2 native integration matches most of Anvil's Embers/SMIM/Swaps/CC
+Fishing stack; **Window Shadows Ultimate is not installed** (major window-light gap).
+Removing Lux does **not** remove Splashes of Storms or Sky Sync (task-0017); **CS Light
+must be reinstalled on Vanilla configs** before MLO2.
+
+Full plan: [`mlo2-migration-plan.md`](mlo2-migration-plan.md). **Do not execute**
+until explicit human sign-off — same bar as Pandora migration.
+
+---
+
+### 2026-07-07 — Pandora migration: three independent fixes before first clean run (task-0018)
+
+Nemesis → Pandora **prep looked complete on paper** but the first successful MO2
+**Launch** required **three unrelated fixes** — any one alone left Pandora broken.
+Do not skim "migration complete" and assume plug-and-play.
+
+| # | Blocker | Symptom (short) | Fix (short) |
+|---:|---|---|---|
+| 1 | **`ActiveMods.json` schema** | 0 patches / FATAL `ArgumentNullException` | camelCase `code`/`active`/`priority` only — wrong keys **crash startup** |
+| 2 | **`Settings.json` global scope** | Wrong output path / wrong Data scan | Pre-flight `%LocalAppData%\Pandora Behaviour Engine\Settings.json` every Anvil run |
+| 3 | **Engine path + MO2 launch** | Instant close (#385) or VFS broken (bat) | Exe at `tools/Pandora/`; MO2 → `.exe` direct; **Edit Executables only**; no batch launcher |
+
+**Outcome (2026-07-07):** clean regen — 15 `Pandora Mod` lines + FNIS Serana in
+`Engine.log`; `.hkx` in `Pandora Output`. In-game smoke test still pending.
+
+**Full diagnostic reference (symptom → cause → fix, not chronology):**
+[`pandora-manual-run.md` § Gotchas](pandora-manual-run.md#gotchas--symptom--cause--fix).
+
+Also documented there: 28 Patcher rows vs 15 to enable (install-folder samples);
+FNIS separate from checkboxes; **`tdmv` = Headtracking** (ID vs log display name);
+batch launcher obsolete now that Settings holds paths.
+
+---
+
+### 2026-07-07 — Pandora regen succeeded; FNIS vs Patcher UI clarified (task-0018)
+
+*(Superseded by entry above — detail lives in Gotchas section.)*
+
+First successful MO2 Pandora **Launch** after moving the engine to `tools/Pandora/`.
+`Engine.log` shows 15 `Pandora Mod` lines + `FNIS Mod 1 : FNIS_SeranaHoodFixWithAnim_List`;
+output `.hkx` under `Pandora Output/meshes/actors/character/Behaviors/`. In-game
+smoke test still pending.
+
+---
+
+### 2026-07-07 — Pandora engine moved out of `mods/` for MO2 launch (task-0018)
+
+*(Folded into "three independent fixes" entry above.)*
+
+Pandora **instant-closed** when launched from MO2 (no process, stale `Engine.log`,
+`ActiveMods.json` not regenerated) while direct exe launch worked. Root cause:
+[Pandora #385](https://github.com/Monitor221hz/Pandora-Behaviour-Engine-Plus/issues/385)
+— exe inside MO2 `mods/` + USVFS = silent exit.
+
+**Fix:** copied engine to `Anvil/tools/Pandora/`; MO2 tool #6 binary + working
+directory updated to that path. MO2 mod `Pandora Behaviour Engine+` remains
+disabled (legacy folder under `mods/` can be removed later). User must confirm
+tool paths in **Edit Executables** after MO2 restart, then run **Launch**.
+
+---
+
+### 2026-07-06 — Nemesis → Pandora MO2 prep complete; regen deferred to user (task-0018)
+
+MO2 folder prep for Nemesis → Pandora migration is **complete**. Behavior
+regeneration was **not run** — Pandora must be launched manually through MO2's
+executable toolbar (not automatable from Cursor).
+
+**Done on disk:**
+- Installed **Pandora Behaviour Engine+** v4.3.1-beta; MO2 tool #6 configured
+  (`--tesv` + `-o` to `Pandora Output`; no `--auto_run`)
+- Installed **Universal Behaviour Runtime — Auto Skeleton Patch** (176724)
+- Created **Bundled Behaviour Patches (Nemesis legacy)** (nemesis/rthf/turn/pscd
+  copied from old Nemesis engine)
+- Created empty **`Pandora Output`** mod (Pandora's standard output target; replaces
+  the never-created `Anvil - Pandora Output` placeholder)
+- **Disabled** Nemesis engine; **removed** Nemesis Creature Behaviour Compatibility
+- **Disabled** four broken empty animation mods
+- Pre-seeded `mods/Pandora Output/Pandora_Engine/ActiveMods.json` (16 Anvil patches +
+  `nemesis`; 13 engine install samples left out so UI defaults unchecked)
+
+**User action:** follow [`pandora-manual-run.md`](pandora-manual-run.md) — launch
+Pandora from MO2, verify patch checkboxes on the **Patcher** page, click **Launch**
+(play icon), in-game smoke test.
+
+**Pandora Settings.json is global (not MO2-scoped):** v4.x stores
+`gameDataPath` and `outputPath` in
+`%LocalAppData%\Pandora Behaviour Engine\Settings.json`. That file is shared
+across all MO2 instances on this PC. Anvil paths were corrected 2026-07-06 after
+stale `E:\Modlists\Skyrim AE\…` values caused a mismatch with MO2 CLI args.
+**This is not permanent** — running Pandora for another list, editing Settings
+in the Pandora UI, or a bad auto-detect can overwrite Anvil paths again.
+**Every future Anvil Pandora run** must pre-flight Settings.json per
+[`pandora-manual-run.md` §2](pandora-manual-run.md#2-pre-flight--verify-settingsjson-required-every-run).
+Saved Settings override MO2 `-o` / `--tesv` when the stored folders still exist.
+
+---
+
 ### 2026-07-06 — Nemesis → Pandora migration research (task-0016)
 
 User intent: transition Anvil from **Project New Reign - Nemesis** (v0.84, static
