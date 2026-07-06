@@ -7,6 +7,9 @@ the "why."
 
 ### 2026-07-06
 
+- **Nemesis → Pandora research** (task-0016): full compatibility audit of 15
+  Nemesis patch inputs; migration plan at `modlist/pandora-migration-plan.md`.
+  Execution deferred pending sign-off (task-0018).
 - **SPID + OAR** (task-0015): SPID **7.2.0 RC11 → 7.3.1** (AE DLL); OAR
   **2.3.6 → 3.1.6** after full OAR/DAR audit (6 replacer mods, all compatible).
   Audit report: `modlist/oar-audit-2026-07-06.md`. No plugin/load-order changes.

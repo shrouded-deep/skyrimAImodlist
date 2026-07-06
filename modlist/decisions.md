@@ -7,6 +7,30 @@ entry at the top.
 
 ---
 
+### 2026-07-06 — Nemesis → Pandora migration research (task-0016)
+
+User intent: transition Anvil from **Project New Reign - Nemesis** (v0.84, static
+since 2021) to **Pandora Behaviour Engine+** (133232, v4.3.1-beta).
+
+**Research outcome:** migration is **feasible with low patch-mod risk** for this
+list. Anvil has **no MCO/SkySA/Precision/FNIS engine** — only **15 Nemesis patch
+inputs** (12 MO2 mods + 3 bundled in engine). Pandora reads the same Nemesis
+`Nemesis_Engine/mod/` format; all installed patch mods are **compatible or
+expected compatible**. DynDOLOD/Synthesis/ParallaxGen have **no** Nemesis output
+dependency.
+
+**Required changes beyond engine swap:**
+- **Add:** Universal Behaviour Runtime — Auto Skeleton Patch (176724) for XPMSSE
+- **Remove:** Nemesis Creature Behaviour Compatibility (45966) — not needed for Pandora
+- **Replace:** stale `Anvil - Nemesis Output` (last run 2025-07-04 used wrong
+  `D:\Anvil\Stock Game\` path; 8 of 15 patches never applied)
+
+**Do not execute yet** — list-wide behavior regen needs explicit sign-off.
+Full plan: [`pandora-migration-plan.md`](pandora-migration-plan.md).
+Execution queued as **task-0018** (Cursor, not houseCARL).
+
+---
+
 ### 2026-07-06 — OAR 3.x audit + SPID bump (task-0015)
 
 **SPID:** updated **7.2.0.0.RC11 → 7.3.1** (AE / 1.6.629+ DLL from GitHub
