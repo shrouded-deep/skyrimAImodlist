@@ -7,6 +7,16 @@ entry at the top.
 
 ---
 
+### 2026-07-07 — CC cleaning audit complete: no action needed (task-0039)
+
+houseCARL scanned all 73 CC plugins for deleted NAVMs, deleted REFRs, and
+ITMs. Zero deleted records found across any type. All 3,280+ conflict
+records are covered by purpose-built Lux CC patches, DynDOLOD/Occlusion
+generated outputs, or Synthesis. No cleaning pass required. Full report:
+`modlist/cc-cleaning-audit-2026-07-07.md`.
+
+---
+
 ### 2026-07-07 — AE/CC import research complete; scope locked (task-0027)
 
 Research-only AE/CC pass scoped — **no installs executed.** Profile has **4 of 73**
