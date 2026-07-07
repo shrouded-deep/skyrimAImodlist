@@ -26,6 +26,17 @@ bulk import. No execution task queued — human sign-off required before imports
 
 ---
 
+### 2026-07-07 — Successor Additions separator in MO2 modlist (task-0038)
+
+Added `-DLC: [Successor Additions]_separator` above Finishing Line; moved
+**97** post-baseline entries (cheat batch, disabled MLO2/WSU stack, 68 imported
+CC mods) under it. Baseline from
+`modlist/exports/mlo2-pre-migration-2026-07-07/modlist.txt` — Pandora, original
+Anvil tiers, and 4 baseline CC mods untouched. **990** enabled mods unchanged
+(reorder only). `scripts/reorganize-successor-mods.ps1`.
+
+---
+
 ### 2026-07-07 — Cheat-mod QoL batch enabled (task-0036)
 
 Enabled **13** approved cheat/QoL mods from task-0032 batch (Infinite OOC
