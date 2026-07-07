@@ -7,6 +7,25 @@ entry at the top.
 
 ---
 
+### 2026-07-07 — AE/CC import research complete; scope locked (task-0027)
+
+Research-only AE/CC pass scoped — **no installs executed.** Profile has **4 of 73**
+CC gameplay packs (Fishing, Survival Mode, Rare Curios, Saints & Seducers) plus
+`_ResourcePack.esl`; **69 absent** (full Anvil baseline = free CC only).
+
+**Import when human approves execution:** Tier A/B/C ranked list in
+[`ae-cc-import-research-2026-07-07.md`](ae-cc-import-research-2026-07-07.md) —
+priority quests/dungeons/magic (GOT, Cause, Forgotten Seasons, Farming, Umbra, etc.),
+homes, Alternative Armors batch. **Skip:** Camping (`ccqdrsse002-firewood.esl`).
+**Defer:** CC Staves — Praedy's Staves AIO already active.
+
+**CC Survival Mode retained** (`ccqdrsse001-survivalmode.esl`) — disable in-game after
+SMI removal; not excluded from AE scope. **Task-0034 NO CONFLICT** with import plan
+(SMI-only removal compatible; proceed when approved). Tier 2 regen required after
+bulk import. No execution task queued — human sign-off required before imports.
+
+---
+
 ### 2026-07-07 — Power-fantasy direction; Survival Mode removal scoped (task-0033)
 
 List curation direction set to **power fantasy** (not survival/realism). **Audit only**
