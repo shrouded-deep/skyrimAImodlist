@@ -35,6 +35,16 @@ At the start of every session, before accepting any user instruction:
 4. For Claude Code specifically: check `git status` after pulling and
    commit any uncommitted Cursor work before starting new work.
 
+## houseCARL version check (Claude Code sessions only)
+
+houseCARL current version: **1.4.0**
+GitHub: https://github.com/Avick3110/houseCARL
+
+At the start of each Claude Code session, check the GitHub releases page
+for a newer version. If one exists, flag it to the user before proceeding
+with any task — don't block on it, just surface it. Update the version
+number in this file when the plugin is updated.
+
 ## Task-first rule
 
 **No work begins without a committed task file.** Verbal assignments,
