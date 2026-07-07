@@ -130,6 +130,17 @@ in parallel with Cursor tasks — but it should not be deferred
 indefinitely. Note the last re-audit date in `decisions.md` each time
 one completes.
 
+## Mod placement in MO2
+
+New mods added to the list must be placed **immediately above the
+`[Finishing Line]` separator** in `modlist.txt`, inside a dedicated
+separator zone named `[Successor Additions]`. Do not append to the
+bottom of the list outside this zone, and do not sort new mods into the
+main Anvil sections until a deliberate placement decision is made.
+
+When adding mods via a task, include this placement explicitly in the
+acceptance criteria — do not rely on MO2's default append behaviour.
+
 ## Curation direction
 
 This list is a **power fantasy** build. Prefer mods that expand player
