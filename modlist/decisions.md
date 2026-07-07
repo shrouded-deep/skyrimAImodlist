@@ -26,6 +26,17 @@ H3/H4/H6/H7 handled at install time (Tier 2 regen, UME hub FOMOD, QA checks).
 
 ---
 
+### 2026-07-07 — JK + Ryn mod catalog for world expansion (task-0041)
+
+Research-only catalog of JK's modular ecosystem (45 interiors, 4 Outskirts, 5
+standalone locations) and Ryn's series (35 location mods + 3 partial AIOs). **No
+JK's Skyrim AIO** in scope. **No mod requires JK AIO**; installing AIO anyway
+conflicts with the per-city exterior stack. Full detail:
+[`jk-ryns-catalog-2026-07-07.md`](jk-ryns-catalog-2026-07-07.md). Human picks
+world-expansion subset before any install task.
+
+---
+
 ### 2026-07-07 — City overhaul stack compatibility research (task-0040)
 
 Research-only pass for the proposed per-city expansion stack (CWE, WHWR,
