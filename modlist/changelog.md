@@ -7,6 +7,11 @@ the "why."
 
 ### 2026-07-07
 
+- **Cheat-mod QoL batch enabled** (task-0036): 13 mods from batch (Infinite
+  OOC ×4, enchantment mods, Reading Is Bad, Jewelry of Power, Shadow Merchant,
+  Detect Levers, Equipment Editor, Signature Equipment; NER + NPC Stats Editor
+  DLL-only). MAST clean. NPC Stats Editor / Signature Equipment caveats in
+  decisions.md.
 - **Puzzle-skip mods enabled** (task-0037): Dragon Claws Auto-Unlock + Puzzle
   Pillar Auto-Solve from cheat batch; Puzzle Solver not enabled. MAST clean.
 - **Lux rollback** (task-0030): restored Lux + Lux Orbis + patch hubs; removed

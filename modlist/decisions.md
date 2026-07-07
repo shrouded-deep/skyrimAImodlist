@@ -26,6 +26,20 @@ bulk import. No execution task queued — human sign-off required before imports
 
 ---
 
+### 2026-07-07 — Cheat-mod QoL batch enabled (task-0036)
+
+Enabled **13** approved cheat/QoL mods from task-0032 batch (Infinite OOC
+cluster, enchantment bypasses, Reading Is Bad, Jewelry of Power, Shadow
+Merchant, Detect Levers, Equipment Editor, Signature Equipment; DLL-only:
+No Enchantment Restriction NG 3.0.1, NPC Stats Editor). **Six do-not-enable
+mods untouched.** MAST clean.
+
+**Caveats:** **NPC Stats Editor** — runtime NPC edits on a mid-save save are
+hard to undo. **Signature Equipment** — weapons/armor gain persistent instance
+stat scaling with use (save-affecting).
+
+---
+
 ### 2026-07-07 — Puzzle-skip cheat mods enabled (task-0037)
 
 Enabled **Dragon Claws Auto-Unlock** (claw doors) and **Puzzle Pillar
