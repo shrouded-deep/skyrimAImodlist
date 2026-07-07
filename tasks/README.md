@@ -8,8 +8,11 @@ This folder is the handoff mechanism between Cursor and Claude Code sessions.
    `template.md` as the starting point. Give it the next sequential ID.
 2. When an agent starts working a task, move the file to `in-progress/`
    and update `status: in-progress`.
-3. When done, fill in the **Result** section, update `status: done`, and
-   move the file to `completed/`.
+3. When done, fill in the **Result** section, set terminal status, and move
+   the file to `completed/`. Terminal statuses:
+   - `done` — acceptance criteria met, work executed
+   - `deferred` — scoped work intentionally not run (see task-0025)
+   - `superseded` — work obviated before execution (see task-0031)
 4. Commit each state change separately if practical, tagged with the task
    ID, e.g. `git commit -m "[task-0012] in-progress: patch AoT/Kasako conflict"`.
 

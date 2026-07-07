@@ -1,0 +1,8 @@
+=== SurvivalModeImproved.esp locations ===
+D:\Skyrim AI Modlist\Anvil\mods\Survival Mode Improved - SKSE\SurvivalModeImproved.esp
+
+=== Plugins referencing Survival masters (ASCII scan) ===
+ACTIVE	PG_1.esp	Anvil - ParallaxGen Output
+ACTIVE	Embers XD - Patch - Survival Mode Improved.esp	Embers XD
+ACTIVE	SurvivalModeImproved.esp	Survival Mode Improved - SKSE
+ACTIVE	unofficial skyrim special edition patch.esp	Unofficial Skyrim Special Edition Patch

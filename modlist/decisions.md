@@ -7,6 +7,61 @@ entry at the top.
 
 ---
 
+### 2026-07-07 — Power-fantasy direction; Survival Mode removal scoped (task-0033)
+
+List curation direction set to **power fantasy** (not survival/realism). **Audit only**
+— nothing disabled in MO2.
+
+**Survival stack to remove (pending sign-off):** Survival Mode Improved - SKSE +
+`ccqdrsse001-survivalmode.esl` / CC archive. **Only hard patch dependency:**
+`Embers XD - Patch - Survival Mode Improved.esp` (disable with SMI). **`PG_1.esp`**
+(ParallaxGen output) references survival forms — regen on Tier 2, not a blocker.
+**OnMagicEffectApply Replacer** ships survival script overrides — inert after removal.
+
+**No other active restriction mods** (no SunHelm/Frostfall/Requiem/perk overhaul).
+Item Equip Restrictor is installed but has **no KID rules** in profile. Scrambled Bugs
+optional friction patches are **all off**. Stamina of Steeds is anti-friction QoL.
+
+**Cheat batch (task-0032):** Survival clash objection drops for Infinite * OOC (×4),
+Handy Crafting, Smart Harvest — other risk factors unchanged; not auto-approved.
+
+Full report: [`power-fantasy-audit-2026-07-07.md`](power-fantasy-audit-2026-07-07.md).
+**Execution queued as task-0034 — requires `Task-0034 approved`.**
+
+---
+
+### 2026-07-07 — MO2 profile script guardrails (task-0028)
+
+After task-0022 MLO2 profile clobber, added shared `scripts/Mo2ProfileGuardrails.ps1`
+(`Assert-Mo2Closed`, MLO2 repair, modlist block, snapshots) + `verify-mlo2.ps1`;
+refactored `install-wsu-stack.ps1`. Rule: any script mutating `modlist.txt` /
+`plugins.txt` / `loadorder.txt` must hard-stop if MO2 is running. Rollback scripts
+from task-0030 brought into compliance same session. Task file was written
+retroactively to `tasks/completed/task-0028.md`.
+
+---
+
+### 2026-07-07 — Externally-sourced cheat-mod batch vetted; none enabled (task-0032)
+
+22 folders copied from another modlist into `Anvil/mods/` (Lazy Modlist Rename
+`[NoDelete]` prefixes stripped; slot **086.022** absent). **None** appear in
+`Anvil - Main Profile` `modlist.txt` or `plugins.txt` — identification/risk
+assessment only.
+
+**Do not enable without staged review:** Skyrim Cheat Engine (overlaps **Modex**),
+RMX Actor Value Book (**GameSetting** / progression stomp vs task-0012 baseline),
+Handy Crafting and Spells (script override + economy bypass), Smart Harvest NG
+(load-order-wide autoloot + Survival clash), Smart Cast Turbo (**missing Smart Cast
+base**), Soarin' Over Skyrim (flight + DAR dependency unverified on OAR list).
+
+**Needs review if any cheat QoL wanted:** Detect Levers and Keys, Reading Is Bad,
+No Enchantment Restriction, Infinite * Out of Combat cluster (Survival clash),
+puzzle-skip trio (pick at most one), Jewelry of Power, Signature Equipment, others.
+
+Full per-mod table: [`cheat-mods-batch-2026-07-07.md`](cheat-mods-batch-2026-07-07.md).
+
+---
+
 ### 2026-07-07 — Pandora furniture/mount silence diagnosed; fix deferred (task-0029)
 
 Live test: **chair/stool/bench sit and horse mount produce no camera change and
@@ -25,16 +80,18 @@ Nemesis SSE cache — **not** a missing-string defect. `Nemesis_Furniture*` abse
 (expected without FNIS `fu` mods). Nemesis `behavior templates/fu/` lives only
 in the **disabled** Nemesis engine MO2 mod; absent from `tools/Pandora/`.
 
-**Root cause:** **not graph-confirmed** in task-0029 (string heuristics
-insufficient). Best hypothesis (**medium** confidence): broken transition wiring
-inside compiled HKX or activation-layer failure — needs HKX→XML diff + in-game
-`GetSitting`/event trace.
+**Root cause (resolved):** Initial report was on an **existing save**. After
+documenting the **fresh-save requirement** in `pandora-manual-run.md`, user
+confirmed **sit and mount work on a new save** — stale save-side
+animation/furniture state, not a confirmed Pandora HKX defect. task-0029's
+graph-wiring hypothesis was **never verified** (string scan only).
 
-**User action:** test **one bed** to narrow scope (see task-0029 Result).
+**task-0031 superseded** — confirm-then-fix work not executed; see
+`tasks/completed/task-0031.md`.
 
-**Next:** **task-0031** — confirm cause, then one targeted fix (candidate:
-temporarily enable Nemesis engine mod during Pandora Launch for template VFS).
-Rollback to Nemesis remains **non-trivial** (pre-migration output was stale).
+**Workflow lesson:** Always run Pandora post-regen smoke tests (furniture sit,
+horse mount first) on a **new game or new test save** — see
+`pandora-manual-run.md` § Fresh save required.
 
 ---
 

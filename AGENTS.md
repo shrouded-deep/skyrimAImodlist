@@ -12,15 +12,37 @@ successor list later.
 
 ## Roles
 
-- **Cursor**: default agent for research (mod pages, version checks,
-  compatibility notes), drafting (INI files, documentation, changelogs),
-  and scripting (Wabbajack build config, utility scripts). Also plans and
-  writes task files for Claude Code.
-- **Claude Code**: only invoked for tasks tagged `requires_housecarl: true`
-  in `tasks/queue/` — i.e. anything needing direct read/write access to the
-  MO2 load order via houseCARL (record edits, conflict trees, patch
-  authoring, distributor grammar validation). Keep these sessions narrow
-  and task-scoped to limit usage.
+- **Claude Code**: primary coordinator and supervisor for this project.
+  Owns the task queue, strategy, and git — creates task files, assigns
+  work, commits and pushes. Also executes any task tagged
+  `requires_housecarl: true` directly (record edits, conflict trees,
+  patch authoring, distributor grammar validation).
+- **Cursor**: execution agent for research (mod pages, version checks,
+  compatibility notes), MO2 folder operations, drafting (INI files,
+  documentation, changelogs), and scripting. Takes task files from
+  `tasks/queue/` as its work queue.
+
+## Session start protocol
+
+At the start of every session, before accepting any user instruction:
+
+1. `git pull` — get latest; don't act on stale queue state.
+2. Read `tasks/queue/` — find your assigned, unblocked tasks.
+3. **Auto-execute** the first unblocked task assigned to you, without
+   waiting for an explicit "run XXXX" from the user — unless the task is
+   marked `requires_human_review: true` or has an approval-phrase gate,
+   in which case stop and surface it.
+4. For Claude Code specifically: check `git status` after pulling and
+   commit any uncommitted Cursor work before starting new work.
+
+## Task-first rule
+
+**No work begins without a committed task file.** Verbal assignments,
+chat instructions, or described intent do not count. If Claude Code
+assigns work to Cursor (or vice versa), the task file must be written
+and pushed to `tasks/queue/` before the executing agent begins.
+This prevents the "task went AWOL" failure mode where real work ships
+with no paper trail.
 
 ## Ground rules
 
@@ -73,6 +95,44 @@ successor list later.
   for human review instead.
 - houseCARL writes always go into a new plugin unless a task explicitly
   says in-place edit is approved.
+- **Any script that edits MO2 profile or config files must enforce
+  `Assert-Mo2Closed` from `scripts/Mo2ProfileGuardrails.ps1`, not just
+  import the module.** "Dot-sources the module" does not mean "enforces
+  it" — check explicitly that the enforcement call is present. This is
+  not optional for new scripts.
+- **GUI tool execution (Pandora, DynDOLOD, ParallaxGen, Synthesis,
+  xEdit) cannot be performed by an agent.** These must be launched by
+  the user through MO2's executable interface. Any acceptance criterion
+  involving these tools must be written as a human step, not an agent
+  step.
+
+## Conflict re-audit practice
+
+Re-run a full cross-plugin conflict audit (following the baseline scan
+methodology from tasks 0004–0007, 0012) whenever:
+
+- 5 or more mods are added or removed in a single session, OR
+- A major structural change lands (worldspace mod, new behavior engine,
+  lighting overhaul, Synthesis regen), OR
+- A Tier 2 toolchain maintenance window is executed.
+
+Claude Code owns scheduling and executing these re-audits. The re-audit
+does not need to be a blocking prerequisite for other work — it can run
+in parallel with Cursor tasks — but it should not be deferred
+indefinitely. Note the last re-audit date in `decisions.md` each time
+one completes.
+
+## Curation direction
+
+This list is a **power fantasy** build. Prefer mods that expand player
+capability, variety, and spectacle. Deprioritise or remove mods that
+impose survival friction, resource scarcity, carry penalties, or
+difficulty-through-fragility. When a new mod's fit is ambiguous, apply
+this lens before adding it.
+
+The long-term goal is a distributable successor list — prefer portable
+fixes (record patches, SPID/OAR distributions) over personal-preference
+hacks that would confuse other users.
 
 ## File formats
 
