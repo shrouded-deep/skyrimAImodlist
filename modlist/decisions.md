@@ -7,6 +7,22 @@ entry at the top.
 
 ---
 
+### 2026-07-07 — City overhaul stack compatibility research (task-0040)
+
+Research-only pass for the proposed per-city expansion stack (CWE, WHWR,
+Capital Windhelm, UM+UME, RedBag Solitude, Crossed Daggers Riften, Riverwood
+Has Walls) against Anvil's Spaghetti suite and city-touching mods. **No
+installs.** Full matrix: [`city-overhaul-compat-2026-07-07.md`](city-overhaul-compat-2026-07-07.md).
+
+**Blockers before install:** Navigator and Vanilla Plus City Entrances have no
+documented patches for any proposed expansion (structural gate/nav risk).
+Whiterun CWE+WHWR together needs PseudoLoadDoors 140034 and hub patches — not
+turnkey. Riften FYX Canal × Crossed Daggers undocumented. Markarth Spaghetti
+clutter depends on WIP UME Patch Hub. Human flags H1–H8 in compat doc must be
+resolved before an execution task is written.
+
+---
+
 ### 2026-07-07 — Conflict re-audit complete: all record types healthy
 
 Full cross-plugin conflict re-audit completed via houseCARL (triggered by 80+
