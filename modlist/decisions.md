@@ -26,6 +26,15 @@ bulk import. No execution task queued — human sign-off required before imports
 
 ---
 
+### 2026-07-07 — Puzzle-skip cheat mods enabled (task-0037)
+
+Enabled **Dragon Claws Auto-Unlock** (claw doors) and **Puzzle Pillar
+Auto-Solve** (pillar scripts) from cheat batch; **Puzzle Solver** left off
+(redundant). `Dragon Claws Auto-Unlock.esp` active after USMP; pillar mod is
+script-only. MAST clean.
+
+---
+
 ### 2026-07-07 — AE/CC content imported (68 packs; task-0035)
 
 Executed Anniversary Upgrade CC import from Steam Data into MO2 per

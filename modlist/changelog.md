@@ -7,6 +7,8 @@ the "why."
 
 ### 2026-07-07
 
+- **Puzzle-skip mods enabled** (task-0037): Dragon Claws Auto-Unlock + Puzzle
+  Pillar Auto-Solve from cheat batch; Puzzle Solver not enabled. MAST clean.
 - **Lux rollback** (task-0030): restored Lux + Lux Orbis + patch hubs; removed
   MLO2/True Light/Dust/DIAL/WSU stack from profile. CS Light Lux JSONs back;
   DynDOLOD.esp + Occlusion.esp + four Lux frozen outputs re-enabled. **343**
