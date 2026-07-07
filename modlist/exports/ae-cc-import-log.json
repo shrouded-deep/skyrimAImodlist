@@ -1,0 +1,342 @@
+﻿[
+    {
+        "ModName":  "Creation Club - Farming",
+        "Plugin":  "ccvsvsse004-beafarmer.esl",
+        "Bsa":  "ccvsvsse004-beafarmer.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Ghosts of the Tribunal",
+        "Plugin":  "ccasvsse001-almsivi.esm",
+        "Bsa":  "ccasvsse001-almsivi.bsa"
+    },
+    {
+        "ModName":  "Creation Club - The Cause",
+        "Plugin":  "ccbgssse067-daedinv.esm",
+        "Bsa":  "ccbgssse067-daedinv.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Forgotten Seasons",
+        "Plugin":  "cctwbsse001-puzzledungeon.esm",
+        "Bsa":  "cctwbsse001-puzzledungeon.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Umbra",
+        "Plugin":  "ccbgssse016-umbra.esm",
+        "Bsa":  "ccbgssse016-umbra.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Dead Man\u0027s Dread",
+        "Plugin":  "ccbgssse031-advcyrus.esm",
+        "Bsa":  "ccbgssse031-advcyrus.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Necromantic Grimoire",
+        "Plugin":  "ccvsvsse003-necroarts.esl",
+        "Bsa":  "ccvsvsse003-necroarts.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Arms of Chaos",
+        "Plugin":  "ccpewsse002-armsofchaos.esl",
+        "Bsa":  "ccpewsse002-armsofchaos.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Arcane Accessories",
+        "Plugin":  "ccbgssse014-spellpack01.esl",
+        "Bsa":  "ccbgssse014-spellpack01.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Arcane Archer Pack",
+        "Plugin":  "ccbgssse002-exoticarrows.esl",
+        "Bsa":  "ccbgssse002-exoticarrows.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Adventurer\u0027s Backpack",
+        "Plugin":  "ccfsvsse001-backpacks.esl",
+        "Bsa":  "ccfsvsse001-backpacks.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Goblins",
+        "Plugin":  "ccbgssse040-advobgobs.esl",
+        "Bsa":  "ccbgssse040-advobgobs.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Goldbrand",
+        "Plugin":  "ccbgssse005-goldbrand.esl",
+        "Bsa":  "ccbgssse005-goldbrand.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Divine Crusader",
+        "Plugin":  "ccmtysse001-knightsofthenine.esl",
+        "Bsa":  "ccmtysse001-knightsofthenine.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Spell Knight Armor",
+        "Plugin":  "ccedhsse002-splkntset.esl",
+        "Bsa":  "ccedhsse002-splkntset.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Vigil Enforcer Armor Set",
+        "Plugin":  "ccmtysse002-ve.esl",
+        "Bsa":  "ccmtysse002-ve.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Redguard Elite Armaments",
+        "Plugin":  "ccedhsse003-redguard.esl",
+        "Bsa":  "ccedhsse003-redguard.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Shadowrend",
+        "Plugin":  "ccbgssse018-shadowrend.esl",
+        "Bsa":  "ccbgssse018-shadowrend.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Chrysamere",
+        "Plugin":  "ccbgssse007-chrysamere.esl",
+        "Bsa":  "ccbgssse007-chrysamere.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Sunder and Wraithguard",
+        "Plugin":  "ccbgssse008-wraithguard.esl",
+        "Bsa":  "ccbgssse008-wraithguard.bsa"
+    },
+    {
+        "ModName":  "Creation Club - The Gray Cowl Returns",
+        "Plugin":  "ccbgssse020-graycowl.esl",
+        "Bsa":  "ccbgssse020-graycowl.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Wild Horses",
+        "Plugin":  "ccbgssse034-mntuni.esl",
+        "Bsa":  "ccbgssse034-mntuni.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Pets of Skyrim",
+        "Plugin":  "ccvsvsse002-pets.esl",
+        "Bsa":  "ccvsvsse002-pets.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Civil War Champions",
+        "Plugin":  "ccffbsse001-imperialdragon.esl",
+        "Bsa":  "ccffbsse001-imperialdragon.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Expanded Crossbow Pack",
+        "Plugin":  "ccffbsse002-crossbowpack.esl",
+        "Bsa":  "ccffbsse002-crossbowpack.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Elite Crossbows",
+        "Plugin":  "ccbgssse043-crosselv.esl",
+        "Bsa":  "ccbgssse043-crosselv.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Tundra Homestead",
+        "Plugin":  "cceejsse001-hstead.esm",
+        "Bsa":  "cceejsse001-hstead.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Bloodchill Manor",
+        "Plugin":  "cceejsse005-cave.esm",
+        "Bsa":  "cceejsse005-cave.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Nchuanthumz Dwarven Home",
+        "Plugin":  "ccafdsse001-dwesanctuary.esm",
+        "Bsa":  "ccafdsse001-dwesanctuary.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Myrwatch",
+        "Plugin":  "cceejsse002-tower.esl",
+        "Bsa":  "cceejsse002-tower.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Hendraheim",
+        "Plugin":  "cceejsse004-hall.esl",
+        "Bsa":  "cceejsse004-hall.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Shadowfoot Sanctum",
+        "Plugin":  "cceejsse003-hollow.esl",
+        "Bsa":  "cceejsse003-hollow.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Gallows Hall",
+        "Plugin":  "ccrmssse001-necrohouse.esl",
+        "Bsa":  "ccrmssse001-necrohouse.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Bittercup",
+        "Plugin":  "cckrtsse001_altar.esl",
+        "Bsa":  "cckrtsse001_altar.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Dawnfang and Duskfang",
+        "Plugin":  "ccbgssse013-dawnfang.esl",
+        "Bsa":  "ccbgssse013-dawnfang.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Bow of Shadows",
+        "Plugin":  "ccbgssse038-bowofshadows.esl",
+        "Bsa":  "ccbgssse038-bowofshadows.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Lord\u0027s Mail",
+        "Plugin":  "ccbgssse021-lordsmail.esl",
+        "Bsa":  "ccbgssse021-lordsmail.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Plague of the Dead",
+        "Plugin":  "ccbgssse003-zombies.esl",
+        "Bsa":  "ccbgssse003-zombies.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Ruin\u0027s Edge",
+        "Plugin":  "ccbgssse004-ruinsedge.esl",
+        "Bsa":  "ccbgssse004-ruinsedge.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Stendarr\u0027s Hammer",
+        "Plugin":  "ccbgssse006-stendarshammer.esl",
+        "Bsa":  "ccbgssse006-stendarshammer.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Staff of Sheogorath",
+        "Plugin":  "ccbgssse019-staffofsheogorath.esl",
+        "Bsa":  "ccbgssse019-staffofsheogorath.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Staff of Hasedoki",
+        "Plugin":  "ccbgssse045-hasedoki.esl",
+        "Bsa":  "ccbgssse045-hasedoki.bsa"
+    },
+    {
+        "ModName":  "Creation Club - The Contest",
+        "Plugin":  "ccbgssse069-contest.esl",
+        "Bsa":  "ccbgssse069-contest.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Headman\u0027s Cleaver",
+        "Plugin":  "ccbgssse068-bloodfall.esl",
+        "Bsa":  "ccbgssse068-bloodfall.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Fearsome Fists",
+        "Plugin":  "cccbhsse001-gaunt.esl",
+        "Bsa":  "cccbhsse001-gaunt.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Netch Leather Armor",
+        "Plugin":  "ccbgssse041-netchleather.esl",
+        "Bsa":  "ccbgssse041-netchleather.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Nordic Jewelry",
+        "Plugin":  "ccedhsse001-norjewel.esl",
+        "Bsa":  "ccedhsse001-norjewel.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Bone Wolf",
+        "Plugin":  "ccbgssse036-petbwolf.esl",
+        "Bsa":  "ccbgssse036-petbwolf.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Nix-Hound",
+        "Plugin":  "ccbgssse035-petnhound.esl",
+        "Bsa":  "ccbgssse035-petnhound.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Dwarven Armored Mudcrab",
+        "Plugin":  "ccbgssse010-petdwarvenarmoredmudcrab.esl",
+        "Bsa":  "ccbgssse010-petdwarvenarmoredmudcrab.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Horse Armor - Elven",
+        "Plugin":  "ccbgssse011-hrsarmrelvn.esl",
+        "Bsa":  "ccbgssse011-hrsarmrelvn.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Horse Armor - Steel",
+        "Plugin":  "ccbgssse012-hrsarmrstl.esl",
+        "Bsa":  "ccbgssse012-hrsarmrstl.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Saturalia Holiday Pack",
+        "Plugin":  "ccvsvsse001-winter.esl",
+        "Bsa":  "ccvsvsse001-winter.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Alternative Armors - Daedric Mail",
+        "Plugin":  "ccbgssse051-ba_daedricmail.esl",
+        "Bsa":  "ccbgssse051-ba_daedricmail.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Alternative Armors - Daedric Plate",
+        "Plugin":  "ccbgssse050-ba_daedric.esl",
+        "Bsa":  "ccbgssse050-ba_daedric.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Alternative Armors - Dragon Plate",
+        "Plugin":  "ccbgssse059-ba_dragonplate.esl",
+        "Bsa":  "ccbgssse059-ba_dragonplate.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Alternative Armors - Dragonscale",
+        "Plugin":  "ccbgssse060-ba_dragonscale.esl",
+        "Bsa":  "ccbgssse060-ba_dragonscale.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Alternative Armors - Dwarven Mail",
+        "Plugin":  "ccbgssse062-ba_dwarvenmail.esl",
+        "Bsa":  "ccbgssse062-ba_dwarvenmail.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Alternative Armors - Dwarven Plate",
+        "Plugin":  "ccbgssse061-ba_dwarven.esl",
+        "Bsa":  "ccbgssse061-ba_dwarven.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Alternative Armors - Ebony Plate",
+        "Plugin":  "ccbgssse063-ba_ebony.esl",
+        "Bsa":  "ccbgssse063-ba_ebony.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Alternative Armors - Elven Hunter",
+        "Plugin":  "ccbgssse064-ba_elven.esl",
+        "Bsa":  "ccbgssse064-ba_elven.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Alternative Armors - Iron",
+        "Plugin":  "ccbgssse052-ba_iron.esl",
+        "Bsa":  "ccbgssse052-ba_iron.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Alternative Armors - Leather",
+        "Plugin":  "ccbgssse053-ba_leather.esl",
+        "Bsa":  "ccbgssse053-ba_leather.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Alternative Armors - Orcish Plate",
+        "Plugin":  "ccbgssse054-ba_orcish.esl",
+        "Bsa":  "ccbgssse054-ba_orcish.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Alternative Armors - Orcish Scaled",
+        "Plugin":  "ccbgssse055-ba_orcishscaled.esl",
+        "Bsa":  "ccbgssse055-ba_orcishscaled.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Alternative Armors - Silver",
+        "Plugin":  "ccbgssse056-ba_silver.esl",
+        "Bsa":  "ccbgssse056-ba_silver.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Alternative Armors - Stalhrim Fur",
+        "Plugin":  "ccbgssse057-ba_stalhrim.esl",
+        "Bsa":  "ccbgssse057-ba_stalhrim.bsa"
+    },
+    {
+        "ModName":  "Creation Club - Alternative Armors - Steel Soldier",
+        "Plugin":  "ccbgssse058-ba_steel.esl",
+        "Bsa":  "ccbgssse058-ba_steel.bsa"
+    }
+]

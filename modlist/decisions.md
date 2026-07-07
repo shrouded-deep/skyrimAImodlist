@@ -26,6 +26,19 @@ bulk import. No execution task queued — human sign-off required before imports
 
 ---
 
+### 2026-07-07 — AE/CC content imported (68 packs; task-0035)
+
+Executed Anniversary Upgrade CC import from Steam Data into MO2 per
+[`ae-cc-import-research-2026-07-07.md`](ae-cc-import-research-2026-07-07.md).
+**68** new `Creation Club - *` mods; **4** baseline packs retained unchanged
+(Fishing, **Survival Mode** esl, Rare Curios, Saints & Seducers). **Skipped:**
+Camping, CC Staves. Profile updated (`modlist.txt`, `plugins.txt`, `loadorder.txt`,
+`archives.txt`); CC MAST **0 missing masters**. Script: `scripts/import-ae-cc.ps1`.
+**Tier 2 regen + Lux/CC Asset Patch FOMOD re-run required** before treating output
+plugins as current. Full log: [`ae-cc-import-execution-2026-07-07.md`](ae-cc-import-execution-2026-07-07.md).
+
+---
+
 ### 2026-07-07 — Power-fantasy direction; Survival Mode removal scoped (task-0033)
 
 List curation direction set to **power fantasy** (not survival/realism). **Audit only**
