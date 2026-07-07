@@ -62,6 +62,10 @@ with no paper trail.
 - One task file = one unit of work. Don't bundle unrelated changes.
 - Every completed task must record: what was done, what changed on disk
   (if anything), and any follow-up tasks it implies.
+- **Before creating any task file, check the highest existing ID across
+  both `tasks/queue/` and `tasks/completed/` on disk (not from session
+  memory) and use the next number.** Never reuse or guess an ID — a
+  parallel agent may have already claimed the number you think is next.
 - **When a task implies follow-up work, create the task file yourself**
   directly in `tasks/queue/` using `tasks/template.md`, with the next
   sequential ID — don't just describe the follow-up in prose and leave it
