@@ -7,6 +7,23 @@ entry at the top.
 
 ---
 
+### 2026-07-07 — Pandora smoke test passed; MLO2 permanently removed; disabled cheat mods retained
+
+Pandora output confirmed good in-game — TDM, barstool exit, weapon switch
+all functioning, no errors observed. Smoke test complete.
+
+MLO2 (Modern Lighting Overhaul 2, Nexus 160748) is permanently out of the
+list. The full Lux suite was restored in task-0030 and is the lighting
+solution going forward. MLO2 folder remains disabled in MO2 — no further
+action needed, disregard in future sessions.
+
+Disabled cheat mods from task-0032 batch (Skyrim Cheat Engine, RMX Actor
+Value Book, Handy Crafting, Smart Harvest NG, Smart Cast Turbo, Soarin'
+Over Skyrim, Puzzle Solver) remain disabled in place — no quarantine or
+removal needed. Do not enable these without explicit revisit.
+
+---
+
 ### 2026-07-07 — CC cleaning audit complete: no action needed (task-0039)
 
 houseCARL scanned all 73 CC plugins for deleted NAVMs, deleted REFRs, and
