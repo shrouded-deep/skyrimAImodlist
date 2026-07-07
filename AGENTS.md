@@ -59,6 +59,13 @@ successor list later.
   a specific gated item, stop and ask which task ID is being approved
   rather than inferring it. This applies regardless of which agent is
   operating or who queued the task.
+- The approval-phrase requirement above applies to *executing* a gated
+  action. **Declining or deferring one does not need the same phrase** —
+  if a human directly discusses, questions, or reasons through a gated
+  decision and the conclusion is not to proceed, that's a legitimate
+  decision on its own terms. Record it plainly in `decisions.md` as the
+  human's call, without implying more ceremony was needed to say no than
+  to say yes.
 - Commit messages reference the task ID, e.g. `[task-0007] resolve ACOT/
   Kasako Core Framework conflict`.
 - Do not silently change the load order tiering methodology

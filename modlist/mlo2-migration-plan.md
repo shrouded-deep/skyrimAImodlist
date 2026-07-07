@@ -33,9 +33,9 @@ ambient templates) are added separately.
 CS + Light Limit Fix (core-merged in CS 1.7.x). **CS Light** is installed with
 **Lux FOMOD configs** — must be reinstalled or retuned for Vanilla/MLO2 on migration.
 
-**Critical gap:** [Window Shadows Ultimate](https://www.nexusmods.com/skyrimspecialedition/mods/66665)
-is **not** in Anvil but is a primary MLO2 native-integration partner for window
-lighting. Without it, interiors rely on vanilla skylights + MLO2 point sources only.
+**Critical gap (resolved task-0026):** [Window Shadows Ultimate](https://www.nexusmods.com/skyrimspecialedition/mods/150494)
+was not in Anvil; now scheduled via `scripts/install-wsu-stack.ps1` after Nexus download.
+(Nexus **66665** is an unrelated mod — do not use that ID.)
 
 **DynDOLOD / Synthesis / ParallaxGen:** no regen required solely for Lux→MLO2 swap
 (unless unrelated maintenance scheduled). Remove Lux plugins before next tool run so

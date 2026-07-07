@@ -7,6 +7,135 @@ entry at the top.
 
 ---
 
+### 2026-07-07 — Pandora furniture/mount silence diagnosed; fix deferred (task-0029)
+
+Live test: **chair/stool/bench sit and horse mount produce no camera change and
+no animation**; TDM (headtracking, leaning, horse archery) and Community Shaders
+work — not a wholesale behavior regen failure.
+
+**Ruled out (high confidence):** `turn` WARN (`PlayerBowModList` on
+`defaultfemale~1hm_behavior` only); XPMSSE double-patch (`xpmsse` absent from
+`ActiveMods.json`, UBR enabled); bseaf/gmill patch failures (both applied in
+`Engine.log`); missing core behavior HKX (Output present, first in MO2 priority;
+only Serana FNIS behavior overrides later).
+
+**Compiled output (ASCII scan):** `IdleFurnitureStart` / `HorseEnter` /
+`to_FurnitureState` / `FurnitureState` counts match Pandora template HKX and
+Nemesis SSE cache — **not** a missing-string defect. `Nemesis_Furniture*` absent
+(expected without FNIS `fu` mods). Nemesis `behavior templates/fu/` lives only
+in the **disabled** Nemesis engine MO2 mod; absent from `tools/Pandora/`.
+
+**Root cause:** **not graph-confirmed** in task-0029 (string heuristics
+insufficient). Best hypothesis (**medium** confidence): broken transition wiring
+inside compiled HKX or activation-layer failure — needs HKX→XML diff + in-game
+`GetSitting`/event trace.
+
+**User action:** test **one bed** to narrow scope (see task-0029 Result).
+
+**Next:** **task-0031** — confirm cause, then one targeted fix (candidate:
+temporarily enable Nemesis engine mod during Pandora Launch for template VFS).
+Rollback to Nemesis remains **non-trivial** (pre-migration output was stale).
+
+---
+
+### 2026-07-07 — Lux restored; MLO2/WSU stack removed (task-0030)
+
+Live testing after task-0022/0026 showed **Modern Lighting Overhaul 2 +
+Window Shadows Ultimate** did not justify replacing Lux's patch ecosystem
+for this list. **Rollback executed:** re-enabled Lux, Lux Orbis, and both
+patch hubs in MO2 (Lux Via + hub left as-is from task-0023); restored **36**
+Lux-named plugins from `modlist/exports/mlo2-pre-migration-2026-07-07/`;
+re-enabled **DynDOLOD.esp**, **Occlusion.esp**, and four Lux-dependent
+frozen outputs; CS Light switched back to **6 Lux FOMOD JSONs** (vanilla
+core set archived under `_disabled_vanilla_mlo2_migration/`). **Disabled**
+MLO2, True Light, Dust not Clouds, DIAL, WSU, and WSU Patch Hub.
+
+**Not a wasted detour** — it was a deliberate experiment with a documented
+snapshot. **Going forward:** mods without a Lux patch get a reactive
+**houseCARL** patch, not another wholesale lighting swap. **task-0024**
+Synthesis W4ENB GitHub source was re-verified on disk (had reverted to `F:\`
+locally; restored to pinned GitHub). Profile: **343 active plugins**, **0
+missing masters** (MAST scan 2026-07-07). **Close MO2 before profile edits**
+or refresh after exit so MO2 does not overwrite `modlist.txt`.
+
+---
+
+### 2026-07-07 — True Light / WSU plugin order corrected (post task-0026)
+
+Earlier repo notes (task-0026, `decisions.md`) said “Placed Light ESPs before WSU” /
+`TL Bulbs ISL.esp` before `Window Shadows Ultimate.esp` before `Shadows and Ambient` —
+**inferred from obsolete “Placed Light” naming**, not Nexus text.
+
+**Correct (author):** [True Light 135488](https://www.nexusmods.com/skyrimspecialedition/mods/135488)
+*Load Order* — `True Light - Shadows and Ambient.esp` **very early**; WSU ESPs **late
+but not later than** `TL Bulbs ISL.esp`; `TL Bulbs ISL.esp` **very late** (before
+`CS Light.esp` if used); True Light patches **after WSU**. [WSU 150494](https://www.nexusmods.com/skyrimspecialedition/mods/150494):
+“No load order requirements.” See `mlo2-manual-run.md` §0.5.
+
+---
+
+### 2026-07-07 — Window Shadows Ultimate + MLO2 re-enable (task-0026)
+
+User sign-off to add **Window Shadows Ultimate** ([150494](https://www.nexusmods.com/skyrimspecialedition/mods/150494))
+before MLO2 live spot tests. **MLO2 re-enabled** in profile (`MLO.dll` re-extracted;
+was missing from `SKSE/Plugins/`). WSU requires **True Light** (135488; Nexus name —
+not `Placed Light*.esp` plugins), **Dust not Clouds**, **DIAL** — install via MO2 then
+run `scripts/install-wsu-stack.ps1`. Optional Patch Hub 151548. **MO2 mod priority:**
+MLO2 after BOS, then True Light → WSU stack. **Plugin LO:** True Light author rules
+(§0.5; corrected same day — see entry above).
+
+---
+
+**Human sign-off:** defer **both** [SR Exterior Cities](https://www.nexusmods.com/skyrimspecialedition/mods/87954) and [Open Cities Skyrim](https://www.nexusmods.com/skyrimspecialedition/mods/87707). Neither framework is worth pursuing while the list is still in flux — SREX hub is WIP/stale; OCS is better maintained but still needs heavy patch work against Spaghetti NavCuts, Navigator, and city mesh stack. **No MO2 install, no execution task** for either mod. Tier 2 DynDOLOD/Occlusion regen (task-0025) proceeds **without** bundling open cities. Revisit only if open cities becomes an explicit successor-list goal after curation stabilizes. See [`sr-exterior-cities-compatibility.md`](sr-exterior-cities-compatibility.md).
+
+---
+
+### 2026-07-07 — Synthesis W4ENB patcher portable path (task-0024)
+
+`ANV_SynW4ENBPatcher` in `Anvil\tools\Synthesis\PipelineSettings.json` referenced a
+**non-portable** local path (`F:\...\WaterForENBPatcherFixed\`). Classified as **(b)**
+maintainer-local clone of public [panthuncia/WaterForENBPatcher](https://github.com/panthuncia/WaterForENBPatcher)
+(W4ENB page–recommended). Replaced with **GitHub patcher settings** (pinned main
+`111d09c8`). **`ANV_SynW4ENBPatcher.esp` not regenerated** — frozen until Tier 2;
+compare output if regen differs from legacy "Fixed" fork.
+
+---
+
+### 2026-07-07 — SR Exterior Cities research (task-0020)
+
+Scoped [SR Exterior Cities 2.0](https://www.nexusmods.com/skyrimspecialedition/mods/87954)
+for eventual addition. All **five capitals** → Tamriel exteriors; **new game** required.
+J3W3LS Synthesis patcher covers object moves only — **navmesh needs CK**. Anvil conflict
+hotspots: Spaghetti's Cities, SB Windhelm, Ivy Whiterun, Lux Via (hub patches).
+**Superseded:** human sign-off defer **both** SREX and OCS — see entry above.
+See [`sr-exterior-cities-compatibility.md`](sr-exterior-cities-compatibility.md).
+
+---
+
+### 2026-07-07 — DynDOLOD.esp / Occlusion.esp disabled; regen deferred (task-0025)
+
+Stale Lux-mastered **`DynDOLOD.esp`** and **`Occlusion.esp`** disabled in profile.
+Regeneration folded into **Tier 2 toolchain maintenance** (with Synthesis, ParallaxGen,
+DynDOLOD Resources/DLL updates) — not worth running while modlist is still in flux.
+**`DynDOLOD.esm`** stays enabled. In-game: vanilla-ish distant LOD / no occlusion culling
+until Tier 2 regen.
+
+---
+
+### 2026-07-07 — MLO2 installed; Lux Via files restored (task-0022)
+
+**Modern Lighting Overhaul 2 (160748)** extracted from Downloads to
+`mods/Modern Lighting Overhaul 2/`, enabled in `modlist.txt` immediately after
+**Base Object Swapper**. `MLO.ini` pre-seeded from FOMOD whitelist (Shadow Casters
+On) with **`enableColorConsistency=false`** for NAT.CS.
+
+**Lux Via (63588) + patch hub (116722)** re-extracted to match prior FOMOD
+choices (ENB Light resource pack, Blended Roads bridges, More Lantern Posts, More
+Wooden Bridges patch). Via + MLO2 combo still **untested in-game** — run spot-test
+matrix in [`mlo2-manual-run.md` §3](mlo2-manual-run.md#3-in-game-spot-test-matrix-phase-5).
+
+---
+
 ### 2026-07-07 — Lux suite disabled; MLO2 install pending user download (task-0021)
 
 Executed MO2 prep per sign-off: **7 Lux-related mods disabled**, **36 Lux-named
@@ -21,6 +150,17 @@ Nexus auth. User must download/install via MO2 and place per
 deferred.
 
 Research reference: [`mlo2-migration-plan.md`](mlo2-migration-plan.md).
+
+---
+
+### 2026-07-07 — Lux Via kept alongside MLO2 (task-0023)
+
+User chose to **re-enable Lux Via** (roads/lanterns/bridges) while Lux/Lux Orbis
+core remain removed for MLO2. Verified at documentation level: **`Lux Via.esp` /
+`Lux Via - plugin.esp` do not require Lux or Orbis master plugins** — only Via's
+dual-master pair. Re-enabled MO2 mods + six Via plugins; **mod folders empty on
+disk** — reinstall via Nexus before play. Via + MLO2 exterior combo is **untested**;
+spot-test roads at night. See [`mlo2-manual-run.md` §0](mlo2-manual-run.md#0-lux-via-reinstall-if-mo2-shows-missing-masters).
 
 ---
 

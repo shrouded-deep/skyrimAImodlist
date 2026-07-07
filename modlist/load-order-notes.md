@@ -20,6 +20,11 @@ reordering.
    - `DynDOLOD.esp`
    - `Occlusion.esp`
 
+   **Current profile (2026-07-07):** `DynDOLOD.esm` enabled; **`DynDOLOD.esp`** and
+   **`Occlusion.esp` disabled** — stale Lux-mastered bake post task-0021. Regenerate both
+   during **Tier 2 toolchain maintenance** (task-0025 deferred), not while modlist is
+   still in active flux.
+
 There is **no bashed or smashed patch** in this list, and none is part
 of the inherited Anvil methodology. Wrye Bash is not installed as an MO2
 tool in the Anvil instance (`D:\Skyrim AI Modlist\Anvil\tools\` has
@@ -36,7 +41,7 @@ config: `Anvil\tools\Synthesis\PipelineSettings.json`.
 | `ANV_SynHPHRaceMenuPatcher.esp` | HighPolyHead-RaceMenuPatcher | RaceMenu / High Poly Head record compatibility |
 | `ANV_SynNPCPatcher.esp` | NoDragonLODs, Followers-are-Sneaky, HighPolyHeadVampireFix | NPC/appearance fixes (dragon LODs, follower sneak, vampire HPH) |
 | `ANV_SynWorldPatcher.esp` | SSBGPatcher, RemoveLandscapeVertexColor | Stretched Snow Begone forwarding; landscape vertex-color cleanup |
-| `ANV_SynW4ENBPatcher.esp` | WaterForENBPatcherFixed | Water for ENB compatibility patching |
+| `ANV_SynW4ENBPatcher.esp` | [panthuncia/WaterForENBPatcher](https://github.com/panthuncia/WaterForENBPatcher) (GitHub; was `F:\...\Fixed\` local path) | Water for ENB cell/worldspace water forwarding |
 
 These are **specialized, task-specific patchers**. They do not perform the
 global leveled-list / container / NPC-inventory merging that a Wrye Bash

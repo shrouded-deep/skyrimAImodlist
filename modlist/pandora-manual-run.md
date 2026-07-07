@@ -395,8 +395,10 @@ first run; `FNIS Parser > Scan FNIS Animations > … > FAILED` when probing
 OAR/DAR/NickNak folders that are not FNIS lists. Treat **FATAL** or InfoBar **Error**
 as a failed run.
 
-After **Success**, you may close Pandora. No further UI action is required before
-launching Skyrim (see in-game smoke test below).
+After **Success**, you may close Pandora. Before launching Skyrim: read
+[**In-game smoke test**](#in-game-smoke-test) — you need a **fresh save** to validate
+behavior output; testing on an existing save can produce false failures (furniture,
+mount, locomotion) that look like a broken regen.
 
 **Log file on disk:** `{outputPath}/Engine.log` (for Anvil:
 `mods/Pandora Output/Engine.log`). The bottom pane mirrors this stream live.
@@ -470,10 +472,33 @@ Nemesis output mod).
 
 ## In-game smoke test
 
+### Fresh save required (Nemesis / FNIS / Pandora)
+
+Behavior-engine output (`*.hkx` under `Pandora Output`) does **not** fully apply to
+an **existing save**. Skyrim caches player animation and furniture/mount interaction
+state in the save; after Nemesis → Pandora migration, a fresh Pandora Launch, or any
+re-run that changes compiled behaviors, validating on an old save can make **sit,
+mount, draw, and locomotion appear completely broken** even when the regen succeeded.
+
+**Before spot-checking the table below:**
+
+1. Launch through MO2 with **Pandora Output** enabled (high in modlist).
+2. On the main menu, start a **new game** (recommended) or a **new test save** —
+   not a long-running character from before the regen.
+3. Run the checks below on that fresh save only.
+4. If a fresh save passes but an old save still fails, the engine output is fine —
+   retire or debug the old save separately; do not treat it as a Pandora defect.
+
+Reloading an existing save is **not** sufficient for behavior-engine QA (same rule as
+classic Nemesis/FNIS workflows). Successor-list users doing any behavior work must
+follow this step or risk false diagnosis.
+
 Launch Skyrim through MO2 and spot-check:
 
 | Test | What to verify |
 |---|---|
+| **Furniture sit** | Activate a chair/stool/bench — camera moves, sit animation plays |
+| **Horse mount** | Mount a horse — mount animation and camera; dismount works |
 | TDM 360° movement | Smooth omnidirectional locomotion |
 | TDM lock-on | Target lock works in 3rd person |
 | TDM horse archery | Mounted archery animations |
@@ -499,3 +524,7 @@ Remaining edge cases:
 - **Benign WARN lines in `Engine.log`:** individual patch edit failures (Pandora
   reverts nodes); `Previous output file not found` on first run; FNIS-parser probes
   on OAR/DAR folders. **FATAL** or InfoBar **Error** = failed run.
+- **Sit / mount / furniture dead on old save, OK on new save:** behavior regen is
+  likely fine — existing save has stale animation/furniture state. Re-test on a
+  [fresh save](#fresh-save-required-nemesis--fnis--pandora) before debugging Pandora
+  output or opening a diagnosis task.

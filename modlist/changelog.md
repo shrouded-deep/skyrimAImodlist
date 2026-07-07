@@ -7,14 +7,37 @@ the "why."
 
 ### 2026-07-07
 
-- **Lux → MLO2 MO2 prep** (task-0021): disabled Lux trilogy + patch hubs +
-  Meridia's Luxon Beacon Replacer (7 MO2 mods); removed **36** Lux-named
-  plugins from profile (0 active Lux masters/patches). CS Light: moved 6
-  `Lux CS Light - *.json` aside; restored 6 vanilla `CS Light - *.json` from
-  CS Light 1.5.1 archive. Pre-migration snapshot:
-  `modlist/exports/mlo2-pre-migration-2026-07-07/`. **MLO2 (160748) not in
-  downloads** — user must install via MO2; steps: `modlist/mlo2-manual-run.md`.
-  In-game QA + CS Wetness/Skylighting/SSGI retune pending.
+- **Lux rollback** (task-0030): restored Lux + Lux Orbis + patch hubs; removed
+  MLO2/True Light/Dust/DIAL/WSU stack from profile. CS Light Lux JSONs back;
+  DynDOLOD.esp + Occlusion.esp + four Lux frozen outputs re-enabled. **343**
+  active plugins, **0 missing masters**. Snapshot reference:
+  `modlist/exports/mlo2-pre-migration-2026-07-07/`. Automation:
+  `scripts/rollback-lux-from-mlo2.ps1`.
+- **True Light / WSU plugin LO corrected:** per Nexus 135488 — Shadows and Ambient
+  early; WSU before TL Bulbs; CS Light after TL Bulbs. Supersedes inferred “Placed Light
+  before WSU” wording in task-0026.
+- **WSU + MLO2 prep** (task-0026): MLO2 re-enabled in profile; `MLO.dll` re-extracted.
+  WSU stack (150494 + deps) — download via MO2, run `scripts/install-wsu-stack.ps1`
+  before interior spot tests. Nexus ID corrected (66665 was wrong).
+- **Open cities deferred** (sign-off): both SREX and OCS off the table until list stabilizes.
+- **Synthesis W4ENB patcher fixed** (task-0024): `PipelineSettings.json` now points at
+  GitHub `panthuncia/WaterForENBPatcher` instead of `F:\...\Fixed\`. Output ESP frozen
+  until Tier 2 regen.
+- **SR Exterior Cities research** (task-0020): compatibility doc at
+  `modlist/sr-exterior-cities-compatibility.md` — execution not queued; sign-off required.
+- **MLO2 installed** (task-0022): extracted from Downloads; enabled after Base
+  Object Swapper; `MLO.ini` pre-seeded with `enableColorConsistency=false`.
+- **Lux Via re-enabled — signed off** (task-0023): archives extracted; master scan
+  confirms no Lux/Orbis ESM deps. **`Lux - Resources.esp`** re-added to profile
+  (Via FOMOD resource pack, not Lux core). 7 Via-related plugins active.
+- **Lux-generated disabled flags** (user 2026-07-07): 4 disabled xEdit/Lux optional
+  plugins with expected missing masters. **`DynDOLOD.esp` / `Occlusion.esp`** also
+  disabled (stale Lux bake); regen deferred Tier 2 (task-0025). task-0024 for Synthesis
+  `F:\` path.
+- **Lux → MLO2 MO2 prep** (task-0021): disabled Lux trilogy + patch hubs (7 MO2
+  mods); removed **36** Lux-named plugins from profile. CS Light: moved 6 Lux JSONs
+  aside; restored vanilla set. Snapshot:
+  `modlist/exports/mlo2-pre-migration-2026-07-07/`. In-game QA pending.
 - **Pandora behavior regen** (task-0018): first successful MO2 Launch; engine at
   `tools/Pandora/` (MO2 #385 fix). Output in `Pandora Output`; FNIS Serana hood
   logged separately from Patcher rows. Smoke test pending.

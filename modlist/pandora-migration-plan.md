@@ -225,7 +225,10 @@ Run Pandora; verify `Engine.log` shows no fatal errors.
 1. Place **Pandora output mod** high in modlist (Anvil currently has Nemesis Output
    near top — keep same convention).
 2. Confirm output contains compiled `.hkx` under `meshes/actors/**/behaviors/`.
-3. Launch game — smoke test:
+3. Launch game — smoke test (**fresh save required** — see
+   [`pandora-manual-run.md` § In-game smoke test](pandora-manual-run.md#in-game-smoke-test);
+   do not validate on a pre-regen save):
+   - Furniture sit + horse mount (first — catches stale-save false negatives)
    - TDM 360° movement, lock-on, horse archery
    - Barstool exit forward
    - Weapon switch while moving

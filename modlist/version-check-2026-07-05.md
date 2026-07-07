@@ -69,10 +69,10 @@ independently whenever a new version is available, same as any other framework m
 |---|---|---|---|---|
 | USSEP | 266 | 4.3.4.0a | **4.3.8a** (Mar 2026) | **Medium** — routine patch release; re-check conflict winners after update |
 | USMP | 49616 | 2.6.3.0 | **2.6.7** | **Medium** — several minor releases; 2.6.7 drops Papyrus Extender requirement |
-| Lux (Patch Hub) | 113002 | 6.8.0.0 | 6.8.0.0 | **Disabled** 2026-07-07 (task-0021) — replaced by MLO2 pending install |
-| Lux Orbis | 56095 | 4.5.0.0 | 4.5.0.0 | **Disabled** 2026-07-07 (task-0021) |
-| Lux Via | 63588 | 2.2.0.0 | 2.2.0.0 | **Disabled** 2026-07-07 (task-0021) |
-| Modern Lighting Overhaul 2 | 160748 | — | latest | **Not installed** — user download required (task-0021) |
+| Lux (Patch Hub) | 113002 | 6.8.0.0 | 6.8.0.0 | **Active** — restored task-0030 after MLO2 experiment |
+| Lux Orbis | 56095 | 4.5.0.0 | 4.5.0.0 | **Active** — restored task-0030 |
+| Lux Via | 63588 | 2.2.0.0 | 2.2.0.0 | **Active** (kept through MLO2 trial; task-0023) |
+| Modern Lighting Overhaul 2 | 160748 | 5.3.x (on disk) | latest | **Disabled** task-0030 — mod folder may remain; not in active profile |
 | Embers XD | 37085 | 3.1.2.0 | 3.1.2.0 | Current |
 | Audio Overhaul Skyrim | 12466 | 4.1.3.0 | 4.1.3.0 | Current |
 
