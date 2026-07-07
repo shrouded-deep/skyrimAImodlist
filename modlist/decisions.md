@@ -7,6 +7,25 @@ entry at the top.
 
 ---
 
+### 2026-07-07 — City overhaul stack: H2 + H8 resolved; modular Spaghetti confirmed
+
+**H2 — Drop Vanilla Plus City Entrances:** VPCE has no patches for any proposed
+city expansion and the author will not make them. Drop it. The JK's outskirts and
+Ryn's exterior mods will overwrite the same gate areas anyway; VPCE would be dead
+weight under that stack.
+
+**H8 — Spaghetti Cities AIO → modular per hold:** Migrate to individual per-city
+ESPs (Nexus IDs in `city-overhaul-compat-2026-07-07.md` Spaghetti modular map).
+Cleaner long-term — allows dropping or patching one hold without carrying all
+others. NavCut slices migrate in lockstep. Palaces + Faction Halls stay as-is
+(interior-only, no hold dependency).
+
+Remaining open flags before install task: **H1** (CWE + WHWR together or one
+Whiterun mod), **H5** (FYX Riften Canal vs Crossed Daggers).
+H3/H4/H6/H7 handled at install time (Tier 2 regen, UME hub FOMOD, QA checks).
+
+---
+
 ### 2026-07-07 — City overhaul stack compatibility research (task-0040)
 
 Research-only pass for the proposed per-city expansion stack (CWE, WHWR,
