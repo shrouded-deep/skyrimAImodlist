@@ -90,6 +90,10 @@ with no paper trail.
   to say yes.
 - Commit messages reference the task ID, e.g. `[task-0007] resolve ACOT/
   Kasako Core Framework conflict`.
+- **After every completed task, immediately commit and push to GitHub** —
+  move the task file to `tasks/completed/`, stage all related file
+  changes, and push before starting the next task. Do not batch multiple
+  task completions into one commit.
 - Do not silently change the load order tiering methodology
   (see `modlist/load-order-notes.md`) — flag proposed changes as a task
   for human review instead.
