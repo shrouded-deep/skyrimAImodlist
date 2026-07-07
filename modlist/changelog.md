@@ -7,9 +7,8 @@ the "why."
 
 ### 2026-07-07
 
-- **Successor Additions modlist separator** (task-0038): major-tier
-  `---- SUCCESSOR ADDITIONS ---` above Finishing Line; corrected separator format
-  after MO2 did not show `-DLC: [Successor Additions]_separator`.
+- **Successor Additions modlist separator** (task-0038): `[Successor Additions]_separator`
+  folder + modlist entry; MO2 open/F5 workflow documented in script.
 - **Cheat-mod QoL batch enabled** (task-0036): 13 mods from batch (Infinite
   OOC ×4, enchantment mods, Reading Is Bad, Jewelry of Power, Shadow Merchant,
   Detect Levers, Equipment Editor, Signature Equipment; NER + NPC Stats Editor
