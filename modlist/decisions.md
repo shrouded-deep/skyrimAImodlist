@@ -20,9 +20,15 @@ Cleaner long-term — allows dropping or patching one hold without carrying all
 others. NavCut slices migrate in lockstep. Palaces + Faction Halls stay as-is
 (interior-only, no hold dependency).
 
-Remaining open flags before install task: **H1** (CWE + WHWR together or one
-Whiterun mod), **H5** (FYX Riften Canal vs Crossed Daggers).
-H3/H4/H6/H7 handled at install time (Tier 2 regen, UME hub FOMOD, QA checks).
+**H1 — Whiterun: CWE only, WHWR dropped.** PseudoLoadDoors (140034) is a niche
+two-mod dependency chain; not worth it. CWE covers the district/market expansion;
+WHWR's wall visuals are redundant once JK's Outskirts and Ryn's exteriors land.
+
+**H5 — Drop FYX Riften Canal.** Anvil relic; no patch for Crossed Daggers and
+the canal district overlap is a genuine conflict. Crossed Daggers is the priority.
+
+All H flags resolved. H3/H4/H6/H7 handled at install time (Tier 2 regen, UME
+hub FOMOD, in-game QA checks). Install task queued as task-0042.
 
 ---
 
