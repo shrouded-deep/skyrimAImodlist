@@ -7,16 +7,18 @@ Nolvus Awakening V6. See `AGENTS.md` for shared agent instructions.
 
 ## MO2 instance
 
-- **Instance path:** (update when Nolvus install is complete)
-- **Working profile:** Successor
-- **Pristine reference profile:** Nolvus (never modify)
+- **MO2 root:** `E:\Nolvus\Nolvus\`
+- **Mods folder:** `E:\Nolvus\Nolvus\MODS\`
+- **Profiles path:** `E:\Nolvus\Nolvus\MODS\profiles\`
+- **Pristine reference profile:** `Nolvus Awakening` — never modify
+- **Working profile:** `Successor` — copy of Nolvus Awakening; all changes go here
 
 ## Key paths
 
-- **Project root:** `E:\Skyrim AI Modlist\nolvus-successor\`
+- **Project root:** `E:\Nolvus\nolvus-successor\`
 - **Reference material:** `E:\Skyrim AI Modlist\anvil-successor\modlist\`
 - **Lessons learned:** `E:\Skyrim AI Modlist\lessons-learned.md`
-- **MO2ProfileGuardrails.ps1:** copy from anvil-successor when first needed
+- **MO2ProfileGuardrails.ps1:** copy from `E:\Skyrim AI Modlist\anvil-successor\scripts\` when first needed
 
 ## houseCARL
 
