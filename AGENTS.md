@@ -136,6 +136,12 @@ Do not add, remove, or patch any mod that touches the city/exterior
 ecosystem without an explicit human decision recorded in `decisions.md`.
 When in doubt, treat the city stack as read-only.
 
+**ENB is also non-alterable infrastructure.** Amon ENB + Nolvus ReShade
+2026 are deployed to the stock game folder and tuned for the full Nolvus
+visual stack. Community Shaders is not installed and must not be added.
+Do not remove, disable, or modify any ENB-linked mod folder or the stock
+game ENB binaries.
+
 ## Conflict re-audit practice
 
 Re-run a full cross-plugin conflict audit whenever:
