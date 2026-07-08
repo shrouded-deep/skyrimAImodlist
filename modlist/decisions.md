@@ -4,6 +4,12 @@ Dated entries recording what changed and why. Most recent first.
 
 ---
 
+## 2026-07-09 — ENB retained; Community Shaders transition declined
+
+Task-0001 audit found the transition would be Major complexity: Amon ENB + Nolvus ReShade 2026 are deployed to the stock game folder (not MO2-toggleable), 63 ENB-linked mod folders, 200+ Lux/Via/Orbis patches tuned for ENB, and the SREX+Lux Orbis patch web is a project constraint that cannot be broken. Decision: retain Amon ENB as-is. Community Shaders is not installed and will not be added. ENB is treated as non-alterable infrastructure alongside the city/SREX stack.
+
+---
+
 ## 2026-07-09 — Plugin count baseline recorded
 
 Nolvus Awakening V6 ships with **228 of 254 active plugins** — 26 slots of headroom. This is the baseline for the Successor profile before any additions or removals. Every task that adds or removes plugins must record the new count in its Result. Prefer ESL-flagged mods for additions; flag any task that would push the count above 245 for human review before proceeding.
