@@ -151,6 +151,14 @@ in parallel with Cursor tasks — but it should not be deferred
 indefinitely. Note the last re-audit date in `decisions.md` each time
 one completes.
 
+## Plugin count budget
+
+Nolvus Awakening V6 baseline: **228 / 254 active plugins** (26 slots headroom).
+Every task that adds or removes plugins must record the new count in its Result.
+Prefer ESL-flagged mods for any additions. **If a proposed change would push the
+count above 245, stop and flag it for human review before proceeding** — do not
+assume the user has accounted for it.
+
 ## Mod placement in MO2
 
 New mods added to the list must be placed **immediately above the
