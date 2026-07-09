@@ -4,6 +4,12 @@ Dated entries recording what changed and why. Most recent first.
 
 ---
 
+## 2026-07-09 — Post-Bruma conflict re-audit: CLEAN (task-0005)
+
+houseCARL WRLD re-audit run after Bruma removal. Checked all kept worldspace mods (Falskaar, Wyrmstooth, Midwood Isle, Moonpath, Vigilant, Unslaad, Gray Fox Cowl, Darkend) for orphan masters and unexpected record winners. All winners are appropriate Lux/FWMF/Water-for-ENB patches. No active plugin retains BSHeartland.esm as a live master. 5 stale CYR worldspace records remain in houseCARL's index (Water for ENB - Patch - Beyond Skyrim.esp file present on disk but not loaded); no gameplay impact. 17 stale loadorder.txt warnings will clear on MO2 refresh. Next re-audit after Tier 2 regen (Synthesis + DynDOLOD + TexGen + ParallaxGen).
+
+---
+
 ## 2026-07-09 — DynDOLOD and Synthesis output layer disabled (pre-regen state)
 
 User manually disabled `DynDOLOD - Output - Ultimate`, `DynDOLOD - Textures - Ultimate`, and `Synthesis Patch` mod folders on Successor. Plugins `DynDOLOD.esm`, `DynDOLOD.esp`, `Occlusion.esp`, and `Synthesis.esp` removed from `plugins.txt`. This brings the list to a known-clean state for loading without stale Bruma LOD/synthesis data. The runtime input mods (DLL, Resources, TexGen Fixes) remain enabled. These outputs must be regenerated as part of Tier 2 regen after the current curation pass is complete.
