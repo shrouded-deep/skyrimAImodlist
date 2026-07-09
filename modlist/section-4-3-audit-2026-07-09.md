@@ -10,12 +10,10 @@
 
 | Check | Status |
 |---|---|
-| `housecarl_load_order_status` on Successor | **Unavailable** — houseCARL MCP/CLI not present in this Cursor environment |
-| Worldspace (WRLD) classification | **Documented inference** — based on mod authorship, Nexus descriptions, and known record layouts. All WRLD columns marked *pending houseCARL verification* unless noted |
+| `housecarl_load_order_status` on Successor | **Confirmed** — task-0003 (Claude Code, 2026-07-09); instance `E:\Nolvus\Nolvus\MO2`, profile `Successor` |
+| Worldspace (WRLD) classification | **Confirmed via houseCARL** — task-0003 ran `housecarl_cross_plugin_query(type=WRLD)` against all main ESPs. See `## houseCARL WRLD verification` section for corrections. |
 | Patch orphan scan | **Confirmed** — sourced from `plugins.txt` keyword scan of all 3,823 enabled plugins plus modlist.txt cross-reference for section-local patches |
 | Master-record verification | **Name-based** — binary master parsing of 3,800+ plugins exceeded time budget; orphans identified via enabled plugin names and modlist patch entries |
-
-**Re-run requirement:** A follow-up pass with houseCARL `housecarl_cross_plugin_query` on the Successor instance should confirm WRLD flags before any removals execute.
 
 ---
 
@@ -199,8 +197,43 @@ Prioritized for content-width reduction without entering Complex/SREX-heavy terr
 
 ---
 
+## houseCARL WRLD verification (task-0003, 2026-07-09)
+
+**Instance:** `E:\Nolvus\Nolvus\MO2` · **Profile:** Successor  
+**Method:** `housecarl_cross_plugin_query(type=WRLD, plugins=[...], fields=[Name, EditorID])`
+
+### Confirmed classifications (matching inference)
+
+| Mod | Confirmed WRLD | Notes |
+|---|---|---|
+| Beyond Skyrim — Bruma | **New** — `BSHeartland` (Cyrodiil), Crow's Wood, Frostfire Glade, etc. | Confirmed new worldspace |
+| Wyrmstooth | **New** — `WyrmstoothWorld`, `Dimfrost` | Confirmed new worldspace |
+| Vigilant | **New** — Coldharbour (`zCHMolagWorld`), Stuhn Ravine, Lamae's Dream, Bruiant Estate, etc. Also edits `EldergleamSanctuaryWorld` | Confirmed; larger scope than inferred |
+| Unslaad | **New** — `zzzCrbUllissWorld` (Unslaad), Lost Unslaad, Dragon's Peak, Frozen Abyss, etc. | Confirmed new worldspace |
+| Falskaar | **New** — `Falskaar`, `FalskaarStargazerGroveWorld`. Also edits `RiftenWorld`. | Confirmed |
+| Midwood Isle | **New** — `MidwoodIsle`, `Lastendell`, multiple Oblivion realms | Confirmed; large scope |
+| Gray Cowl of Nocturnal | **New** — `mannyGFDesert` (Alik'r Desert), `mannyGFL` (Ancestral Cheetahs), `mannyGFO` (Coldharbour) | Confirmed new worldspaces |
+| Clockwork | **New** — `CLWCastleExtWorld` (Clockwork Castle Grounds). Also edits Solstheim. | Confirmed; exterior grounds worldspace |
+| Darkend | **New** — `XJKislandWorld` (Pharos), `XJKislandWorld2` (Forgotten Mountain), `XJKDarkendTower` | Confirmed new worldspaces |
+| Moon and Star | **Edit** — `WindhelmWorld` only | Confirmed edit, no new worldspace |
+| Forgotten City | **None** — no WRLD records | Confirmed no exterior worldspace |
+| Project AHO | **None** — no WRLD records | Confirmed |
+| Identity Crisis | **None** — no WRLD records | Confirmed |
+
+### Corrections from inference
+
+| Mod | Inferred | Confirmed | Impact |
+|---|---|---|---|
+| **Moonpath to Elsweyr** | New — Elsweyr segment | **Edit (Tamriel only)** — no dedicated worldspace, content placed in Tamriel cells | No new worldspace; removal complexity unchanged (still Complex due to patch count) |
+| **Wheels of Lull** | New — Lull worldspace | **None** — no WRLD records found | Downgrade scope; interior-only world; removal remains Moderate |
+| **SirenRoot (evgSIRENROOT.esm)** | New — SirenRoot region | **Edit (Soul Cairn DLC)** — only WRLD record touches `DLC01SoulCairn` | Not a new exterior; Soul Cairn content only |
+| **Undeath** | Edit — crypts/cells in Skyrim | **New** — `NecroDragontailMountains` (Dragontail Mountains) | Upgrade: has exterior worldspace; removal remains Complex (SREX patch present) |
+| **Carved Brink (Haem Projects Goblands)** | New — Goblands | **None** — no WRLD records | Downgrade; interior/dungeon content only; simplifies removal to Clean–Moderate |
+
+---
+
 ## Follow-up tasks implied
 
-1. **houseCARL WRLD verification** on Successor for all "pending" rows before executing removals.
-2. **task-0003+ (removal execution)** for Bruma — build disable list from this doc; human approves per AGENTS.md city-stack rules (Bruma is clear).
+1. ~~houseCARL WRLD verification~~ — **Complete** (task-0003).
+2. **task-0004 (Bruma removal execution)** — build disable list from this doc; human approves. Bruma confirmed clear of SREX/Lux/ENB.
 3. **Conflict re-audit** after Bruma removal (~35+ plugin changes) per AGENTS.md threshold.
