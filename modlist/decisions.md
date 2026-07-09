@@ -4,6 +4,18 @@ Dated entries recording what changed and why. Most recent first.
 
 ---
 
+## 2026-07-09 — DynDOLOD and Synthesis output layer disabled (pre-regen state)
+
+User manually disabled `DynDOLOD - Output - Ultimate`, `DynDOLOD - Textures - Ultimate`, and `Synthesis Patch` mod folders on Successor. Plugins `DynDOLOD.esm`, `DynDOLOD.esp`, `Occlusion.esp`, and `Synthesis.esp` removed from `plugins.txt`. This brings the list to a known-clean state for loading without stale Bruma LOD/synthesis data. The runtime input mods (DLL, Resources, TexGen Fixes) remain enabled. These outputs must be regenerated as part of Tier 2 regen after the current curation pass is complete.
+
+---
+
+## 2026-07-09 — Beyond Skyrim Bruma removed from Successor
+
+First section 4.3 content-width cut executed on the Successor profile (task-0004): 27 mod folders disabled, 37 Bruma/BSHeartland plugins removed (~3823 → ~3786 active plugins). Nolvus Awakening donor profile unchanged. Rationale: user-confirmed removal candidate; task-0002/0003 audit showed no SREX, Lux, or ENB dependency; disable-only with no ESP surgery. **Before first launch:** human must regenerate Synthesis.esp (BSHeartland worldspace winners); DynDOLOD/TexGen/ParallaxGen regen recommended for Cyrodiil border. Post-removal houseCARL conflict re-audit queued as task-0005.
+
+---
+
 ## 2026-07-09 — ENB retained; Community Shaders transition declined
 
 Task-0001 audit found the transition would be Major complexity: Amon ENB + Nolvus ReShade 2026 are deployed to the stock game folder (not MO2-toggleable), 63 ENB-linked mod folders, 200+ Lux/Via/Orbis patches tuned for ENB, and the SREX+Lux Orbis patch web is a project constraint that cannot be broken. Decision: retain Amon ENB as-is. Community Shaders is not installed and will not be added. ENB is treated as non-alterable infrastructure alongside the city/SREX stack.
