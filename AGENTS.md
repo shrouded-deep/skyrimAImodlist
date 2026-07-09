@@ -128,6 +128,22 @@ with no paper trail.
   involving these tools must be written as a human step, not an agent
   step.
 
+## Nolvus mod folders — never overwrite
+
+**Never write into, rename, or regenerate over any mod folder whose name
+begins with `Nolvus` or whose content was installed by Nolvus Awakening.**
+Those folders are the pristine donor baseline and must remain untouched so
+the `Nolvus Awakening` profile stays recoverable.
+
+For Tier 2 tool outputs (DynDOLOD, TexGen, Synthesis, ParallaxGen,
+Occlusion), the Successor profile uses **separate output folders** with a
+`Successor -` prefix (e.g. `Successor - DynDOLOD Output`, `Successor -
+Synthesis Patch`). Always target these Successor-prefixed folders when
+configuring or running regen tools. If a Successor output folder does not
+exist yet, create it — never reuse the Nolvus original.
+
+---
+
 ## Nolvus city stack — do not alter
 
 Nolvus ships with deep SR Exterior Cities (SREX) integration across all
