@@ -6,13 +6,15 @@ files (`CLAUDE.md` for Claude Code); this file is the common ground.
 
 ## Project
 
-Personal Skyrim SE modlist, built on **Nolvus Awakening V6** as the donor list.
-Approach: top-down curation — trim unwanted mods, add genuine gaps, leave
-Nolvus's core city/exterior ecosystem (including SREX integration) untouched.
+Personal Skyrim SE modlist, built on **Keizaal** as the middle-ground Wabbajack
+foundation. Approach: fork-and-curate — audit patch lock-in, add content gaps,
+and shape toward a power-fantasy build without dismantling the base list's structure.
+
+**MO2 root:** `E:\Skyrim\`
 
 **MO2 profiles:**
-- `Nolvus` — pristine donor profile, never modify
-- `Successor` — working profile; all changes go here
+- `Keizaal` — pristine Wabbajack-installed profile, never modify
+- `Keizaal - Fork` — working profile; all changes go here
 
 ## Roles
 
@@ -128,14 +130,6 @@ with no paper trail.
   involving these tools must be written as a human step, not an agent
   step.
 
-## Nolvus city stack — do not alter
-
-Nolvus ships with deep SR Exterior Cities (SREX) integration across all
-hold exteriors. This patch web is load-bearing and must not be disrupted.
-Do not add, remove, or patch any mod that touches the city/exterior
-ecosystem without an explicit human decision recorded in `decisions.md`.
-When in doubt, treat the city stack as read-only.
-
 ## Conflict re-audit practice
 
 Re-run a full cross-plugin conflict audit whenever:
@@ -153,19 +147,20 @@ one completes.
 
 ## Plugin count budget
 
-Nolvus Awakening V6 baseline: **228 / 254 active plugins** (26 slots headroom).
+Keizaal baseline: **TBD** — record after task-0046 fork-test audit.
 Every task that adds or removes plugins must record the new count in its Result.
 Prefer ESL-flagged mods for any additions. **If a proposed change would push the
-count above 245, stop and flag it for human review before proceeding** — do not
-assume the user has accounted for it.
+active plugin count above 245, stop and flag it for human review before proceeding**
+— do not assume the user has accounted for it.
 
 ## Mod placement in MO2
 
-New mods added to the list must be placed **immediately above the
-`[Finishing Line]` separator** in `modlist.txt`, inside a dedicated
-separator zone named `[Nolvus Additions]`. Do not append to the bottom
-of the list outside this zone, and do not sort new mods into the main
-Nolvus sections until a deliberate placement decision is made.
+New mods added to the list must be placed in a dedicated separator zone
+named `[Keizaal Additions]`. Exact placement (relative to which Keizaal
+separator) to be established during task-0046 fork-test once the list
+structure is understood. Do not append outside a named zone, and do not
+sort new mods into the main Keizaal sections until a deliberate placement
+decision is recorded in `modlist/decisions.md`.
 
 When adding mods via a task, include this placement explicitly in the
 acceptance criteria — do not rely on MO2's default append behaviour.
