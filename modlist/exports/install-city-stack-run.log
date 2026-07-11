@@ -1,0 +1,25 @@
+[2026-07-12 02:01:17] task-0051 city stack install starting
+[2026-07-12 02:01:17] SKIP exists: Capital Whiterun Expansion
+[2026-07-12 02:01:17] SKIP exists: Capital Windhelm Expansion
+[2026-07-12 02:01:17] SKIP exists: Ultimate Markarth
+[2026-07-12 02:01:17] SKIP exists: Ultimate Markarth Expanded
+[2026-07-12 02:01:17] SKIP exists: RedBag's Solitude
+[2026-07-12 02:01:17] SKIP exists: City of Crossed Daggers - Riften Expansion
+[2026-07-12 02:01:17] SKIP exists: Riverwood Has Charm and Walls
+[2026-07-12 02:01:17] SKIP exists: Rob's Bug Fixes - Capital Whiterun
+[2026-07-12 02:01:17] SKIP exists: CWE Spaghetti Patch
+[2026-07-12 02:01:17] SKIP exists: Spaghetti's Capital Windhelm Expansion
+[2026-07-12 02:01:17] SKIP exists: RedBag Patch Collection
+[2026-07-12 02:01:17] SKIP exists: Riverwood Has Walls Patch Collection
+[2026-07-12 02:01:17] SKIP exists: UME Patch Hub
+[2026-07-12 02:01:17] SKIP exists: Crossed Daggers - Spaghetti Patch
+[2026-07-12 02:01:17] SKIP exists: Spaghetti's Cities - Whiterun
+[2026-07-12 02:01:17] SKIP exists: Spaghetti's Cities - Windhelm
+[2026-07-12 02:01:17] SKIP exists: Spaghetti's Cities - Markarth
+[2026-07-12 02:01:17] SKIP exists: Spaghetti's Cities - Solitude
+[2026-07-12 02:01:17] SKIP exists: Spaghetti's Cities - Riften
+[2026-07-12 02:01:17] SKIP exists: Spaghetti's Towns - Riverwood
+[2026-07-12 02:01:17] plugins active: 762 -> 783 (+21)
+[2026-07-12 02:01:17] city plugins inserted before Keizaal Maintenance.esp : 21
+[2026-07-12 02:01:17] NOTE: Keizaal has no Lux — Lux Patch Hub FOMOD step N/A; no Lux/Orbis/Via patches enabled
+[2026-07-12 02:01:17] task-0051 complete — MO2 F5 + MAST check required

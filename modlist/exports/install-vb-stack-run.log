@@ -1,0 +1,50 @@
+[2026-07-12 01:58:59] task-0050 VB stack install starting
+[2026-07-12 01:58:59] SKIP exists: Apocalypse - Magic of Skyrim
+[2026-07-12 01:58:59] SKIP exists: Apocalypse - Additional Dremora Faces Patch
+[2026-07-12 01:58:59] SKIP exists: Mysticism - Additional Dremora Faces Patch
+[2026-07-12 01:58:59] SKIP exists: Mysticism - Jump Spell Addon
+[2026-07-12 01:58:59] SKIP exists: Mysticism - USSEP Container Patch
+[2026-07-12 01:58:59] SKIP exists: Mysticism - The Cause Rebalance
+[2026-07-12 01:58:59] SKIP exists: Mysticism - Lower Charge Time
+[2026-07-12 01:58:59] SKIP exists: Mysticism - No Projectile Weight
+[2026-07-12 01:58:59] SKIP exists: Mysticism - Spells For Npcs
+[2026-07-12 01:58:59] SKIP exists: Mysticism - Deadly Spell Impacts
+[2026-07-12 01:58:59] COPY Mysticism - Cleaned and Upscaled [2K]
+[2026-07-12 01:58:59] SKIP exists: SPERG - Skyrim Perk Enhancements and Rebalanced Gameplay
+[2026-07-12 01:58:59] SKIP exists: SPERG - Optimised Scripts
+[2026-07-12 01:58:59] SKIP exists: Adamant - Apocalypse Patch
+[2026-07-12 01:58:59] SKIP exists: Path of Sorcery - Magic Perk Overhaul
+[2026-07-12 01:58:59] SKIP exists: Path of Sorcery - Apocalypse Patch
+[2026-07-12 01:58:59] SKIP exists: Path of Sorcery - Arcane Accessories Patch
+[2026-07-12 01:58:59] SKIP exists: Path of Sorcery - Bittercup Patch
+[2026-07-12 01:58:59] SKIP exists: Path of Sorcery - Necromantic Grimoire Patch
+[2026-07-12 01:58:59] SKIP exists: Path of Sorcery - Plague of the Dead Patch
+[2026-07-12 01:58:59] SKIP exists: Path of Sorcery - Saints and Seducers Patch
+[2026-07-12 01:58:59] SKIP exists: Path of Sorcery - The Cause Patch
+[2026-07-12 01:58:59] SKIP exists: Path of Sorcery - Creation Club Leveled List Patch
+[2026-07-12 01:58:59] SKIP exists: Path of Sorcery - Discrepancy's PoS Mashup Patch
+[2026-07-12 01:58:59] SKIP exists: Vokrii - Minimalistic Perks of Skyrim
+[2026-07-12 01:58:59] SKIP exists: Vokrii - Apocalypse Patch
+[2026-07-12 01:58:59] SKIP exists: Vokrii - Mysticism Patch
+[2026-07-12 01:58:59] SKIP exists: Vokrii - Scrambled Bugs Compatibility
+[2026-07-12 01:58:59] SKIP exists: Vokrii - Optimised Scripts
+[2026-07-12 01:58:59] SKIP exists: Ordinator
+[2026-07-12 01:58:59] SKIP exists: Ordinator - Mysticism Patch
+[2026-07-12 01:58:59] SKIP exists: Ordinator - Apocalypse Patch
+[2026-07-12 01:58:59] SKIP exists: Ordinator - Beyond Skyrim Patch
+[2026-07-12 01:58:59] SKIP exists: Ordinator - Combat Styles
+[2026-07-12 01:58:59] SKIP exists: Ordinator - No Timed Block
+[2026-07-12 01:58:59] SKIP exists: Ordinator - Scrambled Bugs compatibility
+[2026-07-12 01:58:59] SKIP exists: Ordinator - Optimised Scripts
+[2026-07-12 01:58:59] SKIP exists: Ordinator Reworked - Combat Mod Compatibility
+[2026-07-12 01:58:59] SKIP exists: Vokriinator Black - Apocalypse Patch
+[2026-07-12 01:58:59] SKIP exists: Vokriinator Black - No Timed Blocking
+[2026-07-12 01:58:59] SKIP exists: Vokriinator Black - Ethereal Arrows Fix
+[2026-07-12 01:58:59] SKIP exists: Vokriinator Black - Combat Tweaks
+[2026-07-12 01:58:59] SKIP exists: Vokriinator Black - Discrepancy's ISC Patch
+[2026-07-12 01:59:01] EXTRACT Vokriinator Black-26702-6-15-3-1746281209.7z -> Vokriinator Black
+[2026-07-12 01:59:02] NOTE Crash Workaround archive not found — download Nexus 146503 before smoke test if CTD
+[2026-07-12 01:59:02] modlist.txt updated (46 VB mods enabled)
+[2026-07-12 01:59:02] plugins.txt: active 721 -> 1479
+[2026-07-12 01:59:02] loadorder.txt: inserted 41 VB plugins after StaffEnchanting.esp
+[2026-07-12 01:59:02] task-0050 complete — MO2 F5 refresh required

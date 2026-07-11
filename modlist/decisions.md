@@ -24,6 +24,13 @@ Next: task-0050 — Phase 1 VB stack install (Mysticism + Apocalypse + Adamant +
 Path of Sorcery + Vokrii + Ordinator + Vokriinator Black), using Nolvus modlist as
 install order template and skipping all 5 Nolvus-bespoke ESPs.
 
+**Update 2026-07-12:** task-0050 and task-0051 complete (Cursor). `Keizaal - Fork` now
+~783 active plugins (+41 VB, +21 city vs 717 post-Constellations baseline). Install via
+`scripts/install-keizaal-vb-stack.ps1` and `scripts/install-keizaal-city-stack.ps1`; VB
+6.15.3. No Nolvus bespoke ESPs, DAC Improved omitted. **Pending human steps:** MO2 F5 on
+Keizaal - Fork, MAST check, VB new-game smoke test (enable Crash Workaround 146503 if
+Combat Styles CTD). Keizaal has no Lux/Orbis/Via, so no Lux Patch Hub pass was needed.
+
 ---
 
 ## 2026-07-12 — Keizaal adopted as foundation (task-0046 audit complete)
