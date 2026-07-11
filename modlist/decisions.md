@@ -4,6 +4,22 @@ Dated entries recording what changed and why. Most recent first.
 
 ---
 
+## 2026-07-12 — Keizaal adopted as foundation (task-0046 audit complete)
+
+Fork-test audit passed. Full findings in `modlist/keizaal-fork-test-audit-2026-07-12.md`.
+
+- 1170-native confirmed (`SkyrimSE.exe 1.6.1170.0`)
+- No Requiem anywhere in the load order
+- Community Shaders confirmed; no ENB
+- 719 active plugins baseline (+ 54 CC/implicit = 773 total)
+- List glue: ~66 plugins (Keizaal Patches/Tweaks + Tamrielic Distribution) — modular and legible
+- One parse error flagged: `Description Framework - Keizaal Cut.esp` — investigation needed, not a blocker
+- Plugin budget rule updated in AGENTS.md to reflect 719-plugin baseline
+
+**Verdict: ADOPT.** `Keizaal - Fork` profile is the working foundation going forward.
+
+---
+
 ## 2026-07-12 — Keizaal fork profile created; Vokriinator Black as gameplay target
 
 Working profile `Keizaal - Fork` created as a copy of the pristine `Keizaal`

@@ -147,11 +147,13 @@ one completes.
 
 ## Plugin count budget
 
-Keizaal baseline: **TBD** — record after task-0046 fork-test audit.
+Keizaal baseline (task-0046, 2026-07-12): **719 active checked plugins** (+ 54
+CC/implicit = 773 total). Of the 719: 50 `.esl`, 665 `.esp`, 4 `.esm`.
+
 Every task that adds or removes plugins must record the new count in its Result.
-Prefer ESL-flagged mods for any additions. **If a proposed change would push the
-active plugin count above 245, stop and flag it for human review before proceeding**
-— do not assume the user has accounted for it.
+**Strongly prefer ESL-flagged mods for any additions** — the full-weight plugin
+count is already large. Flag any non-ESL addition for human review before
+proceeding; do not assume the user has accounted for the slot cost.
 
 ## Mod placement in MO2
 
