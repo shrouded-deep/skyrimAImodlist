@@ -10,6 +10,12 @@ Personal Skyrim SE modlist, built on **Keizaal** as the middle-ground Wabbajack
 foundation. Approach: fork-and-curate — audit patch lock-in, add content gaps,
 and shape toward a power-fantasy build without dismantling the base list's structure.
 
+**Git branch:** `keizaal-fork` (set 2026-07-12). The old `nolvus-successor`
+remote branch is a **dead archive** of the abandoned Nolvus project — do **not**
+pull, merge, or rebase from it. If your local checkout is still on
+`nolvus-successor`, switch: `git fetch && git checkout keizaal-fork`. All work
+commits and pushes go to `keizaal-fork`.
+
 **MO2 root:** `E:\Skyrim\`
 
 **MO2 profiles:**
