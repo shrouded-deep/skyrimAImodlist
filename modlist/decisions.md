@@ -4,6 +4,28 @@ Dated entries recording what changed and why. Most recent first.
 
 ---
 
+## 2026-07-12 — Vokriinator Black chosen over Constellations (task-0049)
+
+task-0048 identified a critical conflict: Constellations (custom skill trees via CSF —
+Athletics, Hand-to-Hand, Sorcery) cannot coexist with Vokriinator Black's Ordinator
+perk tree replacement without custom patch work that doesn't yet exist publicly.
+
+**Decision: Option A — remove Constellations, proceed with full VB stack.**
+
+Disabled on `Keizaal - Fork` (pristine `Keizaal` profile untouched):
+- `Constellations - Additional Player Skills` mod — disabled in modlist.txt
+- `ConstellationsNewSkills.esp` — deactivated in plugins.txt
+- `Keizaal Patch - Book Covers Skyrim - Constellation.esp` — deactivated in plugins.txt
+- `Constellations for Simonrim` — was already disabled
+
+Active plugin count: 719 → **717** (2 full-weight ESPs removed).
+
+Next: task-0050 — Phase 1 VB stack install (Mysticism + Apocalypse + Adamant + SPERG +
+Path of Sorcery + Vokrii + Ordinator + Vokriinator Black), using Nolvus modlist as
+install order template and skipping all 5 Nolvus-bespoke ESPs.
+
+---
+
 ## 2026-07-12 — Keizaal adopted as foundation (task-0046 audit complete)
 
 Fork-test audit passed. Full findings in `modlist/keizaal-fork-test-audit-2026-07-12.md`.
