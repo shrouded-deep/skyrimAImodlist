@@ -4,6 +4,28 @@ Dated entries recording what changed and why. Most recent first.
 
 ---
 
+## 2026-07-12 — Restored 3 omitted CC creations for PoS patches (task-0057)
+
+The VB stack (copied from Nolvus) shipped Path of Sorcery patches for 3 Creation Club
+creations Keizaal curates OUT — leaving missing masters that would CTD at load. User
+spotted the MO2 warning icons; houseCARL's summary had NOT caught them (it verifies
+plugin files exist but tolerates missing master references — use
+`scripts/full-mast-scan.ps1` for real MAST audits).
+
+**Decision:** Restore the CC content rather than disable the patches — keeps PoS's
+balancing and gives the player the content. New standalone mod `Restored CC - Arcane
+Accessories, Bittercup, Necromantic Grimoire` (3 esl + 3 bsa from the user's own AE
+install), enabled at top priority; Keizaal's own mods untouched (pristine). The one
+patch needing Immersive Sounds Compendium (`DISCO_VokriinatorISCPatch.esp`, not CC) was
+disabled instead.
+
+**Result:** `Keizaal - Fork` **824 active, 0 missing masters, load order clean.** 3 CC
+now force-loaded as implicit masters (54 → 57). Full-weight unchanged (~104/254). Re-adds
+gameplay Keizaal cut (Bittercup, Necromancy, Arcane staves) — deliberate; watch in smoke
+test.
+
+---
+
 ## 2026-07-12 — Spaghetti's Cities dropped (task-0055)
 
 Spaghetti's Cities was only in the city stack because the Anvil reference list
