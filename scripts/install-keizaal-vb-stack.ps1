@@ -103,9 +103,22 @@ if ($vbArchive) {
     Write-Log "EXTRACT $($vbArchive.Name) -> Vokriinator Black"
     & $SevenZip x $vbArchive.FullName "-o$tmp" -y | Out-Null
     if ($LASTEXITCODE -gt 1) { throw "7z extract failed exit $LASTEXITCODE" }
-    $inner = Get-ChildItem $tmp -Directory | Select-Object -First 1
-    if ($inner) { Move-Item $inner.FullName $vbDest }
-    else { Move-Item (Join-Path $tmp '*') $vbDest }
+    # Determine the mod root. Only descend into a wrapper dir if $tmp contains
+    # EXACTLY one item and it is a directory. If $tmp holds plugin/data files at
+    # root (esp/esm/bsa) or multiple items, $tmp itself IS the mod root — moving a
+    # single 'scripts'/'source' subfolder here silently drops the .esp (task-0052 bug).
+    $top = Get-ChildItem $tmp -Force
+    $rootHasData = $top | Where-Object { $_.PSIsContainer -eq $false -and $_.Extension -in '.esp','.esm','.esl','.bsa' }
+    if ($top.Count -eq 1 -and $top[0].PSIsContainer -and -not $rootHasData) {
+        Move-Item $top[0].FullName $vbDest
+    } else {
+        New-Item -ItemType Directory -Path $vbDest -Force | Out-Null
+        Move-Item (Join-Path $tmp '*') $vbDest -Force
+    }
+    # Post-copy verification: the core merge plugin MUST be present
+    if (-not (Test-Path (Join-Path $vbDest 'Vokriinator Black.esp'))) {
+        throw "VB install verify FAILED: Vokriinator Black.esp missing in $vbDest after extract"
+    }
 } else {
     Write-Log 'WARN VB 6.15 archive not found; copying Nolvus Vokriinator Black folder'
     $src = Join-Path $NolvusMods 'Vokriinator Black'
