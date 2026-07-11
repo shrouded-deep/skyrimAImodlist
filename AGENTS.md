@@ -153,13 +153,16 @@ one completes.
 
 ## Plugin count budget
 
-Keizaal baseline (task-0046, 2026-07-12): **719 active checked plugins** (+ 54
-CC/implicit = 773 total). Of the 719: 50 `.esl`, 665 `.esp`, 4 `.esm`.
+Pristine `Keizaal` baseline (task-0046): 719 active checked + 54 CC/implicit = 773.
 
-Every task that adds or removes plugins must record the new count in its Result.
-**Strongly prefer ESL-flagged mods for any additions** — the full-weight plugin
-count is already large. Flag any non-ESL addition for human review before
-proceeding; do not assume the user has accounted for the slot cost.
+**Working `Keizaal - Fork` state (task-0052, 2026-07-12):** 831 active plugins, all
+resolve, 0 missing masters. The number that matters vs the **254 full-weight cap** is
+**105 full-weight ESP/ESM — 149 slots headroom.** The other 622 ESL-flagged ESP + 50
+`.esl` are free (don't count vs the cap).
+
+Every task that adds or removes plugins must record the new full-weight count in its
+Result. **Strongly prefer ESL-flagged mods for additions.** If a change would push
+full-weight plugins toward 254 (flag at 240), stop for human review before proceeding.
 
 ## Mod placement in MO2
 

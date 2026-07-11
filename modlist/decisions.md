@@ -24,12 +24,27 @@ Next: task-0050 — Phase 1 VB stack install (Mysticism + Apocalypse + Adamant +
 Path of Sorcery + Vokrii + Ordinator + Vokriinator Black), using Nolvus modlist as
 install order template and skipping all 5 Nolvus-bespoke ESPs.
 
-**Update 2026-07-12:** task-0050 and task-0051 complete (Cursor). `Keizaal - Fork` now
-~783 active plugins (+41 VB, +21 city vs 717 post-Constellations baseline). Install via
+**Update 2026-07-12:** task-0050 and task-0051 complete (Cursor). Install via
 `scripts/install-keizaal-vb-stack.ps1` and `scripts/install-keizaal-city-stack.ps1`; VB
-6.15.3. No Nolvus bespoke ESPs, DAC Improved omitted. **Pending human steps:** MO2 F5 on
-Keizaal - Fork, MAST check, VB new-game smoke test (enable Crash Workaround 146503 if
-Combat Styles CTD). Keizaal has no Lux/Orbis/Via, so no Lux Patch Hub pass was needed.
+6.15.3. No Nolvus bespoke ESPs, DAC Improved omitted. Keizaal has no Lux/Orbis/Via, so
+no Lux Patch Hub pass was needed.
+
+**Update 2026-07-12 (task-0052 MAST audit):** houseCARL audit on `Keizaal - Fork` found
+and fixed **3 defects** — see task-0052 for detail:
+1. **`Vokriinator Black.esp` was missing** (install script did a partial folder copy —
+   got the `.pex` scripts but not the core 529 KB merge plugin). Restored from Nolvus.
+2. Wrong-variant `CWE Spaghetti Patch` (AIO patch on a modular Spaghetti setup) —
+   disabled; task-0053 to source the modular variant.
+3. Stale `Description Framework - Keizaal Cut.esp` active line — deactivated.
+
+**Final `Keizaal - Fork` state: 831 active plugins, all resolve, 0 missing masters.**
+Budget: **105 full-weight ESP/ESM vs the 254 cap — 149 slots headroom** (Keizaal is
+heavily ESL-ified: 622 ESL-flagged ESP + 50 .esl are free). task-0054 queued to verify
+no other script-copied folders are missing assets (the partial-copy bug is systemic).
+
+Still pending (human): VB new-game smoke test (enable Crash Workaround 146503 if Combat
+Styles CTD). **Before launching, run MO2 once on the `Keizaal - Fork` profile and F5** so
+MO2 rewrites the profile files with the fixes applied.
 
 ---
 
