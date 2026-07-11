@@ -4,6 +4,21 @@ Dated entries recording what changed and why. Most recent first.
 
 ---
 
+## 2026-07-12 — Keizaal fork profile created; Vokriinator Black as gameplay target
+
+Working profile `Keizaal - Fork` created as a copy of the pristine `Keizaal`
+(vanilla+) profile at `E:\Skyrim\profiles\`. `Keizaal` and `Keizaal - SimonRim`
+remain untouched as reference baselines.
+
+**Gameplay foundation choice:** Starting from the vanilla+ profile rather than
+SimonRim. Long-term gameplay overhaul target is **Vokriinator Black** — the
+comprehensive character system overhaul built on Ordinator + Vokrii + Apocalypse
++ Odin ecosystem. This is a deliberate start-small approach: establish the fork,
+audit lock-in, then layer Vokriinator Black and its patch requirements once the
+base is understood.
+
+---
+
 ## 2026-07-12 — Foundation filters: no Requiem; target Skyrim 1.17.0 (1170)
 
 Two hard filters now steer Wabbajack foundation selection (see updated
