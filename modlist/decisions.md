@@ -4,6 +4,28 @@ Dated entries recording what changed and why. Most recent first.
 
 ---
 
+## 2026-07-12 — Spaghetti's Cities dropped (task-0055)
+
+Spaghetti's Cities was only in the city stack because the Anvil reference list
+(task-0044) shipped it natively. On Keizaal it's redundant — the standalone city mods
+stand on their own. **Decision: drop Spaghetti entirely.**
+
+Disabled on `Keizaal - Fork`: 8 mods (Spaghetti's Cities Whiterun/Windhelm/Markarth/
+Solitude/Riften, Spaghetti's Towns Riverwood, Spaghetti's Capital Windhelm Expansion,
+Crossed Daggers - Spaghetti Patch) + 2 bridge plugins deactivated inside kept mods
+(UME Patch Hub's `Markarth Expanded - Spaghetti's Markarth.esp`, Riverwood Has Walls
+Patch Collection's `Riverwood Has Charm - Spaghetti's Riverwood Patch.esp`).
+
+Standalone city mods retained: Capital Whiterun Expansion, Capital Windhelm Expansion,
+Ultimate Markarth (+Expanded), RedBag's Solitude, City of Crossed Daggers (Riften
+Expansion), Riverwood Has Charm + Walls.
+
+**`Keizaal - Fork`: 831 → 821 active plugins, 0 missing masters. Full-weight unchanged
+at 105/254** (all Spaghetti plugins were ESL-flagged). task-0053 (modular CWE×Spaghetti
+patch) cancelled as moot.
+
+---
+
 ## 2026-07-12 — Vokriinator Black chosen over Constellations (task-0049)
 
 task-0048 identified a critical conflict: Constellations (custom skill trees via CSF —
