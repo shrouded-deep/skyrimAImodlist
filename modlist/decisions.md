@@ -4,6 +4,26 @@ Dated entries recording what changed and why. Most recent first.
 
 ---
 
+## 2026-07-12 — Fixed addition placement/priority; additions go under Uncategorized (task-0058)
+
+The VB/city install scripts appended additions to the END of `modlist.txt`. Since
+`modlist.txt` is REVERSE-ordered (top = lowest priority, bottom = highest), this put all
+additions at the HIGHEST asset priority — overriding Keizaal's `DynDOLOD Output` /
+`TexGen Output` and tuning wherever files overlapped. User caught it.
+
+**Fix:** Moved all 65 addition mods under the `Uncategorized` separator (top of file =
+lowest priority) so Keizaal's tool outputs and curation correctly win. Only mod/asset
+priority changed; plugin load order (loadorder.txt) untouched, so MAST state unchanged.
+Backup: `profiles/Keizaal - Fork/modlist.backup-reorg-2026-07-12.txt`.
+
+**Rule restored** in AGENTS.md ("Mod placement in MO2"): additions → Uncategorized; never
+append to end; documents the reverse-order + separator-owns-below semantics. This rule had
+been genericized/lost across the Nolvus→Keizaal pivot.
+
+Pending: user F5 + re-smoke-test visuals.
+
+---
+
 ## 2026-07-12 — Restored 3 omitted CC creations for PoS patches (task-0057)
 
 The VB stack (copied from Nolvus) shipped Path of Sorcery patches for 3 Creation Club

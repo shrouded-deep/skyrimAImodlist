@@ -164,14 +164,35 @@ Every task that adds or removes plugins must record the new full-weight count in
 Result. **Strongly prefer ESL-flagged mods for additions.** If a change would push
 full-weight plugins toward 254 (flag at 240), stop for human review before proceeding.
 
-## Mod placement in MO2
+## Mod placement in MO2 (CRITICAL — modlist.txt is REVERSE-ordered)
 
-New mods added to the list must be placed in a dedicated separator zone
-named `[Keizaal Additions]`. Exact placement (relative to which Keizaal
-separator) to be established during task-0046 fork-test once the list
-structure is understood. Do not append outside a named zone, and do not
-sort new mods into the main Keizaal sections until a deliberate placement
-decision is recorded in `modlist/decisions.md`.
+**All mods we add go under the `Uncategorized` separator**, never into
+Keizaal's own category separators.
+
+**`modlist.txt` order is the REVERSE of the MO2 UI.** The TOP of the file is
+the LOWEST mod (asset/loose-file) priority; the BOTTOM of the file is the
+HIGHEST priority. In this Keizaal profile:
+
+- `Uncategorized_separator` is the FIRST separator (top of file) → **lowest
+  priority** → additions there are correctly overridden by Keizaal's mods.
+- Tool outputs (`DynDOLOD Output`, `TexGen Output`, `ParallaxGen Output`,
+  `Grass Cache`) sit near the BOTTOM of the file → **highest priority** →
+  they must win. Additions must NEVER sit below them.
+- A separator OWNS the mod lines listed immediately BELOW it in the file
+  (until the next separator).
+
+**Do NOT append new mods to the end of `modlist.txt`.** That is the
+highest-priority / base-game-separator tier and makes additions override the
+entire list (including tool outputs). This exact bug happened with the VB and
+city install scripts (task-0050/0051) and was fixed in task-0058 by moving all
+additions under `Uncategorized`. A backup of the pre-fix modlist is at
+`profiles/Keizaal - Fork/modlist.backup-reorg-2026-07-12.txt`.
+
+To place additions correctly: insert the mod lines immediately AFTER the
+`+Uncategorized_separator` line (they will render inside the Uncategorized
+group in the MO2 UI, at low priority). Plugin *record* conflicts are handled
+separately by `loadorder.txt` (plugin load order) — mod priority does not
+affect those.
 
 When adding mods via a task, include this placement explicitly in the
 acceptance criteria — do not rely on MO2's default append behaviour.
