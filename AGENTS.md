@@ -173,26 +173,32 @@ Keizaal's own category separators.
 the LOWEST mod (asset/loose-file) priority; the BOTTOM of the file is the
 HIGHEST priority. In this Keizaal profile:
 
-- `Uncategorized_separator` is the FIRST separator (top of file) → **lowest
-  priority** → additions there are correctly overridden by Keizaal's mods.
+- A separator OWNS the mod lines listed immediately **ABOVE** it in the file
+  (up to the previous separator). So a mod's category = the FIRST separator
+  line BELOW it in the file.
+- `Uncategorized_separator` is the FIRST separator (near top of file) → its
+  group is at **lowest priority** → additions there are correctly overridden
+  by Keizaal's mods.
 - Tool outputs (`DynDOLOD Output`, `TexGen Output`, `ParallaxGen Output`,
   `Grass Cache`) sit near the BOTTOM of the file → **highest priority** →
-  they must win. Additions must NEVER sit below them.
-- A separator OWNS the mod lines listed immediately BELOW it in the file
-  (until the next separator).
+  they must win. Additions must NEVER sit below them (i.e. never lower in the
+  file).
 
 **Do NOT append new mods to the end of `modlist.txt`.** That is the
 highest-priority / base-game-separator tier and makes additions override the
 entire list (including tool outputs). This exact bug happened with the VB and
-city install scripts (task-0050/0051) and was fixed in task-0058 by moving all
-additions under `Uncategorized`. A backup of the pre-fix modlist is at
+city install scripts (task-0050/0051) and was fixed in task-0058. A backup of
+the pre-fix modlist is at
 `profiles/Keizaal - Fork/modlist.backup-reorg-2026-07-12.txt`.
 
-To place additions correctly: insert the mod lines immediately AFTER the
-`+Uncategorized_separator` line (they will render inside the Uncategorized
-group in the MO2 UI, at low priority). Plugin *record* conflicts are handled
-separately by `loadorder.txt` (plugin load order) — mod priority does not
-affect those.
+**To place additions correctly: insert the mod lines immediately BEFORE (ABOVE)
+the `+Uncategorized_separator` line** — between the header and the separator,
+since `Uncategorized` is the first separator. Because the separator owns the
+mods above it, this puts them in the Uncategorized group at low priority.
+(Placing them AFTER/below the separator wrongly assigns them to the NEXT
+separator's group — that mistake put them in `SimonRim` first.) Plugin *record*
+conflicts are handled separately by `loadorder.txt` (plugin load order) — mod
+priority does not affect those.
 
 When adding mods via a task, include this placement explicitly in the
 acceptance criteria — do not rely on MO2's default append behaviour.
