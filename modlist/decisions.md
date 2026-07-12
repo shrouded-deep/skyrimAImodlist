@@ -4,7 +4,7 @@ Dated entries recording what changed and why. Most recent first.
 
 ---
 
-## 2026-07-12 — Outputs category at highest priority; regen deferred (task-0059)
+## 2026-07-12 — Outputs category at highest priority; regen deferred (task-0061)
 
 **Priority direction (definitive):** `modlist.txt` TOP = HIGHEST priority, BOTTOM = LOWEST
 (base-game separator is at the file bottom). This is the reverse of the MO2 UI.
@@ -13,7 +13,7 @@ Keizaal ships its generated LOD outputs (`DynDOLOD Output`, `TexGen Output`, `xL
 near the file BOTTOM = LOW priority. With our additions now under `Uncategorized` (top =
 high priority), the additions were overriding the outputs' loose LOD files (user spotted).
 
-**Fix (task-0059):** Created an `Outputs` separator at the very top of the file (highest
+**Fix (task-0061):** Created an `Outputs` separator at the very top of the file (highest
 priority) and moved the 3 generated outputs there, above the Uncategorized additions.
 Left `DynDOLOD DLL` / `DynDOLOD` (Resources) in place — runtime inputs, not outputs.
 Backup: `modlist.backup-outputs-2026-07-12.txt`.

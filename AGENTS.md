@@ -186,7 +186,7 @@ HIGHEST mod (asset/loose-file) priority; the BOTTOM is the LOWEST.**
 
 1. **`Outputs` separator** (top of file, highest priority) — generated tool
    outputs: `DynDOLOD Output`, `TexGen Output`, `xLODGEN` (and any
-   ParallaxGen/Grass Cache/Occlusion). Created in task-0059 because Keizaal
+   ParallaxGen/Grass Cache/Occlusion). Created in task-0061 because Keizaal
    shipped these low (they were being overridden). They must win, so they sit
    ABOVE our additions. Do NOT move the DynDOLOD DLL / DynDOLOD Resources
    (runtime inputs, not outputs).
