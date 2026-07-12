@@ -4,23 +4,38 @@ Dated entries recording what changed and why. Most recent first.
 
 ---
 
-## 2026-07-12 — Fixed addition placement/priority; additions go under Uncategorized (task-0058)
+## 2026-07-12 — Outputs category at highest priority; regen deferred (task-0059)
 
-The VB/city install scripts appended additions to the END of `modlist.txt`. Since
-`modlist.txt` is REVERSE-ordered (top = lowest priority, bottom = highest), this put all
-additions at the HIGHEST asset priority — overriding Keizaal's `DynDOLOD Output` /
-`TexGen Output` and tuning wherever files overlapped. User caught it.
+**Priority direction (definitive):** `modlist.txt` TOP = HIGHEST priority, BOTTOM = LOWEST
+(base-game separator is at the file bottom). This is the reverse of the MO2 UI.
 
-**Fix:** Moved all 65 addition mods under the `Uncategorized` separator (top of file =
-lowest priority) so Keizaal's tool outputs and curation correctly win. Only mod/asset
-priority changed; plugin load order (loadorder.txt) untouched, so MAST state unchanged.
-Backup: `profiles/Keizaal - Fork/modlist.backup-reorg-2026-07-12.txt`.
+Keizaal ships its generated LOD outputs (`DynDOLOD Output`, `TexGen Output`, `xLODGEN`)
+near the file BOTTOM = LOW priority. With our additions now under `Uncategorized` (top =
+high priority), the additions were overriding the outputs' loose LOD files (user spotted).
+
+**Fix (task-0059):** Created an `Outputs` separator at the very top of the file (highest
+priority) and moved the 3 generated outputs there, above the Uncategorized additions.
+Left `DynDOLOD DLL` / `DynDOLOD` (Resources) in place — runtime inputs, not outputs.
+Backup: `modlist.backup-outputs-2026-07-12.txt`.
+
+**Deferred (task-0060, user-gated):** the outputs are also STALE — the city expansions add
+worldspace buildings with no generated LOD. A Tier-2 regen (xLODGen → TexGen → DynDOLOD +
+grass cache) is required, run via the GUI tools by the user. **Deferred by user for now.**
+
+**Correction:** the task-0058 decision note (below) originally stated the priority
+direction backwards. Top of file = HIGHEST, not lowest.
+
+## 2026-07-12 — Fixed addition placement; additions go under Uncategorized (task-0058)
+
+The VB/city install scripts appended additions to the END of `modlist.txt`, outside any
+separator — they showed ungrouped at the MO2 UI top. Moved all 65 additions under the
+`Uncategorized` separator (above the `+Uncategorized_separator` line, since a separator
+owns the mods above it). First attempt put them BELOW the separator → landed in `SimonRim`;
+corrected to above. Only mod/asset priority changed; loadorder.txt untouched (MAST
+unchanged). Backup: `modlist.backup-reorg-2026-07-12.txt`.
 
 **Rule restored** in AGENTS.md ("Mod placement in MO2"): additions → Uncategorized; never
-append to end; documents the reverse-order + separator-owns-below semantics. This rule had
-been genericized/lost across the Nolvus→Keizaal pivot.
-
-Pending: user F5 + re-smoke-test visuals.
+append to end. This rule had been genericized/lost across the Nolvus→Keizaal pivot.
 
 ---
 

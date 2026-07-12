@@ -169,36 +169,46 @@ full-weight plugins toward 254 (flag at 240), stop for human review before proce
 **All mods we add go under the `Uncategorized` separator**, never into
 Keizaal's own category separators.
 
-**`modlist.txt` order is the REVERSE of the MO2 UI.** The TOP of the file is
-the LOWEST mod (asset/loose-file) priority; the BOTTOM of the file is the
-HIGHEST priority. In this Keizaal profile:
+### Priority direction (definitive — verified 2026-07-12)
 
+**`modlist.txt` is the REVERSE of the MO2 UI, and the TOP of the file is the
+HIGHEST mod (asset/loose-file) priority; the BOTTOM is the LOWEST.**
+
+- Evidence: the base-game `Skyrim Anniversary Edition 1.6.1170_separator` sits
+  at the very BOTTOM of the file (base game = lowest priority = bottom). Ergo
+  top = highest. (Standard MO2 UI = "lower in the list wins"; the file is the
+  reverse of the UI, so file-top = UI-bottom = highest.)
 - A separator OWNS the mod lines listed immediately **ABOVE** it in the file
-  (up to the previous separator). So a mod's category = the FIRST separator
-  line BELOW it in the file.
-- `Uncategorized_separator` is the FIRST separator (near top of file) → its
-  group is at **lowest priority** → additions there are correctly overridden
-  by Keizaal's mods.
-- Tool outputs (`DynDOLOD Output`, `TexGen Output`, `ParallaxGen Output`,
-  `Grass Cache`) sit near the BOTTOM of the file → **highest priority** →
-  they must win. Additions must NEVER sit below them (i.e. never lower in the
-  file).
+  (up to the previous separator). A mod's category = the FIRST separator line
+  BELOW it in the file.
 
-**Do NOT append new mods to the end of `modlist.txt`.** That is the
-highest-priority / base-game-separator tier and makes additions override the
-entire list (including tool outputs). This exact bug happened with the VB and
-city install scripts (task-0050/0051) and was fixed in task-0058. A backup of
-the pre-fix modlist is at
-`profiles/Keizaal - Fork/modlist.backup-reorg-2026-07-12.txt`.
+### Where things go (top of file → bottom = highest → lowest priority)
 
-**To place additions correctly: insert the mod lines immediately BEFORE (ABOVE)
-the `+Uncategorized_separator` line** — between the header and the separator,
-since `Uncategorized` is the first separator. Because the separator owns the
-mods above it, this puts them in the Uncategorized group at low priority.
-(Placing them AFTER/below the separator wrongly assigns them to the NEXT
-separator's group — that mistake put them in `SimonRim` first.) Plugin *record*
-conflicts are handled separately by `loadorder.txt` (plugin load order) — mod
-priority does not affect those.
+1. **`Outputs` separator** (top of file, highest priority) — generated tool
+   outputs: `DynDOLOD Output`, `TexGen Output`, `xLODGEN` (and any
+   ParallaxGen/Grass Cache/Occlusion). Created in task-0059 because Keizaal
+   shipped these low (they were being overridden). They must win, so they sit
+   ABOVE our additions. Do NOT move the DynDOLOD DLL / DynDOLOD Resources
+   (runtime inputs, not outputs).
+2. **`Uncategorized` separator** — all mods WE add (VB stack, city stack,
+   Restored CC, etc.). High priority (below Outputs, above Keizaal).
+3. Keizaal's own category separators (SimonRim … Essentials).
+4. Base-game separator (bottom, lowest priority).
+
+**Do NOT append new mods to the end of `modlist.txt`** — the end is the LOWEST
+priority / base-game tier; appended mods there are overridden by everything and
+also fall outside any separator. (The VB/city install scripts appended to the
+end; fixed in task-0058.)
+
+**To place additions correctly: insert the mod lines immediately ABOVE the
+`+Uncategorized_separator` line** (separator owns the mods above it). Placing
+them BELOW the separator wrongly assigns them to the next group up — that
+mistake put them in `SimonRim` first. Plugin *record* conflicts are handled
+separately by `loadorder.txt` (plugin load order) — mod priority does not
+affect those.
+
+Backups from the reorgs: `profiles/Keizaal - Fork/modlist.backup-reorg-2026-07-12.txt`
+and `modlist.backup-outputs-2026-07-12.txt`.
 
 When adding mods via a task, include this placement explicitly in the
 acceptance criteria — do not rely on MO2's default append behaviour.
