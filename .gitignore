@@ -1,0 +1,4 @@
+# Cursor script output logs and temp extraction folders
+modlist/exports/
+temp-extract-test/
+modlist/exports/tmp-probe/
