@@ -178,8 +178,9 @@ Spaghetti remains dropped. COTN Morthal plugins skipped (Fortified Morthal used
 instead). **64187** (Rorikstead FOMOD patches) missing from Downloads — task-0076
 (download) + task-0075 (FOMOD once archive present).
 
-**`Lost Legacy - Fork`:** 1518 → 3671 active plugins per install script; 169
-settlement-folder plugins active; **0 MAST violations** after hub filtering.
+**Update (task-0077):** Five settlement mods re-extracted (bad archive dumps); empty
+`City Stack_separator` removed — all city + settlement mods under `Settlements_separator`
+only. 1676 → 1680 active plugins; 0 MAST violations.
 
 ---
 

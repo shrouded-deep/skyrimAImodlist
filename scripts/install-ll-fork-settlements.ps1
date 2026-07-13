@@ -60,6 +60,26 @@ function Find-Archive([int]$NexusId, [string]$PreferPattern) {
     return ($hits | Sort-Object Name -Descending | Select-Object -First 1)
 }
 
+function Hoist-DataToModRoot([string]$FolderPath) {
+    $dataPath = Join-Path $FolderPath 'Data'
+    if (-not (Test-Path -LiteralPath $dataPath)) { return }
+    Get-ChildItem -LiteralPath $dataPath -Force | ForEach-Object {
+        $dest = Join-Path $FolderPath $_.Name
+        if ($_.PSIsContainer) {
+            if (Test-Path -LiteralPath $dest) {
+                robocopy $_.FullName $dest /E /MOVE /NFL /NDL /NJH /NJS /nc /ns /np | Out-Null
+                if (Test-Path -LiteralPath $_.FullName) { Remove-Item -LiteralPath $_.FullName -Recurse -Force }
+            }
+            else { Move-Item -LiteralPath $_.FullName -Destination $FolderPath -Force }
+        }
+        else {
+            if (Test-Path -LiteralPath $dest) { Remove-Item -LiteralPath $dest -Force }
+            Move-Item -LiteralPath $_.FullName -Destination $FolderPath -Force
+        }
+    }
+    if (Test-Path -LiteralPath $dataPath) { Remove-Item -LiteralPath $dataPath -Recurse -Force }
+}
+
 function Install-ArchiveMod([string]$FolderName, [int]$NexusId, [string]$PreferPattern) {
     $dst = Join-Path $SkyrimMods $FolderName
     if (Test-Path -LiteralPath $dst) {
@@ -89,6 +109,7 @@ function Install-ArchiveMod([string]$FolderName, [int]$NexusId, [string]$PreferP
         Get-ChildItem $tmp -Force | Move-Item -Destination $dst -Force
     }
     Remove-Item $tmp -Recurse -Force -ErrorAction SilentlyContinue
+    Hoist-DataToModRoot $dst
     return @{ Status = 'installed'; Archive = $archive.Name }
 }
 
@@ -209,7 +230,7 @@ foreach ($line in $modlist) {
             }
             continue
         }
-        if ($name -eq 'City Stack_separator' -and -not $settlementsInserted) {
+        if ($name -eq 'Settlements_separator' -and -not $settlementsInserted) {
             foreach ($entry in $settlementModOrder) {
                 $mod = $entry.Folder
                 if ($enableSet.Contains($mod) -and -not $seen.ContainsKey($mod)) {
@@ -222,25 +243,24 @@ foreach ($line in $modlist) {
             $newModlist.Add($line)
             continue
         }
-        if ($name -eq 'Settlements_separator') {
-            if (-not $settlementsInserted) {
-                foreach ($entry in $settlementModOrder) {
-                    $mod = $entry.Folder
-                    if ($enableSet.Contains($mod) -and -not $seen.ContainsKey($mod)) {
-                        $newModlist.Add("+$mod")
-                        $seen[$mod] = $true
-                    }
+        if ($name -eq 'Ryn''s Mods_separator' -and -not $settlementsInserted) {
+            foreach ($entry in $settlementModOrder) {
+                $mod = $entry.Folder
+                if ($enableSet.Contains($mod) -and -not $seen.ContainsKey($mod)) {
+                    $newModlist.Add("+$mod")
+                    $seen[$mod] = $true
                 }
-                $newModlist.Add('-Settlements_separator')
-                $settlementsInserted = $true
             }
+            $newModlist.Add('-Settlements_separator')
+            $settlementsInserted = $true
+            $newModlist.Add($line)
             continue
         }
     }
     $newModlist.Add($line)
 }
 
-if (-not $settlementsInserted) { throw 'Anchor not found: City Stack_separator' }
+if (-not $settlementsInserted) { throw 'Anchor not found: Settlements_separator or Ryn''s Mods_separator' }
 Set-Content -Path $ModlistPath -Value $newModlist -Encoding UTF8
 Write-Log "modlist: enabled $($seen.Count) settlement mods above Settlements_separator"
 

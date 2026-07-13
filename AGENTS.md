@@ -207,14 +207,15 @@ mod (asset/loose-file) priority. BOTTOM = LOWEST.**
    -Example_separator  ← always -, owns everything above it in this group
    ```
 
-### City/Ryn's/JK's section order
+### Settlements / Ryn's / JK's section order
 
-Within the city area of modlist.txt, sections must appear in this order
-(top = higher priority):
+Within the city and settlement area of modlist.txt, sections must appear in
+this order (top = higher priority). **`Settlements_separator` covers both city
+overhauls and settlement mods** (TGC/TGV/TGT, COTN, RedBag, Thuldor, etc.).
 
 ```
-[City Stack mods]
--City Stack_separator
+[Settlement + city overhaul mods]
+-Settlements_separator
 [Ryn's mods]
 -Ryn's Mods_separator
 [JK's interior mods]
@@ -234,7 +235,7 @@ Do not search for or install individual Ryn's Nexus folders to "match" the list.
 
 1. **`Outputs` separator** (top, highest priority) — generated tool outputs:
    DynDOLOD Output, TexGen Output, xLODGEN, Synthesis output, etc.
-2. **Our addition separators** (City Stack, Ryn's Mods, JKs Skyrim, etc.).
+2. **Our addition separators** (Settlements, Ryn's Mods, JKs Skyrim, etc.).
 3. Lost Legacy's own category separators.
 4. Base-game separator (bottom, lowest priority).
 
