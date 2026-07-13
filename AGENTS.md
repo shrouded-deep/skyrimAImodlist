@@ -136,6 +136,16 @@ with no paper trail.
   involving these tools must be written as a human step, not an agent
   step.
 
+## Downloads folder
+
+Mod archives live in `E:\Modding\Skyrim Mods\Downloads\` — flat, no subfolders.
+
+When searching for an archive by Nexus mod ID, **also search by mod name** —
+some archives lack the standard `*-<id>-*` filename pattern and will be missed
+by ID-only globs. Example: `redbag's rorikstead - fomod.zip` has no ID in the
+filename. Always fall back to a name-based search before concluding an archive
+is absent.
+
 ## Conflict re-audit practice
 
 Re-run a full cross-plugin conflict audit whenever:
@@ -166,52 +176,74 @@ full-weight plugins toward 254 (flag at 240), stop for human review before proce
 
 ## Mod placement in MO2 (CRITICAL — modlist.txt is REVERSE-ordered)
 
-**All mods we add go under the `Uncategorized` separator**, never into
-Keizaal's own category separators.
+**Foundation (as of 2026-07-13): Lost Legacy Fork at `D:\Skyrim\`, profile
+`Lost Legacy - Fork`.** Earlier notes referencing `Keizaal` or `E:\Skyrim\` are
+historical; the active working path is `D:\Skyrim\`.
 
-### Priority direction (definitive — verified 2026-07-12)
+### Priority direction (definitive)
 
-**`modlist.txt` is the REVERSE of the MO2 UI, and the TOP of the file is the
-HIGHEST mod (asset/loose-file) priority; the BOTTOM is the LOWEST.**
+**`modlist.txt` is the REVERSE of the MO2 UI. TOP of the file = HIGHEST
+mod (asset/loose-file) priority. BOTTOM = LOWEST.**
 
-- Evidence: the base-game `Skyrim Anniversary Edition 1.6.1170_separator` sits
-  at the very BOTTOM of the file (base game = lowest priority = bottom). Ergo
-  top = highest. (Standard MO2 UI = "lower in the list wins"; the file is the
-  reverse of the UI, so file-top = UI-bottom = highest.)
+- The base-game separator sits at the very bottom (base game = lowest priority). Top = highest.
 - A separator OWNS the mod lines listed immediately **ABOVE** it in the file
-  (up to the previous separator). A mod's category = the FIRST separator line
-  BELOW it in the file.
+  (up to the previous separator). A mod's category = the first separator line below it.
+
+### Separator rules (CRITICAL — do not guess these)
+
+1. **Separators are ALWAYS prefixed `-` in modlist.txt.** This is correct and
+   intentional — MO2 doesn't try to load separators, so they stay disabled.
+   Never change a separator line to `+`.
+
+2. **Every separator line requires a matching folder** at
+   `D:\Skyrim\mods\<separator_name>_separator\` (may be empty).
+   If the folder is missing, MO2 silently drops the separator on next save.
+
+3. **Mods belong ABOVE their separator** in modlist.txt (the separator is the
+   last line of the group, not the first):
+   ```
+   +Mod A              ← enabled mod, owned by separator below
+   +Mod B              ← enabled mod, owned by separator below
+   -Example_separator  ← always -, owns everything above it in this group
+   ```
+
+### City/Ryn's/JK's section order
+
+Within the city area of modlist.txt, sections must appear in this order
+(top = higher priority):
+
+```
+[City Stack mods]
+-City Stack_separator
+[Ryn's mods]
+-Ryn's Mods_separator
+[JK's interior mods]
+-JKs Skyrim_separator
+```
+
+Lost Legacy ships a custom **Ryn's Locations bundle mod** (many Ryn's ESPs
+inside one mod folder) plus **Ryn's Standing Stones Patch Collection** as a
+separate entry. Treat the bundle as a single modlist entry — do not unpack it.
+
+**Name-matching trap:** you will NOT find per-location Ryn's mod folders
+(`Ryn's GoldenGlow Estate`, `Ryn's Robber's Gorge`, etc.) in Lost Legacy.
+Those ESPs live inside `Ryn's Locations` at `D:\Skyrim\mods\Ryn's Locations\`.
+Do not search for or install individual Ryn's Nexus folders to "match" the list.
 
 ### Where things go (top of file → bottom = highest → lowest priority)
 
-1. **`Outputs` separator** (top of file, highest priority) — generated tool
-   outputs: `DynDOLOD Output`, `TexGen Output`, `xLODGEN` (and any
-   ParallaxGen/Grass Cache/Occlusion). Created in task-0061 because Keizaal
-   shipped these low (they were being overridden). They must win, so they sit
-   ABOVE our additions. Do NOT move the DynDOLOD DLL / DynDOLOD Resources
-   (runtime inputs, not outputs).
-2. **`Uncategorized` separator** — all mods WE add (VB stack, city stack,
-   Restored CC, etc.). High priority (below Outputs, above Keizaal).
-3. Keizaal's own category separators (SimonRim … Essentials).
+1. **`Outputs` separator** (top, highest priority) — generated tool outputs:
+   DynDOLOD Output, TexGen Output, xLODGEN, Synthesis output, etc.
+2. **Our addition separators** (City Stack, Ryn's Mods, JKs Skyrim, etc.).
+3. Lost Legacy's own category separators.
 4. Base-game separator (bottom, lowest priority).
 
-**Do NOT append new mods to the end of `modlist.txt`** — the end is the LOWEST
-priority / base-game tier; appended mods there are overridden by everything and
-also fall outside any separator. (The VB/city install scripts appended to the
-end; fixed in task-0058.)
+**Do NOT append new mods to the end of `modlist.txt`** — the end is the lowest
+priority / base-game tier. Appended mods are overridden by everything and fall
+outside any separator.
 
-**To place additions correctly: insert the mod lines immediately ABOVE the
-`+Uncategorized_separator` line** (separator owns the mods above it). Placing
-them BELOW the separator wrongly assigns them to the next group up — that
-mistake put them in `SimonRim` first. Plugin *record* conflicts are handled
-separately by `loadorder.txt` (plugin load order) — mod priority does not
-affect those.
-
-Backups from the reorgs: `profiles/Keizaal - Fork/modlist.backup-reorg-2026-07-12.txt`
-and `modlist.backup-outputs-2026-07-12.txt`.
-
-When adding mods via a task, include this placement explicitly in the
-acceptance criteria — do not rely on MO2's default append behaviour.
+When adding mods via a task, include placement explicitly in the acceptance
+criteria — do not rely on MO2's default append behaviour.
 
 ## Curation direction
 

@@ -4,6 +4,65 @@ Dated entries recording what changed and why. Most recent first.
 
 ---
 
+## 2026-07-12 — Engine Fixes was wiping plugins.txt on every game exit (Fork crash root cause)
+
+MO2 maps `AppData\Local\Skyrim Special Edition\Plugins.txt` → profile `plugins.txt`
+(USVFS). **SSE Engine Fixes** with `EnableAchievementsWithMods = true` causes the game
+to rewrite that file on launch/exit, stripping all mod plugin `*` flags. MO2 then
+imports the emptied list — plugins look checked before launch, all unchecked after crash.
+
+**Fix:** `overwrite\skse\plugins\EngineFixes.toml` override on Fork:
+`EnableAchievementsWithMods = false`, `SaveAddedSoundCategories = false`,
+`SaveScreenshots = false` (STEP recommendation for AE 1.6.1170 + MO2). Restore plugins
+from `plugins.txt.good-2026-07-12` after any launch that still clears them.
+
+**Note:** Initial diagnosis blamed MO2 F5 refresh; user confirmed plugins were checked
+at launch and cleared *after* crash — Engine Fixes write-back is the actual mechanism.
+Restore scripts remain useful if enablement is lost for any reason:
+`scripts\restore-fork-plugins-all.ps1`.
+
+## 2026-07-12 — Game Settings Override incompatible on Fork (Win11 24H2 + MO2 USVFS)
+
+**Game Settings Override** (114911) + **Collection** (119358) were installed from Anvil
+fundamentals tranche (task-0067). **Not on pristine Keizaal.** On this host (Win11 24H2,
+MO2 2.5.2, usvfs 0.5.6.1), GSO fatals at launch: TOML files cannot be opened through MO2's
+virtual filesystem ([MO2 #2174](https://github.com/ModOrganizer2/modorganizer/issues/2174)).
+Upgrade 2.5.0→2.5.2 and multiple file-layout workarounds did not fix it.
+
+**Decision:** **Disable both GSO mods** on `Keizaal - Fork`. No gameplay regression vs
+original Keizaal. Anvil parity for GSO **deferred** until official MO2 USVFS fix lands.
+Documented in `modlist/mo2-upgrade-plan-keizaal-2026-07-12.md`. Collection tweaks can be
+replaced later via standalone Nexus ports if wanted.
+
+## 2026-07-12 — Pandora migration rolled back (post-load crash)
+
+After task-0064, user ran Pandora but game **crashes after splash** with no Crash Logger
+output. `Keizaal - Pandora Output/Engine.log` shows **Precision Creatures parser errors**
+and incomplete regen (**33** `.hkx` only). Nemesis output `.hkx` had been **cleared** (0
+remain). **Rolled back modlist:** Pandora Output / UBR / Bundled Behaviour Patches
+**disabled**; Nemesis Engine + Output + creature compat **re-enabled**; MO2 toolbar #6
+restored to Nemesis. **Human:** run Nemesis → Update Engine before launching SKSE.
+Pandora migration **deferred** until clean full regen is verified.
+
+## 2026-07-12 — Nemesis → Pandora MO2 prep on Keizaal - Fork (task-0064)
+
+Mirrors Anvil's Pandora toolchain (task-0018) with **Fork-specific audit deltas**:
+
+- **Precision + Precision Creatures** added to Pandora patch manifest (`colis`/`colisc`) —
+  not on Anvil; author documents Nemesis; Pandora reads same patch format — smoke-test
+  combat after regen.
+- **Offset Movement Animation** (`gpma`) flagged unknown — modders resource not on Anvil
+  list; enable in Pandora if listed.
+- **Nemesis Creature Werewolf Addon** disabled with compat mod; Pandora native creatures
+  — werewolf smoke test replaces Nemesis creature stack.
+- Nemesis output (2024-09-30 PatchLog) cleared and disabled; empty **`Keizaal - Pandora
+  Output`** at Outputs separator top; UBR + Bundled Behaviour Patches enabled.
+- Pandora exe at `E:\Skyrim\tools\Pandora\` (MO2 #6); engine MO2 mod disabled.
+- **Regen deferred to human** — do not launch game until Pandora fills output mod.
+
+Plan: `modlist/pandora-migration-plan-keizaal-2026-07-12.md` · Manual run:
+`modlist/pandora-manual-run-keizaal.md`
+
 ## 2026-07-12 — Outputs category at highest priority; regen deferred (task-0061)
 
 **Priority direction (definitive):** `modlist.txt` TOP = HIGHEST priority, BOTTOM = LOWEST
@@ -80,6 +139,47 @@ Expansion), Riverwood Has Charm + Walls.
 **`Keizaal - Fork`: 831 → 821 active plugins, 0 missing masters. Full-weight unchanged
 at 105/254** (all Spaghetti plugins were ESL-flagged). task-0053 (modular CWE×Spaghetti
 patch) cancelled as moot.
+
+**Also applied to `Lost Legacy - Fork` (2026-07-13):** same 8 Spaghetti/CWE-bridge mods
+disabled in modlist after task-0069 city-stack install (folders remain on disk; modlist
+`-` prefix). Standalone expansions retained per table above. CWE Spaghetti Patch and
+Crossed Daggers - Spaghetti Patch disabled with the Spaghetti drop. Confirmed intentional
+by human — not a task-0070 regression.
+
+---
+
+## 2026-07-13 — JK exteriors + Anvil Ryn stack on Lost Legacy Fork (task-0073)
+
+Replaced Lost Legacy's packaged `Ryn's Locations` bundle with Anvil's individual Ryn's
+location mods (32 folders). Disabled LL `Ryn's Locations` and `Ryn's Standing Stones
+Patch Collection` in modlist; Anvil Standing Stones hub imported as
+`Ryn's Standing Stones Patch Collection - Anvil` (name collision — LL folder kept on
+disk, not overwritten).
+
+Imported 8 JK **exterior** worldspace mods from Anvil (outskirts ×4, Riverfall
+Cottage, three Outskirts patch hubs). JK interiors already in Fork were skipped; AIO
+remains disabled per city-stack swap.
+
+**`Lost Legacy - Fork`: 1452 → 1679 active plugins, 0 MAST violations** (331 optional
+hub patches auto-disabled for absent masters).
+
+---
+
+## 2026-07-13 — Settlement overhaul stack on Lost Legacy Fork (task-0074)
+
+Installed hold towns, villages, and hamlets into new `-Settlements_separator`
+section (above City Stack): COTN Dawnstar/Falkreath, TGC Winterhold/Dragon Bridge,
+JK's Solitude Outskirts, Fortified Morthal, Thuldor's Ivarstead, TGV/TGT village
+set, Anga's/Half-Moon COTN addons, Settlements Expanded, RedBag's Rorikstead (base
+only). **34 mod folders** from `E:\Modding\Skyrim Mods\Downloads\`; implicit TGC
+Resources (104373) pulled as master dependency.
+
+Spaghetti remains dropped. COTN Morthal plugins skipped (Fortified Morthal used
+instead). **64187** (Rorikstead FOMOD patches) missing from Downloads — task-0076
+(download) + task-0075 (FOMOD once archive present).
+
+**`Lost Legacy - Fork`:** 1518 → 3671 active plugins per install script; 169
+settlement-folder plugins active; **0 MAST violations** after hub filtering.
 
 ---
 

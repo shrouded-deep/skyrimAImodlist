@@ -1,0 +1,428 @@
+[2026-07-13 17:04:14] task-0073 Lost Legacy - Fork JK exterior + Ryn stack import starting
+[2026-07-13 17:04:14] plugins active before: 1452
+[2026-07-13 17:04:14] JK import list (8): JK's Markarth Outskirts; JK's Markarth Outskirts Patch Collection; JK's Riften Outskirts; JK's Riften Outskirts Patch Collection; JK's Riverfall Cottage; JK's Whiterun Outskirts; JK's Windhelm Outskirts; JK's Windhelm Outskirts Patch Collection
+[2026-07-13 17:04:14] JK SKIP: JK's Angeline's Aromatics (Fork has equivalent: Jk's Angeline's Aromatics)
+[2026-07-13 17:04:14] JK SKIP: JK's Arcadia's Cauldron (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Arnleif and Sons Trading Company (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Belethor's General Goods (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Bits and Pieces (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Blue Palace (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Candlehearth Hall (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Castle Dour (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Castle Volkihar (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's College of Winterhold (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Dark Brotherhood Sanctuaries (Fork has equivalent: JK's Dark Brotherhood Sanctuary)
+[2026-07-13 17:04:14] JK SKIP: JK's Dragonsreach (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Elgrim's Elixirs (Fork has equivalent: JK's Elgrims Elixirs)
+[2026-07-13 17:04:14] JK SKIP: JK's Fort Dawnguard (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Guild HQ Interiors Patch Collection (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Haelga's Bunkhouse (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Interiors Patch Collection (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Jorrvaskr (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Mistveil Keep (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's New Gnisis Cornerclub (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Nightgate Inn (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Nightingale Hall (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Palace of the Kings (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Radiant Raiment (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Sadri's Used Wares (Fork has equivalent: JK's Sadris Used Wares)
+[2026-07-13 17:04:14] JK SKIP: JK's Septimus Signus's Outpost (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Silver-Blood Inn (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Sinderion's Field Laboratory (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Sky Haven Temple (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Temple of Dibella (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Temple of Kynareth (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Temple of Talos (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Temple of the Divines (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's The Bannered Mare (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's The Bards College (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's The Bee and Barb (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's The Drunken Huntsman (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's The Hag's Cure (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's The Pawned Prawn (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's The Ragged Flagon (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's The Temple of Mara (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's The Winking Skeever (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Thieves Guild HQ (Fork has equivalent: JK's Thieves Guild)
+[2026-07-13 17:04:14] JK SKIP: JK's Understone Keep (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's Warmaiden's (already in Fork)
+[2026-07-13 17:04:14] JK SKIP: JK's White Phial (already in Fork)
+[2026-07-13 17:04:14] Ryn import list (32): Ryn's Farms; Ryn's Standing Stones; Ryn's Dragon Mounds Collection; Ryn's Alchemist's Shack; Ryn's Anise's Cabin; Ryn's Azura's Shrine; Ryn's Bleak Falls Barrow; Ryn's Bleakwind Basin; Ryn's Goldenglow Estate; Ryn's Halted Stream Camp; Ryn's Karthspire; Ryn's Lost Valley Redoubt; Ryn's Lund's Hut; Ryn's Lumber Mills; Ryn's Mehrunes Dagon's Shrine; Ryn's Mistwatch Folly; Ryn's Saarthal; Ryn's Secunda's Kiss; Ryn's Ustengrav; Ryn's Valtheim Towers; Ryn's Western Watchtower; Ryn's Riverwood Trader; Ryn's Sleeping Giant Inn; Ryn's Alvor and Sigrid's House; Ryn's Faendal's House; Ryn's Hod and Gerdur's House; Ryn's Sven's and Hilde's House; Ryn's Whiterun City Limits; Ryn's Skyrim Official Patch Hub; Ryn's Skyrim Patch Collection; Ryn's Standing Stones Patch Collection - Anvil; Ryn's Riverwood Patch Collection
+[2026-07-13 17:04:14] Ryn COLLISION: Ryn's Standing Stones Patch Collection -> renamed to Ryn's Standing Stones Patch Collection - Anvil (LL folder kept; not overwritten)
+[2026-07-13 17:04:14] COPY JK's Markarth Outskirts -> JK's Markarth Outskirts
+[2026-07-13 17:04:14] COPY JK's Markarth Outskirts Patch Collection -> JK's Markarth Outskirts Patch Collection
+[2026-07-13 17:04:14] COPY JK's Riften Outskirts -> JK's Riften Outskirts
+[2026-07-13 17:04:14] COPY JK's Riften Outskirts Patch Collection -> JK's Riften Outskirts Patch Collection
+[2026-07-13 17:04:14] COPY JK's Riverfall Cottage -> JK's Riverfall Cottage
+[2026-07-13 17:04:14] COPY JK's Whiterun Outskirts -> JK's Whiterun Outskirts
+[2026-07-13 17:04:14] COPY JK's Windhelm Outskirts -> JK's Windhelm Outskirts
+[2026-07-13 17:04:14] COPY JK's Windhelm Outskirts Patch Collection -> JK's Windhelm Outskirts Patch Collection
+[2026-07-13 17:04:14] COPY Ryn's Farms -> Ryn's Farms
+[2026-07-13 17:04:14] COPY Ryn's Standing Stones -> Ryn's Standing Stones
+[2026-07-13 17:04:14] COPY Ryn's Dragon Mounds Collection -> Ryn's Dragon Mounds Collection
+[2026-07-13 17:04:14] COPY Ryn's Alchemist's Shack -> Ryn's Alchemist's Shack
+[2026-07-13 17:04:14] COPY Ryn's Anise's Cabin -> Ryn's Anise's Cabin
+[2026-07-13 17:04:14] COPY Ryn's Azura's Shrine -> Ryn's Azura's Shrine
+[2026-07-13 17:04:14] COPY Ryn's Bleak Falls Barrow -> Ryn's Bleak Falls Barrow
+[2026-07-13 17:04:14] COPY Ryn's Bleakwind Basin -> Ryn's Bleakwind Basin
+[2026-07-13 17:04:14] COPY Ryn's Goldenglow Estate -> Ryn's Goldenglow Estate
+[2026-07-13 17:04:14] COPY Ryn's Halted Stream Camp -> Ryn's Halted Stream Camp
+[2026-07-13 17:04:14] COPY Ryn's Karthspire -> Ryn's Karthspire
+[2026-07-13 17:04:15] COPY Ryn's Lost Valley Redoubt -> Ryn's Lost Valley Redoubt
+[2026-07-13 17:04:15] COPY Ryn's Lund's Hut -> Ryn's Lund's Hut
+[2026-07-13 17:04:15] COPY Ryn's Lumber Mills -> Ryn's Lumber Mills
+[2026-07-13 17:04:15] COPY Ryn's Mehrunes Dagon's Shrine -> Ryn's Mehrunes Dagon's Shrine
+[2026-07-13 17:04:15] COPY Ryn's Mistwatch Folly -> Ryn's Mistwatch Folly
+[2026-07-13 17:04:15] COPY Ryn's Saarthal -> Ryn's Saarthal
+[2026-07-13 17:04:15] COPY Ryn's Secunda's Kiss -> Ryn's Secunda's Kiss
+[2026-07-13 17:04:15] COPY Ryn's Ustengrav -> Ryn's Ustengrav
+[2026-07-13 17:04:15] COPY Ryn's Valtheim Towers -> Ryn's Valtheim Towers
+[2026-07-13 17:04:15] COPY Ryn's Western Watchtower -> Ryn's Western Watchtower
+[2026-07-13 17:04:15] COPY Ryn's Riverwood Trader -> Ryn's Riverwood Trader
+[2026-07-13 17:04:15] COPY Ryn's Sleeping Giant Inn -> Ryn's Sleeping Giant Inn
+[2026-07-13 17:04:15] COPY Ryn's Alvor and Sigrid's House -> Ryn's Alvor and Sigrid's House
+[2026-07-13 17:04:15] COPY Ryn's Faendal's House -> Ryn's Faendal's House
+[2026-07-13 17:04:15] COPY Ryn's Hod and Gerdur's House -> Ryn's Hod and Gerdur's House
+[2026-07-13 17:04:15] COPY Ryn's Sven's and Hilde's House -> Ryn's Sven's and Hilde's House
+[2026-07-13 17:04:15] COPY Ryn's Whiterun City Limits -> Ryn's Whiterun City Limits
+[2026-07-13 17:04:15] COPY Ryn's Skyrim Official Patch Hub -> Ryn's Skyrim Official Patch Hub
+[2026-07-13 17:04:15] COPY Ryn's Skyrim Patch Collection -> Ryn's Skyrim Patch Collection
+[2026-07-13 17:04:16] COPY Ryn's Standing Stones Patch Collection -> Ryn's Standing Stones Patch Collection - Anvil
+[2026-07-13 17:04:16] COPY Ryn's Riverwood Patch Collection -> Ryn's Riverwood Patch Collection
+[2026-07-13 17:04:16] Copied 40 folders; skipped 0 existing
+[2026-07-13 17:04:16] LL Ryn plugins to unstar: 391
+[2026-07-13 17:04:16] modlist: disabled 2 LL Ryn entries; added 32 Ryn + 8 JK mods
+[2026-07-13 17:04:27] MAST-disabled 331 plugins
+[2026-07-13 17:04:27]   DISABLE RelicsofHyrule-Ryn's Shrine of Azura Patch.esp -> Ryn's Azura's Shrine.esp
+[2026-07-13 17:04:27]   DISABLE LOTD - Ryn's Last Vigil.esp -> Ryn's Snazzy Last Vigil.esp
+[2026-07-13 17:04:27]   DISABLE Lux Via - Ryn's Robber Gorge patch.esp -> Ryn's Robber's Gorge.esp
+[2026-07-13 17:04:27]   DISABLE Lux Via - Ryn's Standing Stones patch.esp -> Ryn's Standing Stones.esp
+[2026-07-13 17:04:27]   DISABLE Lux Orbis - Ryn's Azura's Shrine.esp -> Ryn's Azura's Shrine.esp
+[2026-07-13 17:04:27]   DISABLE Lux Orbis - Ryn's Bleak Falls ReCovered.esp -> BleakFallsReCovered.esp
+[2026-07-13 17:04:27]   DISABLE Lux Orbis - Ryn's Dragon Mounds.esp -> Ryn's Dragon Mounds AIO.esp
+[2026-07-13 17:04:27]   DISABLE Lux Orbis - Ryn's Goldenglow Estate patch.esp -> Ryn's GoldenGlow Estate.esp
+[2026-07-13 17:04:27]   DISABLE Lux Orbis - Ryn's Karthspire.esp -> Ryn's Karthspire.esp
+[2026-07-13 17:04:27]   DISABLE Lux Orbis - Ryn's Lost Valley Redoubt Patch.esp -> Ryn's Lost Valley Redoubt.esp
+[2026-07-13 17:04:27]   DISABLE Lux Orbis - Ryn's Saarthal.esp -> Ryn's Saarthal.esp
+[2026-07-13 17:04:27]   DISABLE Lux Orbis - Ryn's Standing Stones patch.esp -> Ryn's Standing Stones.esp
+[2026-07-13 17:04:27]   DISABLE Lux - Ryn's Azura's Shrine patch.esp -> Ryn's Azura's Shrine.esp
+[2026-07-13 17:04:27]   DISABLE Lux - Ryn's Mehrunes Dagon Shrine patch.esp -> Ryn's Mehrunes Dagon Shrine.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - Alternate Start patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp, alternate start - live another life.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - Beyond Reach patch.esp -> arnima.esm, Lux Via - Markarth Entrance and Farm Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - Birds of Skyrim SE patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp, BirdsOfSkyrim_SSE.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - CACO Farm Overhaul patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp, Complete Alchemy & Cooking Overhaul.esp, CACO Farm Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - Carriage Stops of Skyrim patch.esp -> simpleCarriageExpansion.esp, Lux Via - Markarth Entrance and Farm Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - CC Fishing patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - CDAA patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp, Carriage Drivers Are Alive.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - Clockwork patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - Convenient Carriages patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - Enhanced Landscapes patch.esp -> Enhanced Landscapes.esp, Lux Via - Markarth Entrance and Farm Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - ESO Imports patch.esp -> ESOimports.esp, Lux Via - Markarth Entrance and Farm Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - Gallows of Skyrim patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp, GallowsOfSkyrim.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - Greater Markarth Expansion patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp, Domenicus Markarth Mod.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - Immersive Citizens patch.esp -> Immersive Citizens - AI Overhaul.esp, Lux Via - Markarth Entrance and Farm Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - Immersive Encounters patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp, Immersive Encounters.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - Immersive Laundry patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp, Laundry.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - Justice patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp, JUSTICE - City Exteriors.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - Khajiit Has Wares patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp, KhajiitHazWares.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - LFfGM patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp, Landscape Fixes For Grass Mods.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - LotD patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - Lux Orbis patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - Lux Via patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - Nature of the Wild Lands patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - Rigmor patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp, Rigmor.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - Roadsigns Overhaul patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp, RoadsignsOverhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - Second Great War patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp, GreatWarSkyrim.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - Sky City patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp, Sky City.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - Trees Addon patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp, Treeswinedave.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - Ulvenwald patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp, Ulvenwald.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - USSEP patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - Warbirds Dwemer Train Stations patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp, Warbird's Dwemer Train Station.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - Witcher Horses patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp, Witcher Horses 2.0.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts - Wizards Well patch.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp, Haem Projects Basalt.esp
+[2026-07-13 17:04:27]   DISABLE JKs GGs Markarth Outskirts.esp -> Lux Via - Markarth Entrance and Farm Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - Alternate Start patch.esp -> Alternate Start - Live Another Life.esp
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - Beyond Reach patch.esp -> arnima.esm
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - Birds of Skyrim SE patch.esp -> BirdsOfSkyrim_SSE.esp
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - CACO Farm Overhaul patch.esp -> Complete Alchemy & Cooking Overhaul.esp, CACO Farm Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - Carriage Stops of Skyrim patch.esp -> simpleCarriageExpansion.esp
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - CDAA patch.esp -> Carriage Drivers Are Alive.esp
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - Convenient Carriages (ICAIO) patch.esp -> Immersive Citizens - AI Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - Enhanced Landscapes + NotWL patch.esp -> Enhanced Landscapes.esp
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - Enhanced Landscapes patch.esp -> Enhanced Landscapes.esp
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - ESO Imports patch.esp -> ESOimports.esp
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - Greater Markarth Expansion patch.esp -> Domenicus Markarth Mod.esp
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - Immersive Citizens patch.esp -> Immersive Citizens - AI Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - Immersive Encounters patch.esp -> Immersive Encounters.esp
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - Immersive Laundry patch.esp -> Laundry.esp
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - Justice patch.esp -> JUSTICE - City Exteriors.esp
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - Khajiit Has Wares patch.esp -> KhajiitHazWares.esp
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - LFfGM patch.esp -> Landscape Fixes For Grass Mods.esp
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - LoS II patch.esp -> Lanterns Of Skyrim II.esm
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - Rigmor patch.esp -> Rigmor.esp
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - Roadsigns Overhaul patch.esp -> RoadsignsOverhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - Second Great War patch.esp -> GreatWarSkyrim.esp
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - Sky City patch.esp -> Sky City.esp
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - Skyrim Bridges patch.esp -> Skyrim Bridges.esp
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - Trees Addon patch.esp -> Treeswinedave.esp
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - Ulvenwald patch.esp -> Ulvenwald.esp
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - Warbirds Dwemer Train Stations patch.esp -> Warbird's Dwemer Train Station.esp
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - Witcher Horses patch.esp -> Witcher Horses 2.0.esp
+[2026-07-13 17:04:27]   DISABLE JKs Markarth Outskirts - Wizards Well patch.esp -> Haem Projects Basalt.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - A Cats Life patch.esp -> ACatsLife.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - AI Overhaul patch.esp -> AI Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - Aspens Ablaze patch.esp -> Aspens Ablaze.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - Birds of Skyrim SE patch.esp -> BirdsOfSkyrim_SSE.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - Carriage Drivers Are Alive patch.esp -> Carriage Drivers Are Alive.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - Carriage Stops of Skyrim patch.esp -> simpleCarriageExpansion.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - Dawnguard Sentries patch.esp -> Dawnguard Sentries SE.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - DK Nord Ships patch.esp -> RealisticNordShips2.0.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - ELFX Exteriors patch.esp -> ELFX - Exteriors.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - Eli Ruska - Ryns Farms patch.esp -> Eli_Ruska.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - Eli Ruska patch.esp -> Eli_Ruska.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - Enhanced Landscapes patch.esp -> Enhanced Landscapes.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - Gallows of Skyrim patch.esp -> GallowsOfSkyrim.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - Illustrated Town Panels patch.esp -> IllustratedTownPanels.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - Immersive Laundry patch.esp -> Laundry.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - Justice patch.esp -> JUSTICE - City Exteriors.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - Khajiit Has Wares (ICAIO) patch.esp -> Immersive Citizens - AI Overhaul.esp, KhajiitHazWares.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - Khajiit Has Wares patch.esp -> KhajiitHazWares.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - LAWF patch.esp -> Landscape and Water Fixes.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - LoS II patch.esp -> Lanterns Of Skyrim II.esm
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - Lux Orbis + Lux Via consistency patch.esp -> Lux Orbis - JK's Riften Outskirts patch.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - Mihail Haystacks patch.esp -> mihailhaystacks.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - Mihails Goblins and Riekrs patch.esp -> mihailgoblinsandriekrs.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - Riften Docks Overhaul patch.esp -> Riften Docks Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - Riften Southwoods District patch.esp -> RiftenExtension.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - RT Docks + Eli Ruska + Ryns Farms consistency patch.esp -> Riften Docks Overhaul.esp, Eli_Ruska.esp, RTDocks - Ryn's Farms.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - RT Docks + Eli Ruska consistency patch.esp -> Riften Docks Overhaul.esp, Eli_Ruska.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - RT Docks + Ryns Farms consistency patch.esp -> Riften Docks Overhaul.esp, RTDocks - Ryn's Farms.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - RT Docks + Southwoods District consistency patch.esp -> Riften Docks Overhaul.esp, RiftenExtension.esp, RiftenExtensionDockOverhaulPatch.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - Ryns Farms - Southwoods District consistency patch.esp -> RiftenExtension.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - Scarecrows of Skyrim patch.esp -> Scarecrows_of_Skyrim.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - Second Great War patch.esp -> GreatWarSkyrim.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - Touring Carriages patch.esp -> TouringCarriages.esp
+[2026-07-13 17:04:27]   DISABLE JKs Riften Outskirts - Ulvenwald patch.esp -> Ulvenwald.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - 3DNPC + CFO patch.esp -> Complete Alchemy & Cooking Overhaul.esp, CACO Farm Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - 3DNPC + Ryns Farms + CFO patch.esp -> Complete Alchemy & Cooking Overhaul.esp, CACO Farm Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Birds of Skyrim SE patch.esp -> BirdsOfSkyrim_SSE.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - BUVARP + CFO patch.esp -> BUVARP SE RE.esp, Complete Alchemy & Cooking Overhaul.esp, CACO Farm Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - BUVARP patch.esp -> BUVARP SE RE.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - CACO Farm Overhaul patch.esp -> Complete Alchemy & Cooking Overhaul.esp, CACO Farm Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - CDAA patch.esp -> Carriage Drivers Are Alive.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - CEO Windhelm + Capital Windhelm patch.esp -> WindhelmEntranceOverhaul.esp, WindhelmEntranceOverhaul WindhelmSSE Patch.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - CEO Windhelm + CFO patch.esp -> WindhelmEntranceOverhaul.esp, Complete Alchemy & Cooking Overhaul.esp, CACO Farm Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - CEO Windhelm + Eli Routa patch.esp -> WindhelmEntranceOverhaul.esp, Eli_Routa.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - CEO Windhelm + Ryns Farms patch.esp -> WindhelmEntranceOverhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - CEO Windhelm + Windhelm Exterior Altered patch.esp -> WindhelmEntranceOverhaul.esp, Windhelm Exterior Altered.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - CEO Windhelm patch.esp -> WindhelmEntranceOverhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Civil War Refugees patch.esp -> Civil War Refugees Redux.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - DK Nord Ships patch.esp -> RealisticNordShips2.0.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Eli Routa + CFO patch.esp -> Complete Alchemy & Cooking Overhaul.esp, CACO Farm Overhaul.esp, Eli_Routa.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Eli Routa + Ryns Farm patch.esp -> Eli_Routa.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Eli Routa patch.esp -> Eli_Routa.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Enhanced Landscapes patch.esp -> Enhanced Landscapes.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - ESO Imports patch.esp -> ESOimports.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Farmhouse Chimneys patch.esp -> FarmhouseChimneys.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Illustrated Town Panels patch.esp -> IllustratedTownPanels.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Immersive Citizens patch.esp -> Immersive Citizens - AI Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Immersive Laundry (CFO) patch.esp -> Complete Alchemy & Cooking Overhaul.esp, Laundry.esp, CACO Farm Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Immersive Laundry patch.esp -> Laundry.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - iNeed Extended patch.esp -> iNeed - Extended.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Justice patch.esp -> JUSTICE - City Exteriors.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Khajiit Has Wares patch.esp -> KhajiitHazWares.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - LAWF patch.esp -> Landscape and Water Fixes.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - LoS II patch.esp -> Lanterns Of Skyrim II.esm
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - NSUTR patch.esp -> Prometheus_No_snow_Under_the_roof.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Realistic Boat Travel patch.esp -> BoatTravel.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Ryns Farms + BUVARP + CFO patch.esp -> BUVARP SE RE.esp, Complete Alchemy & Cooking Overhaul.esp, CACO Farm Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Ryns Farms + BUVARP patch.esp -> BUVARP SE RE.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Ryns Farms + CFO patch.esp -> Complete Alchemy & Cooking Overhaul.esp, CACO Farm Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Scarecrows of Skyrim patch.esp -> Scarecrows_of_Skyrim.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Skyrim 3D Signs patch.esp -> S3DSigns.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Skyrim Bridges patch.esp -> Skyrim Bridges.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Skyrim Sewers (DK) patch.esp -> SkyrimSewers.esp, RealisticNordShips2.0.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Skyrim Sewers patch.esp -> SkyrimSewers.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Touring Carriages patch.esp -> TouringCarriages.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Ulvenwald + Eli Routa patch.esp -> Ulvenwald.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Ulvenwald + Ryns Farms + BUVARP patch.esp -> Ulvenwald.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Ulvenwald + Ryns Farms patch.esp -> Ulvenwald.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Ulvenwald patch.esp -> Ulvenwald.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Veydogolt Extra Trees patch.esp -> Veydogolt Trees - Extra Trees.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Windhelm Bridge Revived patch.esp -> Windhelm Bridge Revived.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Windhelm Exterior Altered Altered patch.esp -> Windhelm Exterior Altered.esp, Windhelm Exterior Altered Altered.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Windhelm Exterior Altered Patch.esp -> Windhelm Exterior Altered.esp
+[2026-07-13 17:04:27]   DISABLE JKs Windhelm Outskirts - Witcher Horses patch.esp -> Witcher Horses 2.0.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's_Robber's_Gorge_Crabber's_Shanty_PATCH.esp -> Ryn's Robber's Gorge.esp, Ryn's Crabber's Shanty.esp
+[2026-07-13 17:04:27]   DISABLE JK's Ryn's Riverwood Trader - ELFX patch.esp -> EnhancedLightsandFX.esp, SoundsofSkyrimComplete.esp
+[2026-07-13 17:04:27]   DISABLE JK's Ryn's Riverwood Trader - ELFX Shadows patch.esp -> EnhancedLightsandFX.esp, ELFX Shadows.esp, SoundsofSkyrimComplete.esp
+[2026-07-13 17:04:27]   DISABLE JK's Ryn's Sleeping Giant Inn - ELFX patch.esp -> EnhancedLightsandFX.esp, SoundsofSkyrimComplete.esp
+[2026-07-13 17:04:27]   DISABLE JK's Ryn's Sleeping Giant Inn - ELFX Shadows patch.esp -> SoundsofSkyrimComplete.esp, EnhancedLightsandFX.esp, ELFX Shadows.esp
+[2026-07-13 17:04:27]   DISABLE Nature of the Wild Lands - Ryn' Lost Valley Redoubt patch.esp -> Ryn's Lost Valley Redoubt.esp
+[2026-07-13 17:04:27]   DISABLE Nature of the Wild Lands - Ryn's Bleakfalls Tower patch.esp -> Ryn's Bleakfalls Tower.esp
+[2026-07-13 17:04:27]   DISABLE Nature of the Wild Lands - Ryn's Broken Tower Redoubt patch.esp -> Ryn's Broken Tower Redoubt.esp
+[2026-07-13 17:04:27]   DISABLE Nature of the Wild Lands - Ryn's Goldenglow Estate patch.esp -> Ryn's GoldenGlow Estate.esp
+[2026-07-13 17:04:27]   DISABLE Nature of the Wild Lands - Ryn's Karthspire patch.esp -> Ryn's Karthspire.esp
+[2026-07-13 17:04:27]   DISABLE Nature of the Wild Lands - Ryn's Robber's Gorge patch.esp -> Ryn's Robber's Gorge.esp
+[2026-07-13 17:04:27]   DISABLE Nature of the Wild Lands - Ryn's Saarthal patch.esp -> Ryn's Saarthal.esp
+[2026-07-13 17:04:27]   DISABLE Nature of the Wild Lands - Ryn's Snazzy Last Vigil patch.esp -> Ryn's Snazzy Last Vigil.esp
+[2026-07-13 17:04:27]   DISABLE RiftenNorthshore - RTDocks - Ryn's Farms patch.esp -> RiftenExtensionNorth.esp, Riften Docks Overhaul.esp, RifNDocksPatch.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Alchemists Shack - LAWF patch.esp -> Landscape and Water Fixes.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Alvor's House - ELFX patch.esp -> EnhancedLightsandFX.esp, SoundsofSkyrimComplete.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Alvor's House - ELFX Shadows patch.esp -> SoundsofSkyrimComplete.esp, EnhancedLightsandFX.esp, ELFX Shadows.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Azura's Shrine - 3DNPC patch.esp -> Ryn's Azura's Shrine.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Azura's Shrine - ACE patch.esp -> WACCF_Armor and Clothing Extension.esp, Ryn's Azura's Shrine.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Azura's Shrine - Clearable Locations - Lux patch.esp -> Ryn's Azura's Shrine.esp, rynazuraclear.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Azura's Shrine - Encounter Zone Overhaul consistency patch.esp -> Ryn's Azura's Shrine.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Azura's Shrine - Enhanced Landscapes patch.esp -> Enhanced Landscapes.esp, Ryn's Azura's Shrine.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Azura's Shrine - Lux - Encounter Zone Overhaul consistency patch.esp -> Ryn's Azura's Shrine.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Azura's Shrine - Moon and Star patch.esp -> Ryn's Azura's Shrine.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Azura's Shrine - NSUTR patch.esp -> Prometheus_No_snow_Under_the_roof.esp, Ryn's Azura's Shrine.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Bleakwind Basin - EVE Giant Campfires patch.esp -> EVE_GiantCampfiresCastShadowsENBLightVersion.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Bleakwind Basin - EVE Giant Campires patch.esp -> EVE_GiantCampfiresCastShadows.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Bleakwind Basin - LAWF patch.esp -> Landscape and Water Fixes.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Bleakwind Basin - TOTS patch.esp -> Turn of the Seasons.esp, TOTS - Icy Waterways.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Dragon Mounds - Fall of Granite Hill patch.esp -> Fall of Granite Hill.esp, Ryn's Dragon Mounds AIO.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Dragon Mounds - Oblivion Gates Remade patch.esp -> Oblivion Gates Remade.esp, Ryn's Dragon Mounds AIO.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Dragon Mounds - Pale Pass patch.esp -> DBM_PalePassExtension.esp, Ryn's Dragon Mounds AIO.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Faendal's House - ELFX patch.esp -> EnhancedLightsandFX.esp, SoundsofSkyrimComplete.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Faendal's House - ELFX Shadows patch.esp -> SoundsofSkyrimComplete.esp, EnhancedLightsandFX.esp, ELFX Shadows.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Farms - Immersive Citizens patch.esp -> Immersive Citizens - AI Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Farms - Mihail Haystacks patch.esp -> mihailhaystacks.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Farms - RiftenExtNorth patch.esp -> RiftenExtensionNorth.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Farms - Unique Windhelm Farms patch.esp -> Unique Windhelm Farms.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Farms Riften extension patch.esp -> RiftenExtension.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Farms_RiftenExtension - NotWL patch.esp -> RiftenExtension.esp, Nature of the Wild Lands - Southwoods patch.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Farms_RiftenExtNorth - NotWL patch.esp -> Nature of the Wild Lands - Northshore patch.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Farms_RiftenExt_Ryn's Standing Stones_patch.esp -> Ryn's Standing Stones.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Gerdur's House - ELFX patch.esp -> EnhancedLightsandFX.esp, SoundsofSkyrimComplete.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Gerdur's House - ELFX Shadows patch.esp -> SoundsofSkyrimComplete.esp, ELFX Shadows.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Goldenglow Estate - LAWF patch.esp -> Ryn's GoldenGlow Estate.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's GoldenGlow Estate - s606t Oblivion Gates.esp -> s6o6t Lore - Oblivion Gates.esp, Ryn's GoldenGlow Estate.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Goldenglow Estate - Seasonal Critter patch.esp -> Ryn's GoldenGlow Estate.esp, ChillyBugs.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Goldenglow Estate - USSEP patch.esp -> Ryn's GoldenGlow Estate.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Karthspire - EmbersHD patch.esp -> EmbersHD.esp, Ryn's Karthspire.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Karthspire - ezPG patch.esp -> ezPG.esp, Ryn's Karthspire.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Karthspire - LAWF patch.esp -> Landscape and Water Fixes.esp, Ryn's Karthspire.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Karthspire - Soljund's Sinkhole patch.esp -> Ryn's Karthspire.esp, Soljund's Sinkhole.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Lost Valley Redoubt - EmbersHD patch.esp -> EmbersHD.esp, Ryn's Lost Valley Redoubt.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Lost Valley Redoubt - LOTD patch.esp -> Ryn's Lost Valley Redoubt.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Lumber Mills - CFTO patch.esp -> CFTO.esp, Ryn's Lumber Mills.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Lumber Mills - COTN Anga's Mill + NotWL patch.esp -> COTN Addon - Anga's Mill.esp, RLM - Nature of the Wild Lands_Patch.esp, COTN Angas Mill Addon - Ryns Lumber Mills patch.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Lumber Mills - Fishing patch.esp -> Ryn's Lumber Mills.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Lumber Mills - Half Moon Creek patch.esp -> Ryn's Lumber Mills.esp, Half Moon Creek.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Lumber Mills - Half Moon Creek_COTN patch.esp -> Half Moon Creek.esp, Half-Moon Mill COTNed - Ryn's Lumber Mills Patch.esp, Half-Moon Mill COTNed - Half Moon Creek patch.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Lumber Mills - LAWF patch.esp -> Ryn's Lumber Mills.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Lumber Mills - USSEP patch.esp -> Ryn's Lumber Mills.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Lund's Hut - Alternate Start patch.esp -> Alternate Start - Live Another Life.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Mehrunes Dagon's Shrine - ELFX patch.esp -> EnhancedLightsandFX.esp, Ryn's Mehrunes Dagon Shrine.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Mistwatch Folly - USSEP - Lux patch.esp -> Lux - Ryn's Mistwatch Folly patch.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Saarthal - USSEP_USMP patch.esp -> Ryn's Saarthal.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Secunda's Kiss - EmbersHD patch.esp -> EmbersHD.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Sven's House - ELFX patch.esp -> EnhancedLightsandFX.esp, SoundsofSkyrimComplete.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Sven's House - ELFX Shadows patch.esp -> SoundsofSkyrimComplete.esp, EnhancedLightsandFX.esp, ELFX Shadows.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Ustengrav - USSEP patch.esp -> Ryn's Ustengrav.esp
+[2026-07-13 17:04:27]   DISABLE Ryns_Farms_-_LAWF_patch.esp -> Landscape and Water Fixes.esp
+[2026-07-13 17:04:27]   DISABLE Seasonal Alchemy - Ryn's Skyrim addon.esp -> Seasonal Alchemy.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - Artifacts of Skyrim Patch.esp -> Artifacts.esp, Ryn's Standing Stones.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - Aspens Ablaze Patch.esp -> Ryn's Standing Stones.esp, Aspens Ablaze.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - Enhanced Landscapes Patch.esp -> Enhanced Landscapes.esp, Ryn's Standing Stones.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - ETaC Complete Patch.esp -> ETaC - RESOURCES.esp, Ryn's Standing Stones.esp, ETaC - Complete.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - ETaC DWC Patch.esp -> ETaC - RESOURCES.esp, Ryn's Standing Stones.esp, ETaC - Darkwater Crossing.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - Falkreath Hauntings Patch.esp -> Ryn's Standing Stones.esp, ogFalkreathHauntings.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - Hold Border Guards Patch.esp -> Ryn's Standing Stones.esp, Hold Border Guards Anniversary.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - iNeed Extended Patch.esp -> Ryn's Standing Stones.esp, iNeed - Extended.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - Isengrav Barrow Patch.esp -> Ryn's Standing Stones.esp, Incaendo_IsengravBarrow.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - Landscape and Water Fixes Patch.esp -> Landscape and Water Fixes.esp, Ryn's Standing Stones.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - Landscape Patch.esp -> Ryn's Standing Stones.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - Leaps of Faith Patch.esp -> Ryn's Standing Stones.esp, LeapsOfFaith.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - Leviathan Axe Patch.esp -> Ryn's Standing Stones.esp, FGCLeviathanAxe.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - Marsh Pines Patch.esp -> Ryn's Standing Stones.esp, Enhanced Landscapes Standalone Marsh Pines.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - Mavari Armor Patch.esp -> Mavari Armor.esp, Ryn's Standing Stones.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - Mundus Stones Patch.esp -> Ryn's Standing Stones.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - Necrolock Patch.esp -> Ryn's Standing Stones.esp, Collygon - Necrolock.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - NSUTR Patch.esp -> Ryn's Standing Stones.esp, Prometheus_No_snow_Under_the_roof.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - Requiem Patch.esp -> Ryn's Standing Stones.esp, Requiem.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - S3D Trees Patch.esp -> S3DTrees NextGenerationForests.esp, Ryn's Standing Stones.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - Shadow of Meresis Patch.esp -> Ryn's Standing Stones.esp, The Shadow of Meresis.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - Skyrim Reborn - Hjaalmarch Hold Patch.esp -> Ryn's Standing Stones.esp, Skyrim Reborn - Hjaalmarch Hold.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - Skyrim Reborn - Whiterun Hold Patch.esp -> Skyrim Reborn - Whiterun Hold.esp, Ryn's Standing Stones.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - Steel Falcon Patch.esp -> Steel Falcon.esp, Ryn's Standing Stones.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - TPOS2 - RTCWG Patch.esp -> tpos_complete02_RTCWG.esp, Ryn's Standing Stones.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - Way of the Dwemer Patch.esp -> Markarth_The_Way_Of_The_Dwemer.esp, Ryn's Standing Stones.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - Wraiths Patch.esp -> 1wraiths.esl, Ryn's Standing Stones.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Standing Stones - Zerofrost Ultimate Armor Collection Patch.esp -> Ryn's Standing Stones.esp, Zerofrost Ultimate Armor Collection.esp
+[2026-07-13 17:04:27]   DISABLE JK's Ryn's Riverwood Trader - Distinct Interiors patch.esp -> Distinct Interiors.esp
+[2026-07-13 17:04:27]   DISABLE JK's Ryn's Riverwood Trader - SFCO patch.esp -> Snazzy Furniture and Clutter Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JK's Ryn's Sleeping Giant Inn - Art Imports patch.esp -> Art Imports.esp
+[2026-07-13 17:04:27]   DISABLE JK's Ryn's Sleeping Giant Inn - Distinct Interiors patch.esp -> Distinct Interiors.esp
+[2026-07-13 17:04:27]   DISABLE JK's Ryn's Sleeping Giant Inn - Immersive Citizens patch.esp -> Immersive Citizens - AI Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JK's Ryn's Sleeping Giant Inn - SFCO patch.esp -> Snazzy Furniture and Clutter Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE JK's Ryn's Sleeping Giant Inn - Sounds of Skyrim (Lux) patch.esp -> SoundsofSkyrimComplete.esp
+[2026-07-13 17:04:27]   DISABLE JK's Ryn's Sleeping Giant Inn - Sounds of Skyrim patch.esp -> SoundsofSkyrimComplete.esp
+[2026-07-13 17:04:27]   DISABLE JK's Ryn's Sleeping Giant Inn - Tamrielic Culture patch.esp -> WZTamrielic Culture.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Alvor's House - Art Imports patch.esp -> Art Imports.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Alvor's House - AYOP TG patch.esp -> At Your Own Pace - Thieves Guild.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Alvor's House - CACO patch.esp -> Complete Alchemy & Cooking Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Alvor's House - Cheesemod patch.esp -> yumcheese.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Alvor's House - Immersive Citizens patch.esp -> Immersive Citizens - AI Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Alvor's House - Radiance Locations patch.esp -> Radiance - Locations.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Alvor's House - SFCO patch.esp -> Snazzy Furniture and Clutter Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Alvor's House - Sounds of Skyrim (Lux) patch.esp -> SoundsofSkyrimComplete.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Alvor's House - Sounds of Skyrim patch.esp -> SoundsofSkyrimComplete.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Faendal's House - Art Imports patch.esp -> Art Imports.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Faendal's House - Cheesemod patch.esp -> yumcheese.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Faendal's House - Immersive Citizens (Lux) patch.esp -> Immersive Citizens - AI Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Faendal's House - Immersive Citizens - Sounds of Skyrim (Lux) patch.esp -> SoundsofSkyrimComplete.esp, Immersive Citizens - AI Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Faendal's House - Immersive Citizens - Sounds of Skyrim patch.esp -> SoundsofSkyrimComplete.esp, Immersive Citizens - AI Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Faendal's House - Immersive Citizens patch.esp -> Immersive Citizens - AI Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Faendal's House - SFCO patch.esp -> Snazzy Furniture and Clutter Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Faendal's House - Sounds of Skyrim (Lux) patch.esp -> SoundsofSkyrimComplete.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Faendal's House - Sounds of Skyrim patch.esp -> SoundsofSkyrimComplete.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Gerdur's House - Art Imports patch.esp -> Art Imports.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Gerdur's House - AYOP TG patch.esp -> At Your Own Pace - Thieves Guild.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Gerdur's House - Cheesemod patch.esp -> yumcheese.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Gerdur's House - Immersive Citizens patch.esp -> Immersive Citizens - AI Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Gerdur's House - SFCO patch.esp -> Snazzy Furniture and Clutter Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Gerdur's House - Sounds of Skyrim (Lux) patch.esp -> SoundsofSkyrimComplete.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Gerdur's House - Sounds of Skyrim patch.esp -> SoundsofSkyrimComplete.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Riverwood Trader - AI Overhaul patch.esp -> AI Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Riverwood Trader - AYOP TG patch.esp -> At Your Own Pace - Thieves Guild.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Riverwood Trader - Cheesemod patch.esp -> yumcheese.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Riverwood Trader - Distinct Interiors patch.esp -> Distinct Interiors.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Riverwood Trader - ezPG patch.esp -> ezPG.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Riverwood Trader - Immersive Citizens patch.esp -> Immersive Citizens - AI Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Riverwood Trader - Off Limits patch.esp -> Off Limits - Trespassing Behavior Expansion.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Riverwood Trader - Radiance Locations patch.esp -> Radiance - Locations.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Riverwood Trader - SFCO patch.esp -> Snazzy Furniture and Clutter Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Riverwood Trader - Sounds of Skyrim (Lux) patch.esp -> SoundsofSkyrimComplete.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Riverwood Trader - Sounds of Skyrim patch.esp -> SoundsofSkyrimComplete.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Riverwood Trader - TNotT patch.esp -> mpThievesNightOnTheTown.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Riverwood Trader Is a Mess - LOTD Patch.esp -> Riverwood Trader Is A Mess.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Riverwood Trader Is a Mess.esp -> Riverwood Trader Is A Mess.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Sleeping Giant Inn - AI Overhaul patch.esp -> AI Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Sleeping Giant Inn - Art Imports patch.esp -> Art Imports.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Sleeping Giant Inn - Cheesemod patch.esp -> yumcheese.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Sleeping Giant Inn - Distinct Interiors patch.esp -> Distinct Interiors.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Sleeping Giant Inn - Drunks of Skyrim patch.esp -> DrunksofSkyrim.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Sleeping Giant Inn - ezPG patch.esp -> ezPG.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Sleeping Giant Inn - Immersive Citizens patch.esp -> Immersive Citizens - AI Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Sleeping Giant Inn - Keep It Clean patch.esp -> Keep It Clean.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Sleeping Giant Inn - Mihail's Animal Bones patch.esp -> mihailanimalbones.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Sleeping Giant Inn - Mythos patch.esp -> Mythos.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Sleeping Giant Inn - New Treasure Hunt patch.esp -> treasure_hunt.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Sleeping Giant Inn - Off Limits patch.esp -> Off Limits - Trespassing Behavior Expansion.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Sleeping Giant Inn - Radiance Locations patch.esp -> Radiance - Locations.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Sleeping Giant Inn - SFCO patch.esp -> Snazzy Furniture and Clutter Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Sleeping Giant Inn - Sounds of Skyrim (Lux) patch.esp -> SoundsofSkyrimComplete.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Sleeping Giant Inn - Sounds of Skyrim patch.esp -> SoundsofSkyrimComplete.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Sleeping Giant Inn - Tamrielic Culture patch.esp -> WZTamrielic Culture.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Sleeping Giant Inn - TNotT patch.esp -> mpThievesNightOnTheTown.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Sven's House - Art Imports patch.esp -> Art Imports.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Sven's House - Cheesemod patch.esp -> yumcheese.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Sven's House - Immersive Citizens patch.esp -> Immersive Citizens - AI Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Sven's House - SFCO patch.esp -> Snazzy Furniture and Clutter Overhaul.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Sven's House - Sounds of Skyrim (Lux) patch.esp -> SoundsofSkyrimComplete.esp
+[2026-07-13 17:04:27]   DISABLE Ryn's Sven's House - Sounds of Skyrim patch.esp -> SoundsofSkyrimComplete.esp
+[2026-07-13 17:04:27] plugins active after: 1676
+[2026-07-13 17:04:27] task-0073 complete - MO2 F5 refresh recommended

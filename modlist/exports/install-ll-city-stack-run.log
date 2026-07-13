@@ -1,0 +1,30 @@
+[2026-07-13 16:47:40] task-0069 Lost Legacy - Fork city stack starting
+[2026-07-13 16:47:40] NOTE Anvil name map: Rob's Bug Fixes - Capital Whiterun; CWE Spaghetti Patch; Crossed Daggers - Spaghetti Patch
+[2026-07-13 16:47:40] SKIP exists: Capital Whiterun Expansion
+[2026-07-13 16:47:40] SKIP exists: Rob's Bug Fixes - Capital Whiterun
+[2026-07-13 16:47:40] SKIP exists: Capital Windhelm Expansion
+[2026-07-13 16:47:40] SKIP exists: Spaghetti's Capital Windhelm Expansion
+[2026-07-13 16:47:40] SKIP exists: Ultimate Markarth
+[2026-07-13 16:47:40] SKIP exists: Ultimate Markarth Expanded
+[2026-07-13 16:47:40] SKIP exists: UME Patch Hub
+[2026-07-13 16:47:40] SKIP exists: RedBag's Solitude
+[2026-07-13 16:47:40] SKIP exists: RedBag Patch Collection
+[2026-07-13 16:47:40] SKIP exists: City of Crossed Daggers - Riften Expansion
+[2026-07-13 16:47:40] SKIP exists: Riverwood Has Charm and Walls
+[2026-07-13 16:47:40] SKIP exists: Riverwood Has Walls Patch Collection
+[2026-07-13 16:47:40] SKIP exists: Spaghetti's Cities - Whiterun
+[2026-07-13 16:47:40] SKIP exists: Spaghetti's Cities - Windhelm
+[2026-07-13 16:47:40] SKIP exists: Spaghetti's Cities - Markarth
+[2026-07-13 16:47:40] SKIP exists: Spaghetti's Cities - Solitude
+[2026-07-13 16:47:40] SKIP exists: Spaghetti's Cities - Riften
+[2026-07-13 16:47:40] SKIP exists: Spaghetti's Towns - Riverwood
+[2026-07-13 16:47:40] SKIP exists: CWE Spaghetti Patch
+[2026-07-13 16:47:40] SKIP exists: Crossed Daggers - Spaghetti Patch
+[2026-07-13 16:47:40] SKIP exists: Ivy - Whiterun Well Overhaul
+[2026-07-13 16:47:40] SKIP exists: Ivy - Riverwood Smelter Addon
+[2026-07-13 16:47:40] modlist: disabled 6 JK exterior mods; enabled 22 city stack mods
+[2026-07-13 16:47:40] plugins active before: 1452
+[2026-07-13 16:47:48] MAST-disabled 1 plugins
+[2026-07-13 16:47:48]   DISABLE Captial Whiterun and Spaghetti AIO Patch.esp -> Spaghetti's Cities - AIO.esp
+[2026-07-13 16:47:48] plugins active after: 1461
+[2026-07-13 16:47:48] task-0069 complete — MO2 F5 refresh + in-game spot check

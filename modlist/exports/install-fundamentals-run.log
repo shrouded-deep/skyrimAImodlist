@@ -1,0 +1,107 @@
+[2026-07-12 11:57:16] task-0067 fundamentals Phase A install starting
+[2026-07-12 11:57:16] SKIP exists: Bleeding Damage Fixes
+[2026-07-12 11:57:16] SKIP exists: Hammering Animation and Sound Fixes
+[2026-07-12 11:57:16] SKIP exists: Quest Journal Limit Bug Fixer - Recover Disappeared Quests
+[2026-07-12 11:57:16] SKIP exists: Hide Quest Items in Container Menu
+[2026-07-12 11:57:16] SKIP exists: Nilheim BQ Fix
+[2026-07-12 11:57:16] SKIP exists: Dwemer Gates Don't Reset - Patches
+[2026-07-12 11:57:16] SKIP exists: Dwemer Gates Don't Reset
+[2026-07-12 11:57:16] SKIP exists: Arcane Blacksmith's Apron - Hood Fixes
+[2026-07-12 11:57:16] SKIP exists: Safety of Skuldafn - Railing and Small Fixes
+[2026-07-12 11:57:16] SKIP exists: Solitude Rock Arch LOD Fix (By force)
+[2026-07-12 11:57:16] SKIP exists: LOD Unloading Bug Fix
+[2026-07-12 11:57:16] SKIP exists: Unaggressive Dragon Priests Fix
+[2026-07-12 11:57:16] SKIP exists: Durak Teleport Fix
+[2026-07-12 11:57:16] SKIP exists: Civil War Intro Scenes Run Only Once
+[2026-07-12 11:57:16] SKIP exists: Guild Master's Armor First Person Texture Fix
+[2026-07-12 11:57:16] SKIP exists: Stuck on Screen Load Door Prompt Fix
+[2026-07-12 11:57:16] SKIP exists: NPC Stuck in Bleedout Fix
+[2026-07-12 11:57:16] SKIP exists: Zero Bounty Hostility Fix
+[2026-07-12 11:57:16] SKIP exists: Rock Traps Trigger Fixes
+[2026-07-12 11:57:16] SKIP exists: Dwemer Ballista Crash fix
+[2026-07-12 11:57:16] SKIP exists: Universal Cured Serana Eye Fix
+[2026-07-12 11:57:16] SKIP exists: Chillwind Depths CTD Fix
+[2026-07-12 11:57:16] SKIP exists: Stamina of Steeds
+[2026-07-12 11:57:16] SKIP exists: Hearthfires Houses Building Fix
+[2026-07-12 11:57:16] SKIP exists: Source of Stalhrim Quest Fix
+[2026-07-12 11:57:16] SKIP exists: Proving Honor Companions Quest Progression Fix
+[2026-07-12 11:57:16] SKIP exists: Shalidor's Maze Sound Fix
+[2026-07-12 11:57:16] SKIP exists: Labyrinthian Shalidor's Maze Fixes
+[2026-07-12 11:57:16] SKIP exists: Mannequin Management
+[2026-07-12 11:57:16] SKIP exists: Mount Anthor Dragon Fix
+[2026-07-12 11:57:16] SKIP exists: Dragon Dies on Touchdown Fix
+[2026-07-12 11:57:16] SKIP exists: EMISH - Dragon Crash Land Markers Fix
+[2026-07-12 11:57:16] SKIP exists: Simplicity of Seeding - Better Hearthfires and Farming CC Planter Scripts
+[2026-07-12 11:57:16] SKIP exists: Thieves Guild - A Proper Missing Items Fix
+[2026-07-12 11:57:16] SKIP exists: WI College Student Bug Fix
+[2026-07-12 11:57:16] SKIP exists: One Soul Only Mirmulnir
+[2026-07-12 11:57:16] SKIP exists: Smoothing of Splices
+[2026-07-12 11:57:16] SKIP exists: WIDeadBodyCleanupScript Crash Fix
+[2026-07-12 11:57:16] SKIP exists: WE05 Script Fix
+[2026-07-12 11:57:16] SKIP exists: TrapSwingingWall Script Fix
+[2026-07-12 11:57:16] SKIP exists: Stealth Detection Fixes
+[2026-07-12 11:57:16] SKIP exists: Scare my Enemy Bug Fix
+[2026-07-12 11:57:16] SKIP exists: Roggvir's Execution Scene Fixes
+[2026-07-12 11:57:16] SKIP exists: Optimized USSEP Valdr Quest
+[2026-07-12 11:57:16] SKIP exists: OnMagicEffectApply Replacer
+[2026-07-12 11:57:16] SKIP exists: Irkngthand's Possible Bugs Fix
+[2026-07-12 11:57:16] SKIP exists: Ethereal Immunity
+[2026-07-12 11:57:16] SKIP exists: dunPOISoldiersRaidOnStart Script Tweak
+[2026-07-12 11:57:16] SKIP exists: DLC2 Miraak BossFightScript Fix
+[2026-07-12 11:57:16] SKIP exists: DLC2 March of the Dead Fix
+[2026-07-12 11:57:16] SKIP exists: Delphine Skyhaven Bugfix MQ203
+[2026-07-12 11:57:16] SKIP exists: Scrambled Bugs - Vendor Respawn Fix
+[2026-07-12 11:57:16] SKIP exists: Scrambled Bugs - Script Effect Archetype Crash Fix
+[2026-07-12 11:57:16] SKIP exists: Better Third Person Selection - BTPS
+[2026-07-12 11:57:16] SKIP exists: Toggle Dialogue Camera
+[2026-07-12 11:57:16] SKIP exists: Better Jumping AE
+[2026-07-12 11:57:16] SKIP exists: Sprint Stuttering Fix
+[2026-07-12 11:57:16] SKIP exists: First Person Sneak Strafe - Walk Stutter Fix
+[2026-07-12 11:57:16] SKIP exists: Fix Toggle Walk Run (SKSE)
+[2026-07-12 11:57:16] SKIP exists: Keyboard Shortcuts Fix
+[2026-07-12 11:57:16] SKIP exists: No Console Spam
+[2026-07-12 11:57:16] SKIP exists: Kill Caps Lock NG
+[2026-07-12 11:57:16] SKIP exists: Console Commands Extender - Anniversary Edition Update
+[2026-07-12 11:57:16] SKIP exists: Yes Im Sure NG
+[2026-07-12 11:57:16] SKIP exists: Whose Quest is it Anyway NG
+[2026-07-12 11:57:16] SKIP exists: Which Key NG
+[2026-07-12 11:57:16] SKIP exists: Wash That Blood Off 2
+[2026-07-12 11:57:16] SKIP exists: Stay At The System Page NG
+[2026-07-12 11:57:16] SKIP exists: Skyrim Priority - CPU Performance FPS Optimizer
+[2026-07-12 11:57:16] SKIP exists: Remember Lockpick Angle - Updated
+[2026-07-12 11:57:16] SKIP exists: Mum's the Word NG
+[2026-07-12 11:57:16] SKIP exists: Menu Zoom
+[2026-07-12 11:57:16] SKIP exists: I'm Walkin' Here NG with Pets
+[2026-07-12 11:57:16] SKIP exists: Hair Colour Sync
+[2026-07-12 11:57:16] SKIP exists: Essential Favorites
+[2026-07-12 11:57:16] SKIP exists: Mute On Focus Loss
+[2026-07-12 11:57:16] SKIP exists: Better AltTab
+[2026-07-12 11:57:16] SKIP exists: Savefile Grouping Fix
+[2026-07-12 11:57:16] SKIP exists: Mu Joint Fix
+[2026-07-12 11:57:16] SKIP exists: LeveledList Crash Fix
+[2026-07-12 11:57:16] SKIP exists: Game Settings Override - Collection
+[2026-07-12 11:57:16] SKIP exists: Game Settings Override
+[2026-07-12 11:57:16] SKIP exists: Female Equipment Scale Fix
+[2026-07-12 11:57:16] SKIP exists: Equip Enchantment Fix
+[2026-07-12 11:57:16] SKIP exists: Enhanced Reanimation
+[2026-07-12 11:57:16] SKIP exists: Enhanced Invisibility
+[2026-07-12 11:57:16] SKIP exists: Bash Bug Fix
+[2026-07-12 11:57:16] SKIP exists: Barter Limit Fix
+[2026-07-12 11:57:16] SKIP exists: Alt-Tab Stuck Key Fix NG
+[2026-07-12 11:57:16] SKIP exists: Absorb Spell XP Fix
+[2026-07-12 11:57:16] SKIP exists: Alchemy XP Fix
+[2026-07-12 11:57:16] SKIP exists: ENB Light Inventory Fix (ELIF)
+[2026-07-12 11:57:16] SKIP exists: Vampires Cast No Shadow 2
+[2026-07-12 11:57:16] SKIP exists: Stagger Effect Fix
+[2026-07-12 11:57:16] SKIP exists: SMP-NPC Crash Fix
+[2026-07-12 11:57:16] SKIP exists: Don't Stay in The Water - NPC Water AI Fix
+[2026-07-12 11:57:16] SKIP exists: Better Combat Escape - NG
+[2026-07-12 11:57:16] SKIP exists: Better Combat Escape - SSE
+[2026-07-12 11:57:16] SKIP exists: Camera Persistence Fixes
+[2026-07-12 11:57:16] SKIP exists: Light Placer
+[2026-07-12 11:57:16] SKIP exists: Mu Skeleton Editor
+[2026-07-12 11:57:16] modlist.txt: 101 fundamentals enabled above Essentials
+[2026-07-12 11:57:24] DEFER (MAST): Dwemer Gates Don't Reset - Navigator Patch.esp
+[2026-07-12 11:57:24] folders: copied=0 skipped=101 missing=0
+[2026-07-12 11:57:24] plugins active: 1330 -> 1330 (+0 new, 0 upgraded, 1 deferred)
+[2026-07-12 11:57:24] task-0067 complete — run full-mast-scan.ps1

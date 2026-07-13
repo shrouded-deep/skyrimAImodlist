@@ -1,0 +1,5 @@
+[2026-07-12 14:18:38] restore-fork-plugin-enablement starting
+[2026-07-12 14:18:38] backup: E:\Skyrim\profiles\Keizaal - Fork\plugins.txt.bak-2026-07-12-141838
+[2026-07-12 14:18:39] plugins active: 0 -> 814 (enable-set size 1181, disable-set size 24)
+[2026-07-12 14:18:39] modlist: disabled 6 legacy SKSE duplicate folders
+[2026-07-12 14:18:39] restore-fork-plugin-enablement complete — run fix-jk-ryn-plugin-masters.ps1 next, then verify MAST in MO2
