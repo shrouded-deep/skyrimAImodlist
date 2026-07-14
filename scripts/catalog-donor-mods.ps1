@@ -328,8 +328,8 @@ if (-not (Test-Path $outDir)) { New-Item -ItemType Directory -Path $outDir -Forc
 Write-Host "Wrote HTML: $OutHtml"
 
 # --- Interactive picker (raw names, checkboxes, export JSON for import script) ---
-# Include: Nexus mods (including LL duplicates) + donor separators as non-selectable
-# section markers. Do NOT exclude DuplicateInLL.
+# Include: Nexus mods (including LL duplicates) + donor separators (checkable so they
+# copy into LL with their section). Do NOT exclude DuplicateInLL.
 function Get-TierSortKey([string]$Tier) {
     if ($Tier -match '^(\d+)\.(\d+)$') {
         return ([int]$Matches[1] * 10000) + [int]$Matches[2]
@@ -342,22 +342,22 @@ $pickerRows = @($rows | Where-Object {
 } | Sort-Object @{ Expression = { Get-TierSortKey $_.ListTier } }, RawFolder)
 
 $pickerBody = [System.Text.StringBuilder]::new()
-$pickerSelectable = 0
+$pickerMods = 0
 $pickerSeparators = 0
 foreach ($r in $pickerRows) {
+    $fid = [System.Guid]::NewGuid().ToString('N')
     if ($r.IsSeparator) {
         $pickerSeparators++
         [void]$pickerBody.AppendLine(@"
 <tr class="sep" data-tier="$(Escape-Html $r.ListTier)" data-sep="1">
-  <td></td>
+  <td><input type="checkbox" class="pick" data-folder="$(Escape-Html $r.RawFolder)" data-sep="1" id="pick-$fid"/></td>
   <td class="tier">$(Escape-Html $r.ListTier)</td>
-  <td colspan="4"><strong>$(Escape-Html $r.CleanName)</strong> <span class="raw">$(Escape-Html $r.RawFolder)</span></td>
+  <td colspan="4"><label for="pick-$fid"><strong>$(Escape-Html $r.CleanName)</strong> <span class="raw">$(Escape-Html $r.RawFolder)</span> <span class="sepflag">separator</span></label></td>
 </tr>
 "@)
         continue
     }
-    $pickerSelectable++
-    $fid = [System.Guid]::NewGuid().ToString('N')
+    $pickerMods++
     $link = if ($r.NexusUrl) { "<a href=`"$($r.NexusUrl)`" target=`"_blank`">$($r.ModId)</a>" } else { '&mdash;' }
     $dup = if ($r.DuplicateInLL) { ' <span class="dupflag" title="' + (Escape-Html $r.DuplicateDetail) + '">LL</span>' } else { '' }
     [void]$pickerBody.AppendLine(@"
@@ -371,6 +371,8 @@ foreach ($r in $pickerRows) {
 </tr>
 "@)
 }
+
+$pickerSelectable = $pickerMods + $pickerSeparators
 
 $pickerHtml = @"
 <!DOCTYPE html>
@@ -393,7 +395,9 @@ tr.dup { background: #2a2218; }
 label { cursor: pointer; }
 .tier { font-family: monospace; color: #c9a227; white-space: nowrap; }
 .raw { color: #888; font-size: 0.8rem; }
-.dupflag { display: inline-block; margin-left: 0.4rem; padding: 0 0.35rem; font-size: 0.7rem; background: #6b3a1a; color: #ffc78a; border-radius: 3px; vertical-align: middle; }
+.dupflag, .sepflag { display: inline-block; margin-left: 0.4rem; padding: 0 0.35rem; font-size: 0.7rem; border-radius: 3px; vertical-align: middle; }
+.dupflag { background: #6b3a1a; color: #ffc78a; }
+.sepflag { background: #1a4a6b; color: #9ad0ff; }
 a { color: #6eb5ff; }
 #filter { padding: 0.35rem; min-width: 16rem; }
 #count { margin-left: auto; color: #aaa; }
@@ -401,11 +405,11 @@ a { color: #6eb5ff; }
 </head>
 <body>
 <h1>Donor AE Import Picker</h1>
-<p><strong>Folder names are as-is</strong> (list tier prefix kept). Separators are shown as section markers (not selectable).
-Mods already in Lost Legacy are marked <span class="dupflag">LL</span> but remain selectable (no de-dupe).
+<p><strong>Folder names are as-is</strong> (list tier prefix kept). Check separators as well as mods so sections copy into Lost Legacy intact.
+Mods already in LL are marked <span class="dupflag">LL</span> but remain selectable (no de-dupe).
 Export JSON to <code>modlist/exports/donor-ae-import-selection.json</code>, then run
 <code>scripts/import-selected-donor-mods.ps1</code> (use <code>-Replace</code> to overwrite identical names).</p>
-<p>Source: <code>$(Escape-Html $DonorMods)</code> &mdash; $($pickerSelectable) selectable + $($pickerSeparators) separators</p>
+<p>Source: <code>$(Escape-Html $DonorMods)</code> &mdash; $($pickerMods) mods + $($pickerSeparators) separators = $($pickerSelectable) selectable</p>
 <div class="toolbar">
   <button type="button" id="btnAll">Select all visible</button>
   <button type="button" id="btnNone">Clear all</button>
@@ -423,12 +427,14 @@ $($pickerBody.ToString())
 </table>
 <script>
 const DONOR = $(ConvertTo-Json -Compress $DonorMods);
-const STORE_KEY = 'donor-ae-picker-selection-v2';
+const STORE_KEY = 'donor-ae-picker-selection-v3';
 const boxes = () => [...document.querySelectorAll('input.pick')];
 const visible = () => boxes().filter(b => b.closest('tr').style.display !== 'none');
 function updateCount() {
-  const sel = boxes().filter(b => b.checked).length;
-  document.getElementById('count').textContent = sel + ' selected / ' + boxes().length + ' mods';
+  const sel = boxes().filter(b => b.checked);
+  const mods = sel.filter(b => b.dataset.sep !== '1').length;
+  const seps = sel.filter(b => b.dataset.sep === '1').length;
+  document.getElementById('count').textContent = sel.length + ' selected (' + mods + ' mods / ' + seps + ' separators)';
 }
 function saveLocal() {
   try {
@@ -462,7 +468,7 @@ function exportSelection() {
     document.body.removeChild(a);
     URL.revokeObjectURL(a.href);
     saveLocal();
-    alert('Exported ' + folders.length + ' mods.');
+    alert('Exported ' + folders.length + ' folders (mods + separators).');
   } catch (e) {
     alert('Export failed: ' + e.message);
   }
@@ -486,5 +492,5 @@ updateCount();
 "@
 
 [System.IO.File]::WriteAllText($OutPickerHtml, $pickerHtml, [System.Text.UTF8Encoding]::new($false))
-Write-Host "Wrote picker: $OutPickerHtml ($pickerSelectable selectable, $pickerSeparators separators)"
+Write-Host "Wrote picker: $OutPickerHtml ($pickerMods mods + $pickerSeparators separators = $pickerSelectable selectable)"
 Write-Host "Done. Nexus resolved: $($stats.NexusResolved) | Excluded: $($stats.ExcludedNonNexus) | Candidates (incl. LL dups): $($stats.ImportCandidates)"
