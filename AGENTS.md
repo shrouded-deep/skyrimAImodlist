@@ -49,7 +49,7 @@ At the start of every session, before accepting any user instruction:
 
 ## houseCARL version check (Claude Code sessions only)
 
-houseCARL current version: **1.6.0**
+houseCARL current version: **1.7.1**
 GitHub: https://github.com/Avick3110/houseCARL
 
 At the start of each Claude Code session, check the GitHub releases page
