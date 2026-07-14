@@ -4,6 +4,14 @@ Dated entries recording what changed and why. Most recent first.
 
 ---
 
+## 2026-07-14 — ModEx + Cheats stack from Anvil (task-0097)
+
+Added Anvil Dev Tools (ModEx, Debug Menu) and 14 cheat/utility mods into
+`Lost Legacy - Fork` as new `-Dev Tools_separator` / `-Cheats_separator` sections
+immediately above `-MCMs_separator` (below oStim). Prisma UI Additem Menu was
+already present; ModEx still installed as a separate explorer menu. Active plugins
+2018 → 2031.
+
 ## 2026-07-14 — Donor AE import installed (tasks 0078–0095)
 
 867 selected folders from `D:\Skyrim AE\mods` were copied into `D:\Skyrim\mods\`
