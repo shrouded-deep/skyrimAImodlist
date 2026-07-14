@@ -58,10 +58,12 @@ $mastList
 - ``modlist/exports/$TaskId-install.log``
 "@
 
-if ($body -match '(?ms)^## Result\s*\r?\n.*') {
-    $body = $body -replace '(?ms)^## Result\s*\r?\n.*', $resultBlock.TrimEnd() + "`r`n"
+$idx = $body.IndexOf("`n## Result")
+if ($idx -lt 0) { $idx = $body.IndexOf("## Result") }
+if ($idx -ge 0) {
+    $body = $body.Substring(0, $idx).TrimEnd() + "`r`n`r`n" + $resultBlock.TrimEnd() + "`r`n"
 } else {
-    $body = $body.TrimEnd() + "`r`n`r`n" + $resultBlock
+    $body = $body.TrimEnd() + "`r`n`r`n" + $resultBlock.TrimEnd() + "`r`n"
 }
 
 Set-Content -LiteralPath $Done -Value $body -Encoding UTF8
