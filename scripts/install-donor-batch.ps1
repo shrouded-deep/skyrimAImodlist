@@ -10,7 +10,8 @@ param(
     [string[]]$PrefixTop = @(),                         # e.g. '016' — insert at TOP of existing section
     [string[]]$PrefixMiddle = @(),                      # e.g. '017','018' — after top, before existing section body
     [string[]]$PrefixBottom = @(),                      # e.g. '004' — just above separator (lowest in section)
-    [switch]$FixSeparatorPlusToMinus
+    [switch]$FixSeparatorPlusToMinus,
+    [Alias('Force')][switch]$Replace   # on clean-name collision: overwrite existing LL folder with donor
 )
 
 $ErrorActionPreference = 'Stop'
@@ -120,10 +121,18 @@ foreach ($raw in $selected) {
         Write-Log "NOOP rename: $raw"
     }
     elseif (Test-Path -LiteralPath $dst) {
-        Write-Log "COLLISION (kept donor name): $raw -> $clean exists"
-        [void]$collisions.Add("$raw -> $clean")
-        $clean = $raw  # keep as-is to not lose content
-        $dst = $src
+        if ($Replace) {
+            Write-Log "REPLACE collision: $raw -> $clean (removing existing)"
+            Remove-Item -LiteralPath $dst -Recurse -Force
+            Rename-Item -LiteralPath $src -NewName $clean
+            [void]$collisions.Add("$raw -> $clean (replaced)")
+        }
+        else {
+            Write-Log "COLLISION (kept donor name): $raw -> $clean exists"
+            [void]$collisions.Add("$raw -> $clean")
+            $clean = $raw  # keep as-is to not lose content
+            $dst = $src
+        }
     }
     else {
         Rename-Item -LiteralPath $src -NewName $clean
