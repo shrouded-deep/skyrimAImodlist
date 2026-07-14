@@ -4,6 +4,20 @@ Dated entries recording what changed and why. Most recent first.
 
 ---
 
+## 2026-07-14 — Donor AE import installed (tasks 0078–0095)
+
+867 selected folders from `D:\Skyrim AE\mods` were copied into `D:\Skyrim\mods\`
+earlier; tasks **0078–0095** renamed them (strip `NNN.NNN ◉` + `[NoDelete]`),
+placed them into `Lost Legacy - Fork` sections, and enabled root-level plugins.
+
+**New separators:** `AI` (above NPCs), `Combat` (above Followers), `oStim` (above MCMs).
+**Plugin count:** ~1584 → **2018** active after a selective re-enable of 12 donor
+MAST-off plugins whose masters arrived later in the batch (DBVO/AYOP, IMMORTAN peers,
+AelaRevoicedOStimVoice). Remaining MAST-off plugins stay off (missing masters).
+**Do not** bulk-star inactive LL plugins — many are intentionally unused optionals.
+
+FOMODs were flagged only, not run (see task-0075). Spaghetti cities remain disabled.
+
 ## 2026-07-12 — Engine Fixes was wiping plugins.txt on every game exit (Fork crash root cause)
 
 MO2 maps `AppData\Local\Skyrim Special Edition\Plugins.txt` → profile `plugins.txt`
