@@ -4,6 +4,15 @@ Dated entries recording what changed and why. Most recent first.
 
 ---
 
+## 2026-07-15 — Donor wave 2 graphics replace + staging (task-0098)
+
+Copied/renamed **907** donor AE folders into `Lost Legacy - Fork` with overwrite.
+**Graphics 016–066** (793 entries including donor sub-separators) enabled above
+`-Graphics Improvements_separator`, replacing the prior GI block (48 leftover LL
+graphics mods disabled beneath the new stack). **Non-graphics 068–094** (114)
+staged **disabled** at the bottom for task-0075. Plugins 2031 → 2249. Prefix **065
+ENB Particle Lights** flagged for CS compatibility review before launch.
+
 ## 2026-07-14 — ModEx + Cheats stack from Anvil (task-0097)
 
 Added Anvil Dev Tools (ModEx, Debug Menu) and 14 cheat/utility mods into
