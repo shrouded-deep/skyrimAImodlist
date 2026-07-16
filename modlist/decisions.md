@@ -4,6 +4,12 @@ Dated entries recording what changed and why. Most recent first.
 
 ---
 
+## 2026-07-16 — Alphabetize separator groups (task-0100)
+
+Sorted mods A–Z within separator groups for **oStim→JKs Skyrim** and
+**Audio→Core & Frameworks** on `Lost Legacy - Fork`. Donor graphics sub-separators
+from task-0099 left unchanged.
+
 ## 2026-07-15 — Donor wave 2 graphics replace + staging (task-0098)
 
 Copied/renamed **907** donor AE folders into `Lost Legacy - Fork` with overwrite.
